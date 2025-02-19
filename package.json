@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rpfarish.github.io/stardew_fishing",
+  "homepage": "https://rpfarish.github.io/stardew_fishing/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

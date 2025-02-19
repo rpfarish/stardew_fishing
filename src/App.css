@@ -40,3 +40,25 @@
 .read-the-docs {
   color: #888;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+  grid-template-rows: repeat(2, 100px); /* 2 equal rows with fixed height */
+  gap: 10px; /* Space between items */
+  padding: 20px;
+  background-color: #424242;
+  border-radius: 24px;
+}
+
+.grid-item {
+  background-color: #3498db;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height to make it a square */
+}
