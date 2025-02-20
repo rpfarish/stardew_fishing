@@ -43,17 +43,16 @@
   max-width: 150px;
 }
 
-.inner-grid > * {
-  background-color: #2371a5;
+.fish-names {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
- .grid-item > * {
-  background-color: #2371a5;
-
- }
-
  .wrapper {
   padding: 20px;
  }
+
+
+
 
  .footer {
   margin-top:auto;
@@ -85,6 +84,20 @@
   color:white;
   padding:0 20px;
   text-wrap:balance;
+}
+
+
+.interface {
+  background-color: rgb(87, 87, 87);
+  height: 100px;
+  color: yellow;
+  height: fit-content;
+  min-height: 200px;
+}
+
+.outer-interface {
+  padding: 30px 0;
+
 }
 
 @media only screen and (max-width: 400px) {

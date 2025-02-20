@@ -1,0 +1,831 @@
+{
+    "Name": {
+        "Name": "Name",
+        "Location": "Location",
+        "Time": "Time",
+        "Season": [],
+        "Weather": "Weather",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Pufferfish": {
+        "Name": "Pufferfish",
+        "Location": "Ocean, Ginger Island oceans",
+        "Time": "12pm - 4pm",
+        "Season": [
+            "Summer"
+        ],
+        "Weather": "Sun",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Anchovy": {
+        "Name": "Anchovy",
+        "Location": "Ocean",
+        "Time": "Anytime",
+        "Season": [
+            "Spring",
+            "Fall"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Tuna": {
+        "Name": "Tuna",
+        "Location": "Ocean, Ginger Island oceans",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Summer",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Sardine": {
+        "Name": "Sardine",
+        "Location": "Ocean",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Spring",
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Bream": {
+        "Name": "Bream",
+        "Location": "River (Town+Forest)",
+        "Time": "6pm - 2am",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Largemouth Bass": {
+        "Name": "Largemouth Bass",
+        "Location": "The Mountain Lake",
+        "Time": "6am - 7pm",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Smallmouth Bass": {
+        "Name": "Smallmouth Bass",
+        "Location": "River (Town) Forest Pond",
+        "Time": "Anytime",
+        "Season": [
+            "Spring",
+            "Fall"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Rainbow Trout": {
+        "Name": "Rainbow Trout",
+        "Location": "River (Town+Forest) The Mountain Lake",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Summer"
+        ],
+        "Weather": "Sun",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Salmon": {
+        "Name": "Salmon",
+        "Location": "River (Town+Forest) Forest Waterfalls",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Fall"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Walleye": {
+        "Name": "Walleye",
+        "Location": "River (Town+Forest) Forest Pond The Mountain Lake",
+        "Time": "12pm - 2am",
+        "Season": [
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Rain",
+        "WinterWithTotem": true,
+        "ExclusiveToGingerIsland": false
+    },
+    "Perch": {
+        "Name": "Perch",
+        "Location": "River (Town+Forest) Forest Pond The Mountain Lake",
+        "Time": "Anytime",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Carp": {
+        "Name": "Carp",
+        "Location": "The Mountain Lake Secret Woods Pond The Sewers",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Catfish": {
+        "Name": "Catfish",
+        "Location": "River (Town+Forest) Secret Woods Pond Witch's Swamp",
+        "Time": "6am - 12am",
+        "Season": [
+            "Spring",
+            "Summer",
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Rain",
+        "WinterWithTotem": true,
+        "ExclusiveToGingerIsland": false
+    },
+    "Pike": {
+        "Name": "Pike",
+        "Location": "River (Town+Forest) Forest Pond",
+        "Time": "Anytime",
+        "Season": [
+            "Summer",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Sunfish": {
+        "Name": "Sunfish",
+        "Location": "River (Town+Forest)",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Spring",
+            "Summer"
+        ],
+        "Weather": "Sun  Wind",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Red Mullet": {
+        "Name": "Red Mullet",
+        "Location": "Ocean",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Summer",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Herring": {
+        "Name": "Herring",
+        "Location": "Ocean",
+        "Time": "Anytime",
+        "Season": [
+            "Spring",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Eel": {
+        "Name": "Eel",
+        "Location": "Ocean",
+        "Time": "4pm - 2am",
+        "Season": [
+            "Spring",
+            "Fall"
+        ],
+        "Weather": "Rain",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Octopus": {
+        "Name": "Octopus",
+        "Location": "Ocean, Ginger Island oceans",
+        "Time": "6am - 1pm",
+        "Season": [
+            "Summer"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Red Snapper": {
+        "Name": "Red Snapper",
+        "Location": "Ocean",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Summer",
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Rain",
+        "WinterWithTotem": true,
+        "ExclusiveToGingerIsland": false
+    },
+    "Squid": {
+        "Name": "Squid",
+        "Location": "Ocean",
+        "Time": "6pm - 2am",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Sea Cucumber": {
+        "Name": "Sea Cucumber",
+        "Location": "Ocean",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Super Cucumber": {
+        "Name": "Super Cucumber",
+        "Location": "Ocean, Ginger Island oceans",
+        "Time": "6pm - 2am",
+        "Season": [
+            "Summer",
+            "Fall"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Ghostfish": {
+        "Name": "Ghostfish",
+        "Location": "The Mines 20F & 60F Ghost drops",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Stonefish": {
+        "Name": "Stonefish",
+        "Location": "The Mines 20F",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Ice Pip": {
+        "Name": "Ice Pip",
+        "Location": "The Mines 60F",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Lava Eel": {
+        "Name": "Lava Eel",
+        "Location": "The Mines 100F Volcano Caldera",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Sandfish": {
+        "Name": "Sandfish",
+        "Location": "The Desert",
+        "Time": "6am - 8pm",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Scorpion Carp": {
+        "Name": "Scorpion Carp",
+        "Location": "The Desert Requires fishing level 4",
+        "Time": "6am - 8pm",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Flounder": {
+        "Name": "Flounder",
+        "Location": "Ocean, Ginger Island oceans",
+        "Time": "6am - 8pm",
+        "Season": [
+            "Spring",
+            "Summer"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Midnight Carp": {
+        "Name": "Midnight Carp",
+        "Location": "Mountain Lake, Cindersap Forest pond, Ginger Island pond and river",
+        "Time": "10pm - 2am",
+        "Season": [
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Sturgeon": {
+        "Name": "Sturgeon",
+        "Location": "Mountain Lake",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Summer",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Tiger Trout": {
+        "Name": "Tiger Trout",
+        "Location": "River (Town+Forest)",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Bullhead": {
+        "Name": "Bullhead",
+        "Location": "Mountain Lake",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Tilapia": {
+        "Name": "Tilapia",
+        "Location": "Ocean, Ginger Island rivers",
+        "Time": "6am - 2pm",
+        "Season": [
+            "Summer",
+            "Fall"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Chub": {
+        "Name": "Chub",
+        "Location": "Cindersap Forest River, Mountain Lake",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Dorado": {
+        "Name": "Dorado",
+        "Location": "Cindersap Forest River",
+        "Time": "6am - 7pm",
+        "Season": [
+            "Summer"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Albacore": {
+        "Name": "Albacore",
+        "Location": "Ocean",
+        "Time": "6am - 11am 6pm - 2am",
+        "Season": [
+            "Fall",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Shad": {
+        "Name": "Shad",
+        "Location": "River (Town+Forest)",
+        "Time": "9am - 2am",
+        "Season": [
+            "Spring",
+            "Summer",
+            "Fall"
+        ],
+        "Weather": "Rain",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Lingcod": {
+        "Name": "Lingcod",
+        "Location": "River (Town+Forest) Mountain Lake",
+        "Time": "Any time",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Halibut": {
+        "Name": "Halibut",
+        "Location": "Ocean",
+        "Time": "6am - 11am 7pm - 2am",
+        "Season": [
+            "Spring",
+            "Summer",
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Woodskip": {
+        "Name": "Woodskip",
+        "Location": "Secret Woods Pond Forest Farm",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Void Salmon": {
+        "Name": "Void Salmon",
+        "Location": "Witch's Swamp",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Slimejack": {
+        "Name": "Slimejack",
+        "Location": "Mutant Bug Lair",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Stingray": {
+        "Name": "Stingray",
+        "Location": "Pirate Cove (Ginger Island)",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": true
+    },
+    "Lionfish": {
+        "Name": "Lionfish",
+        "Location": "Ginger Island Ocean",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": true
+    },
+    "Blue Discus": {
+        "Name": "Blue Discus",
+        "Location": "Ginger Island Pond and Rivers",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": true
+    },
+    "Goby": {
+        "Name": "Goby",
+        "Location": "Forest Waterfalls",
+        "Time": "Anytime",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Midnight Squid": {
+        "Name": "Midnight Squid",
+        "Location": "Night Market",
+        "Time": "5pm - 2am",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Spook Fish": {
+        "Name": "Spook Fish",
+        "Location": "Night Market",
+        "Time": "5pm - 2am",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Blobfish": {
+        "Name": "Blobfish",
+        "Location": "Night Market",
+        "Time": "5pm - 2am",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Crimsonfish": {
+        "Name": "Crimsonfish",
+        "Location": "East Pier on The Beach. Requires level 5 fishing.",
+        "Time": "Any",
+        "Season": [
+            "Summer"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Angler": {
+        "Name": "Angler",
+        "Location": "North of JojaMart on the wooden plank bridge. Requires level 3 fishing.",
+        "Time": "Any",
+        "Season": [
+            "Fall"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Legend": {
+        "Name": "Legend",
+        "Location": "The Mountain Lake near the log. Requires level 10 fishing.",
+        "Time": "Any",
+        "Season": [
+            "Spring"
+        ],
+        "Weather": "Rain",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Glacierfish": {
+        "Name": "Glacierfish",
+        "Location": "South end of Arrowhead Island in Cindersap Forest. Requires level 6 fishing.",
+        "Time": "Any",
+        "Season": [
+            "Winter"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Mutant Carp": {
+        "Name": "Mutant Carp",
+        "Location": "The Sewers",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Lobster": {
+        "Name": "Lobster",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Clam": {
+        "Name": "Clam",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Crayfish": {
+        "Name": "Crayfish",
+        "Location": "Freshwater",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Crab": {
+        "Name": "Crab",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Cockle": {
+        "Name": "Cockle",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Mussel": {
+        "Name": "Mussel",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Shrimp": {
+        "Name": "Shrimp",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Snail": {
+        "Name": "Snail",
+        "Location": "Freshwater",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Periwinkle": {
+        "Name": "Periwinkle",
+        "Location": "Freshwater",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Oyster": {
+        "Name": "Oyster",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Seaweed": {
+        "Name": "Seaweed",
+        "Location": "Ocean",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Green Algae": {
+        "Name": "Green Algae",
+        "Location": "Freshwater",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "White Algae": {
+        "Name": "White Algae",
+        "Location": "The Mines, The Sewers, Mutant Bug Lair, Witch's Swamp",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Sea Jelly": {
+        "Name": "Sea Jelly",
+        "Location": "Ocean, Pirates Cove",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "River Jelly": {
+        "Name": "River Jelly",
+        "Location": "River",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    },
+    "Cave Jelly": {
+        "Name": "Cave Jelly",
+        "Location": "Mines",
+        "Time": "Any",
+        "Season": [
+            "All Seasons"
+        ],
+        "Weather": "Any",
+        "WinterWithTotem": false,
+        "ExclusiveToGingerIsland": false
+    }
+}
