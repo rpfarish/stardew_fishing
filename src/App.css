@@ -8,13 +8,14 @@
   min-height: 100vh;
   padding: 2rem;
   text-align: center;
+  font-family: monospace
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   gap: 15px; /* Space between items */
-  padding: 30px;
+  padding: 20px;
   background-color: #424242;
   border-radius: 24px;
   align-content: center;
@@ -37,8 +38,4 @@
 
 .fish-name {
   margin: 0;
-}
-
-.inner-grid {
-  border-color: red;
 }
