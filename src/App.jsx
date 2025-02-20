@@ -15,7 +15,9 @@ function App() {
 
   return (
     <>
-      <GridLayout />
+      <div className="wrapper">
+        <GridLayout />
+      </div>
     </>
   );
 }

@@ -20,6 +20,7 @@
   background-color: #424242;
   border-radius: 24px;
   align-content: center;
+  
 }
 
 .grid-item {
@@ -49,6 +50,10 @@
   background-color: #2371a5;
 
  }
+
+.wrapper {
+  
+}
 
 @media only screen and (max-width: 400px) {
  
