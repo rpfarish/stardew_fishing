@@ -20,7 +20,7 @@
   background-color: #424242;
   border-radius: 24px;
   align-content: center;
-  
+  min-height: 100vh;
 }
 
 .grid-item {
