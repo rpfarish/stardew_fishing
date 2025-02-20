@@ -1,5 +1,5 @@
 import React from "react";
-
+import Pufferfish from "./assets/all_fish/Pufferfish.jpg";
 const stardewFish = [
   "Albacore",
   "Anchovy",
@@ -81,7 +81,7 @@ const GridLayout = () => {
       {stardewFish.sort().map((fish, index) => (
         <div key={index} className="grid-item">
           <div className="inner-grid">
-            <img src={`./src/assets/all_fish/${fish}.jpg`} alt={fish} />
+            <img src={Pufferfish} alt={fish} />
             <p className="fish-name">{fish}</p>{" "}
           </div>
         </div>
