@@ -9,6 +9,15 @@ const Interface = () => {
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
   return (
     <>
+      <button
+        onClick={() => {
+          const newCount = count < 3 ? count + 1 : 0;
+          setCount(newCount);
+          setCurSeason(allSeasons[newCount]);
+        }}
+      >
+        Click me
+      </button>
       <div className="outer-interface">
         <div className="interface">
           <p>Current Season {curSeason}</p>
@@ -23,15 +32,6 @@ const Interface = () => {
                 <div key={fish.Name}>{fish.Name}</div> // Render the fish names
               ))}
           </div>
-          <button
-            onClick={() => {
-              const newCount = count < 3 ? count + 1 : 0;
-              setCount(newCount);
-              setCurSeason(allSeasons[newCount]);
-            }}
-          >
-            Click me
-          </button>
         </div>
       </div>
     </>
