@@ -117,8 +117,7 @@
         "Location": "River (Town+Forest) Forest Pond The Mountain Lake",
         "Time": "12pm - 2am",
         "Season": [
-            "Fall",
-            "Winter"
+            "Fall"
         ],
         "Weather": "Rain",
         "WinterWithTotem": true,
@@ -152,9 +151,7 @@
         "Time": "6am - 12am",
         "Season": [
             "Spring",
-            "Summer",
-            "Fall",
-            "Winter"
+            "Fall"
         ],
         "Weather": "Rain",
         "WinterWithTotem": true,
@@ -237,8 +234,7 @@
         "Time": "6am - 7pm",
         "Season": [
             "Summer",
-            "Fall",
-            "Winter"
+            "Fall"
         ],
         "Weather": "Rain",
         "WinterWithTotem": true,

@@ -3,6 +3,8 @@ import fishData from "./fish.json";
 
 console.log(fishData["Name"]);
 
+// todo add back in secret woods
+// and rain totem
 const Interface = () => {
   const [count, setCount] = useState(0);
   const [curSeason, setCurSeason] = useState("Spring");
@@ -28,6 +30,7 @@ const Interface = () => {
                   fish.Season.includes(curSeason) ||
                   fish.Season.includes("All Seasons")
               )
+
               .map((fish) => (
                 <div key={fish.Name}>{fish.Name}</div> // Render the fish names
               ))}
