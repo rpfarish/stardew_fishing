@@ -27,6 +27,7 @@ html, body {
   margin: 0;
   padding: 0;
   background-size: cover;
+  bottom: 0;
   /* display: flex; */
   /* place-items: center;
   min-width: 320px; */

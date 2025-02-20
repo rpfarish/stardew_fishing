@@ -51,10 +51,14 @@
 
  }
 
+ .wrapper {
+  padding: 20px;
+ }
+
  .footer {
   margin-top:auto;
   background-color: #1c1e20;
-  height:200%; 
+  height:100%; 
 }
 .footer-text{
   background-color: inherit;
