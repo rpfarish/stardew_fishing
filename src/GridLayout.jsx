@@ -75,14 +75,13 @@ const stardewFish = [
   "White Algae",
 ];
 // select all, clear all
-// const images = import.meta.glob("../assets/all_fish/*.jpg", { eager: true });
 const GridLayout = () => {
   return (
     <div className="grid-container">
       {stardewFish.sort().map((fish, index) => (
         <div key={index} className="grid-item">
           <div className="inner-grid">
-            <img src={`src/assets/all_fish/${fish}.jpg`} alt={fish} />
+            <img src={`./src/assets/all_fish/${fish}.jpg`} alt={fish} />
             <p className="fish-name">{fish}</p>{" "}
           </div>
         </div>
