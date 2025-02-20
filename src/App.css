@@ -51,8 +51,36 @@
 
  }
 
-.wrapper {
-  
+ .footer {
+  margin-top:auto;
+  background-color: #1c1e20;
+  height:100%; 
+}
+.footer-text{
+  background-color: inherit;
+  margin:0;
+  padding:0;
+}
+
+.copyright {
+  background-color: #1c1e20;
+  width: 100%;
+  text-align: center;
+  padding: 28px 0;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+}
+.heart {
+  color: #FF004f;
+  background-color: #1c1e20;
+}
+
+.footer-text{
+  /* max-width: 33ch; */
+  background-color: inherit;
+  color:white;
+  padding:0 20px;
+  text-wrap:balance;
 }
 
 @media only screen and (max-width: 400px) {
@@ -71,7 +99,7 @@
   }
 
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 400px) {
  
     
   .grid-container {

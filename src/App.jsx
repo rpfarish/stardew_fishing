@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import GridLayout from "./GridLayout";
-
+import Footer from "./Footer";
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -15,9 +15,8 @@ function App() {
 
   return (
     <>
-      <div className="wrapper">
-        <GridLayout />
-      </div>
+      <GridLayout />
+      <Footer />
     </>
   );
 }
