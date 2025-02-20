@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 15px; /* Space between items */
-  padding: 20px;
+  padding: 10px;
   background-color: #424242;
   border-radius: 24px;
   align-content: center;
@@ -50,10 +50,10 @@
 
  }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 400px) {
  
   #root {
-    padding: 1rem;
+    /* padding: 1rem; */
   }
   
 .grid-container {
@@ -64,3 +64,16 @@
   font-size: medium;
 }
   }
+
+
+  @media only screen and (max-width: 800px) {
+ 
+    
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+  
+  .grid-item {
+    font-size:small;
+  }
+    }
