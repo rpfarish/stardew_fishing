@@ -42,6 +42,13 @@
   max-width: 150px;
 }
 
+.inner-grid > * {
+  background-color: #2371a5;
+}
+ .grid-item > * {
+  background-color: #2371a5;
+
+ }
 
 @media only screen and (max-width: 800px) {
  
