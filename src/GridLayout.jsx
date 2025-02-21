@@ -223,11 +223,8 @@ const stardewFish = [
 ];
 
 // select all, clear all
-const GridLayout = () => {
-  const [isSelectedArrState, setIsSelectedArrState] = useState(
-    Array(72).fill(true)
-  );
-
+const GridLayout = ({ selectedState }) => {
+  const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   return (
     <div className="grid-container">
       {stardewFish.sort().map((fish, index) => (
@@ -235,15 +232,14 @@ const GridLayout = () => {
           key={index}
           className="grid-item"
           onClick={() => {
-            // console.log({ index });
-            setIsSelectedArrState((prevArray) => {
-              const newArray = [...prevArray];
-              newArray[index] = !prevArray[index];
-              return newArray;
-            });
+            console.log({ index });
+            console.log({ isSelectedMapState });
+            setIsSelectedMapState((oldMap) =>
+              new Map(oldMap).set(fish, !oldMap.get(fish))
+            );
           }}
           style={{
-            backgroundColor: isSelectedArrState[index]
+            backgroundColor: isSelectedMapState.get(fish)
               ? "#2371a5"
               : "lightslategray",
           }}
@@ -252,11 +248,13 @@ const GridLayout = () => {
             <img
               src={fishImages[fish.replace(" ", "")]}
               alt="img"
-              style={{ opacity: isSelectedArrState[index] ? 1 : 0.3 }}
+              style={{ opacity: isSelectedMapState.get(fish) ? 1 : 0.3 }}
             />
             <p
               className="fish-name"
-              style={{ color: isSelectedArrState[index] ? "white" : "#f2f2f2" }}
+              style={{
+                color: isSelectedMapState.get(fish) ? "white" : "#f2f2f2",
+              }}
             >
               {fish}
             </p>{" "}

@@ -5,7 +5,8 @@ console.log(fishData["Name"]);
 
 // todo add back in secret woods
 // and rain totem
-const Interface = () => {
+const Interface = ({ selectedState }) => {
+  const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   const [count, setCount] = useState(0);
   const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
@@ -17,6 +18,7 @@ const Interface = () => {
           const newCount = count < 3 ? count + 1 : 0;
           setCount(newCount);
           setCurSeason(allSeasons[newCount]);
+          console.log(isSelectedMapState);
         }}
       >
         Click me
@@ -31,10 +33,11 @@ const Interface = () => {
                   fish.Season.includes(curSeason) ||
                   fish.Season.includes("All Seasons")
               )
-
-              .map((fish) => (
-                <div key={fish.Name}>{fish.Name}</div> // Render the fish names
-              ))}
+              .map((fish) =>
+                isSelectedMapState.get(fish.Name) ? (
+                  <div key={fish.Name}>{fish.Name}</div>
+                ) : null
+              )}
           </div>
         </div>
       </div>
