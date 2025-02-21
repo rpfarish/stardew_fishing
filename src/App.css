@@ -46,12 +46,16 @@
 .fish-names {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  padding: 20px 5px;
+  padding: 15px 5px;
 }
  .wrapper {
   padding: 20px;
  }
 
+
+ .current-season {
+  padding-top: 1em;
+ }
 .season-buttons {
   padding: 1em;
   display:flex;

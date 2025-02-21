@@ -137,7 +137,7 @@ const Interface = ({ selectedState }) => {
       </div>
       <div className="outer-interface">
         <div className="interface">
-          <p>Current Season {curSeason}</p>
+          <p className="current-season">Current Season: {curSeason}</p>
           <div className="fish-names">
             {Object.values(fishData)
               .filter(
