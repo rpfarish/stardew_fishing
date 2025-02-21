@@ -51,6 +51,20 @@
   padding: 20px;
  }
 
+.season-buttons {
+  padding: 1em;
+  display:flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.season-button {
+  background-color:rgb(87, 87, 87);
+  color: white;
+  padding: 0.5em;
+  border-radius: 12px;
+  border-color: black;
+}
 
 
 

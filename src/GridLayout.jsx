@@ -227,7 +227,7 @@ const GridLayout = ({ selectedState }) => {
   const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   return (
     <div className="grid-container">
-      {stardewFish.sort().map((fish, index) => (
+      {stardewFish.map((fish, index) => (
         <div
           key={index}
           className="grid-item"
