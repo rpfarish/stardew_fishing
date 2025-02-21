@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+
 import Albacore from "./assets/all_fish/Albacore.jpg";
 import Anchovy from "./assets/all_fish/Anchovy.jpg";
 import Angler from "./assets/all_fish/Angler.jpg";
@@ -145,7 +147,6 @@ const fishImages = {
   VoidSalmon,
   WhiteAlgae,
 };
-console.log(fishImages);
 const stardewFish = [
   "Albacore",
   "Anchovy",
@@ -220,15 +221,45 @@ const stardewFish = [
   "Void Salmon",
   "White Algae",
 ];
+
 // select all, clear all
 const GridLayout = () => {
+  const [isSelectedArrState, setIsSelectedArrState] = useState(
+    Array(72).fill(true)
+  );
+
   return (
     <div className="grid-container">
       {stardewFish.sort().map((fish, index) => (
-        <div key={index} className="grid-item">
+        <div
+          key={index}
+          className="grid-item"
+          onClick={() => {
+            // console.log({ index });
+            setIsSelectedArrState((prevArray) => {
+              const newArray = [...prevArray];
+              newArray[index] = !prevArray[index];
+              return newArray;
+            });
+          }}
+          style={{
+            backgroundColor: isSelectedArrState[index]
+              ? "#2371a5"
+              : "lightslategray",
+          }}
+        >
           <div className="inner-grid">
-            <img src={fishImages[fish.replace(" ", "")]} alt="img" />
-            <p className="fish-name">{fish}</p>{" "}
+            <img
+              src={fishImages[fish.replace(" ", "")]}
+              alt="img"
+              style={{ opacity: isSelectedArrState[index] ? 1 : 0.3 }}
+            />
+            <p
+              className="fish-name"
+              style={{ color: isSelectedArrState[index] ? "white" : "#f2f2f2" }}
+            >
+              {fish}
+            </p>{" "}
           </div>
         </div>
       ))}

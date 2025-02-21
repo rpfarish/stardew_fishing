@@ -9,6 +9,7 @@ const Interface = () => {
   const [count, setCount] = useState(0);
   const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
+
   return (
     <>
       <button
