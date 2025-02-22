@@ -145,7 +145,7 @@ const Interface = ({ selectedState }) => {
             className="toggle-button"
             onClick={() => setShowResults(!showResults)}
           >
-            See Results
+            Show Results
           </button>
         </div>
       </div>
