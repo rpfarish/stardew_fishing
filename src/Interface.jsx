@@ -84,6 +84,7 @@ const Interface = ({ selectedState }) => {
   const [count, setCount] = useState(0);
   const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
+  const [showResults, setShowResults] = useState(false);
 
   return (
     <>
@@ -137,13 +138,30 @@ const Interface = ({ selectedState }) => {
           </button>
         </div>
         <div className="toggle-buttons">
-          <button className="toggle-button">Unlocked Ginger Island</button>
+          {/* <button className="toggle-button">Unlocked Ginger Island</button>
           <button className="toggle-button">Unlocked Secret Woods</button>
-          <button className="toggle-button">Use Rain Totem</button>
-          <button className="toggle-button">See Results</button>
+          <button className="toggle-button">Use Rain Totem</button> */}
+          <button
+            className="toggle-button"
+            onClick={() => setShowResults(!showResults)}
+          >
+            See Results
+          </button>
         </div>
       </div>
-      <div className="outer-interface">
+      <div
+        className="outer-interface"
+        style={{
+          padding: showResults ? "30px 0" : "0",
+          /* to hide results
+  set padding to 0
+  height to 0
+  overflow to hidden
+  */
+          height: showResults ? "initial" : "0",
+          overflow: showResults ? "initial" : "hidden",
+        }}
+      >
         <div className="interface">
           <p className="current-season">Current Season: {curSeason}</p>
           <div className="fish-names">

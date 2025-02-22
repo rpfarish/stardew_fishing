@@ -135,6 +135,11 @@
 
 .outer-interface {
   padding: 30px 0;
+  /* to hide results
+  set padding to 0
+  height to 0
+  overflow to hidden
+  */
 
 }
 
