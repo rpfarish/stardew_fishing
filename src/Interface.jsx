@@ -138,9 +138,6 @@ const Interface = ({ selectedState }) => {
           </button>
         </div>
         <div className="toggle-buttons">
-          {/* <button className="toggle-button">Unlocked Ginger Island</button>
-          <button className="toggle-button">Unlocked Secret Woods</button>
-          <button className="toggle-button">Use Rain Totem</button> */}
           <button
             className="toggle-button"
             onClick={() => setShowResults(!showResults)}
@@ -152,7 +149,7 @@ const Interface = ({ selectedState }) => {
       <div
         className="outer-interface"
         style={{
-          padding: showResults ? "30px 0" : "0",
+          padding: showResults ? "30px 2em" : "0",
           /* to hide results
   set padding to 0
   height to 0

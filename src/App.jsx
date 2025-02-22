@@ -1,4 +1,5 @@
 import "./App.css";
+import Header from "./Header";
 import { useState } from "react";
 import GridLayout from "./GridLayout";
 import Footer from "./Footer";
@@ -88,11 +89,11 @@ function App() {
   const [isSelectedMapState, setIsSelectedMapState] = useState(selectedMap);
   return (
     <>
+      <Header />
+      <Interface
+        selectedState={{ isSelectedMapState, setIsSelectedMapState }}
+      />
       <div className="wrapper">
-        <Interface
-          selectedState={{ isSelectedMapState, setIsSelectedMapState }}
-        />
-
         <GridLayout
           selectedState={{ isSelectedMapState, setIsSelectedMapState }}
         />
