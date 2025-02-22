@@ -596,7 +596,7 @@
     "Crimsonfish": {
         "Name": "Crimsonfish",
         "Location": "East Pier on The Beach. Requires level 5 fishing.",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "Summer"
         ],
@@ -607,7 +607,7 @@
     "Angler": {
         "Name": "Angler",
         "Location": "North of JojaMart on the wooden plank bridge. Requires level 3 fishing.",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "Fall"
         ],
@@ -618,7 +618,7 @@
     "Legend": {
         "Name": "Legend",
         "Location": "The Mountain Lake near the log. Requires level 10 fishing.",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "Spring"
         ],
@@ -629,7 +629,7 @@
     "Glacierfish": {
         "Name": "Glacierfish",
         "Location": "South end of Arrowhead Island in Cindersap Forest. Requires level 6 fishing.",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "Winter"
         ],
@@ -640,7 +640,7 @@
     "Mutant Carp": {
         "Name": "Mutant Carp",
         "Location": "The Sewers",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -651,7 +651,7 @@
     "Lobster": {
         "Name": "Lobster",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -662,7 +662,7 @@
     "Clam": {
         "Name": "Clam",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -673,7 +673,7 @@
     "Crayfish": {
         "Name": "Crayfish",
         "Location": "Freshwater",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -684,7 +684,7 @@
     "Crab": {
         "Name": "Crab",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -695,7 +695,7 @@
     "Cockle": {
         "Name": "Cockle",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -706,7 +706,7 @@
     "Mussel": {
         "Name": "Mussel",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -717,7 +717,7 @@
     "Shrimp": {
         "Name": "Shrimp",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -728,7 +728,7 @@
     "Snail": {
         "Name": "Snail",
         "Location": "Freshwater",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -739,7 +739,7 @@
     "Periwinkle": {
         "Name": "Periwinkle",
         "Location": "Freshwater",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -750,7 +750,7 @@
     "Oyster": {
         "Name": "Oyster",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -761,7 +761,7 @@
     "Seaweed": {
         "Name": "Seaweed",
         "Location": "Ocean",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -772,7 +772,7 @@
     "Green Algae": {
         "Name": "Green Algae",
         "Location": "Freshwater",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -783,7 +783,7 @@
     "White Algae": {
         "Name": "White Algae",
         "Location": "The Mines, The Sewers, Mutant Bug Lair, Witch's Swamp",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -794,7 +794,7 @@
     "Sea Jelly": {
         "Name": "Sea Jelly",
         "Location": "Ocean, Pirates Cove",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -805,7 +805,7 @@
     "River Jelly": {
         "Name": "River Jelly",
         "Location": "River",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
@@ -816,7 +816,7 @@
     "Cave Jelly": {
         "Name": "Cave Jelly",
         "Location": "Mines",
-        "Time": "Any",
+        "Time": "Anytime",
         "Season": [
             "All Seasons"
         ],
