@@ -87,53 +87,61 @@ const Interface = ({ selectedState }) => {
 
   return (
     <>
-      <div className="season-buttons">
-        <button
-          className="season-button"
-          onClick={() => {
-            const selectedMap = new Map();
-            for (let i = 0; i < stardewFish.length; i++) {
-              selectedMap.set(stardewFish[i], true);
-            }
-            setIsSelectedMapState(selectedMap);
-          }}
-        >
-          Select All
-        </button>
-        <button
-          className="season-button"
-          onClick={() => {
-            const selectedMap = new Map();
-            for (let i = 0; i < stardewFish.length; i++) {
-              selectedMap.set(stardewFish[i], false);
-            }
-            setIsSelectedMapState(selectedMap);
-          }}
-        >
-          Clear All
-        </button>
-        <button
-          className="season-button"
-          onClick={() => {
-            const newCount = count > 0 ? count - 1 : 3;
-            setCount(newCount);
-            setCurSeason(allSeasons[newCount]);
-            //   console.log(isSelectedMapState);
-          }}
-        >
-          Prev Season
-        </button>
-        <button
-          className="season-button"
-          onClick={() => {
-            const newCount = count < 3 ? count + 1 : 0;
-            setCount(newCount);
-            setCurSeason(allSeasons[newCount]);
-            //   console.log(isSelectedMapState);
-          }}
-        >
-          Next Season
-        </button>
+      <div className="button-container">
+        <div className="season-buttons">
+          <button
+            className="season-button"
+            onClick={() => {
+              const selectedMap = new Map();
+              for (let i = 0; i < stardewFish.length; i++) {
+                selectedMap.set(stardewFish[i], true);
+              }
+              setIsSelectedMapState(selectedMap);
+            }}
+          >
+            Select All
+          </button>
+          <button
+            className="season-button"
+            onClick={() => {
+              const selectedMap = new Map();
+              for (let i = 0; i < stardewFish.length; i++) {
+                selectedMap.set(stardewFish[i], false);
+              }
+              setIsSelectedMapState(selectedMap);
+            }}
+          >
+            Clear All
+          </button>
+          <button
+            className="season-button"
+            onClick={() => {
+              const newCount = count > 0 ? count - 1 : 3;
+              setCount(newCount);
+              setCurSeason(allSeasons[newCount]);
+              //   console.log(isSelectedMapState);
+            }}
+          >
+            Prev Season
+          </button>
+          <button
+            className="season-button"
+            onClick={() => {
+              const newCount = count < 3 ? count + 1 : 0;
+              setCount(newCount);
+              setCurSeason(allSeasons[newCount]);
+              //   console.log(isSelectedMapState);
+            }}
+          >
+            Next Season
+          </button>
+        </div>
+        <div className="toggle-buttons">
+          <button className="toggle-button">Unlocked Ginger Island</button>
+          <button className="toggle-button">Unlocked Secret Woods</button>
+          <button className="toggle-button">Use Rain Totem</button>
+          <button className="toggle-button">See Results</button>
+        </div>
       </div>
       <div className="outer-interface">
         <div className="interface">
