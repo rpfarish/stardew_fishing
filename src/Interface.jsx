@@ -85,10 +85,18 @@ const Interface = ({ selectedState }) => {
   const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
   const [showResults, setShowResults] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleResults = () => {
+    setShowResults(!showResults);
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <>
-      <div className="button-container">
+      <div
+        className={`button-container ${isExpanded ? "expanded" : "collapsed"}`}
+      >
         <div className="season-buttons">
           <button
             className="season-button"
@@ -120,7 +128,6 @@ const Interface = ({ selectedState }) => {
               const newCount = count > 0 ? count - 1 : 3;
               setCount(newCount);
               setCurSeason(allSeasons[newCount]);
-              //   console.log(isSelectedMapState);
             }}
           >
             Prev Season
@@ -131,56 +138,49 @@ const Interface = ({ selectedState }) => {
               const newCount = count < 3 ? count + 1 : 0;
               setCount(newCount);
               setCurSeason(allSeasons[newCount]);
-              //   console.log(isSelectedMapState);
             }}
           >
             Next Season
           </button>
         </div>
         <div className="toggle-buttons">
-          <button
-            className="toggle-button"
-            onClick={() => setShowResults(!showResults)}
-          >
-            Show Results
+          <button className="toggle-button" onClick={toggleResults}>
+            <span className="button-text">
+              {showResults ? "Hide Results" : "Show Results"}
+            </span>
+            <span className={`toggle-icon ${isExpanded ? "rotate" : ""}`}>
+              ▼
+            </span>
           </button>
         </div>
       </div>
       <div
-        className="outer-interface"
-        style={{
-          padding: showResults ? "30px 2em" : "0",
-          /* to hide results
-  set padding to 0
-  height to 0
-  overflow to hidden
-  */
-          height: showResults ? "initial" : "0",
-          overflow: showResults ? "initial" : "hidden",
-        }}
+        className={`outer-interface ${showResults ? "expanded" : "collapsed"}`}
       >
-        <div className="interface">
-          <p className="current-season">Current Season: {curSeason}</p>
-          <div className="fish-names">
-            {Object.values(fishData)
-              .filter(
-                (fish) =>
-                  fish.Season.includes(curSeason) ||
-                  fish.Season.includes("All Seasons")
-              )
-              .map((fish) =>
-                isSelectedMapState.get(fish.Name) ? (
-                  <div key={fish.Name}>
-                    {fish.Name}{" "}
-                    {fish.Weather !== "Any" &&
-                      (fish.Weather === "Sun"
-                        ? "☀️"
-                        : fish.Weather === "Rain"
-                        ? "🌧"
-                        : "")}
-                  </div>
-                ) : null
-              )}
+        <div className="interface-content">
+          <div className="interface">
+            <p className="current-season">Current Season: {curSeason}</p>
+            <div className="fish-names">
+              {Object.values(fishData)
+                .filter(
+                  (fish) =>
+                    fish.Season.includes(curSeason) ||
+                    fish.Season.includes("All Seasons")
+                )
+                .map((fish) =>
+                  isSelectedMapState.get(fish.Name) ? (
+                    <div key={fish.Name} className="fish-item">
+                      {fish.Name}{" "}
+                      {fish.Weather !== "Any" &&
+                        (fish.Weather === "Sun"
+                          ? "☀️"
+                          : fish.Weather === "Rain"
+                          ? "🌧"
+                          : "")}
+                    </div>
+                  ) : null
+                )}
+            </div>
           </div>
         </div>
       </div>

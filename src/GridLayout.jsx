@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 import Albacore from "./assets/all_fish/Albacore.jpg";
 import Anchovy from "./assets/all_fish/Anchovy.jpg";
@@ -230,7 +229,9 @@ const GridLayout = ({ selectedState }) => {
       {stardewFish.map((fish, index) => (
         <div
           key={index}
-          className="grid-item"
+          className={
+            !isSelectedMapState.get(fish) ? "grid-item-selected" : "grid-item"
+          }
           onClick={() => {
             console.log({ index });
             console.log({ isSelectedMapState });
@@ -238,11 +239,11 @@ const GridLayout = ({ selectedState }) => {
               new Map(oldMap).set(fish, !oldMap.get(fish))
             );
           }}
-          style={{
-            backgroundColor: isSelectedMapState.get(fish)
-              ? "#2371a5"
-              : "lightslategray",
-          }}
+          // style={{
+          //   backgroundColor: isSelectedMapState.get(fish)
+          //     ? "#2371a5"
+          //     : "lightslategray",
+          // }}
         >
           <div className="inner-grid">
             <img
