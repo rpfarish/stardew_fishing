@@ -6,12 +6,12 @@ export default defineConfig({
   base: "/stardew_fishing/",
   // npm run build
   // npm run deploy
-  server: {
-    host: "0.0.0.0", // Allows access from inside Docker
-    port: 5173, // Matches Docker's exposed port
-    strictPort: true,
-    watch: {
-      usePolling: true,
-    },
-  },
+  // server: {
+  //   host: "0.0.0.0", // Allows access from inside Docker
+  //   port: 5173, // Matches Docker's exposed port
+  //   strictPort: true,
+  //   watch: {
+  //     usePolling: true,
+  //   },
+  // },
 });
