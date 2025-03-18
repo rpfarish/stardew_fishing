@@ -37,7 +37,7 @@
 }
 
 .nav-bar {
-  padding: 2em 4em; 
+  padding: 1.2em 4em; 
 }
 
 .container {
@@ -57,7 +57,7 @@
   background-color: #1a1a1a; /*  #424242; */
   border-radius: 24px;
   align-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border: 1px solid #444;
 }
@@ -97,7 +97,7 @@
 
 
 .grid-item:hover {
-  background-color: rgb(50, 150, 218);
+  background-color: hsl(204, 65%, 49%);
   
 }
 
@@ -137,7 +137,7 @@
 /*  */
 
 .grid-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   /* background-color: #3d3d3d; */
 }
@@ -154,38 +154,13 @@
   max-width: 150px;
 }
 
-.fish-names {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  padding: 15px 5px;
-}
-
  .wrapper {
   padding: 2em 4em;
   padding-top: 0;
  }
 
- .current-season {
-  padding-top: 1em;
-  margin: 0;
- }
 
 
-.season-buttons {
-  padding: 1em;
-  display:flex;
-  gap: 12px;
-  justify-content: center;
-  flex:1;
-}
-
-.season-button {
-  background-color:rgb(87, 87, 87);
-  color: white;
-  padding: 0.5em;
-  border-radius: 12px;
-  border-color: black;
-}
 
 
 .toggle-buttons {
@@ -194,14 +169,6 @@
   gap: 12px;
   justify-content: center;
   align-items: end;
-}
-
-.toggle-button {
-  background-color:rgb(87, 87, 87);
-  color: white;
-  padding: 0.5em;
-  border-radius: 12px;
-  border-color: black;
 }
 
 
@@ -245,26 +212,7 @@
 }
 
 
-.interface {
-  background-color: rgb(87, 87, 87);
-  height: 100px;
-  color: yellow;
-  height: fit-content;
-  min-height: 200px;
-  border-radius: 12px;
-  /* padding: 2em; */
-}
 
-.outer-interface {
-  padding: 30px 4em;
-  padding-top: 0;
-  /* to hide results
-  set padding to 0
-  height to 0
-  overflow to hidden
-  */
-
-}
 
         /* Dark mode theme */
         .button-container {
@@ -273,6 +221,8 @@
           padding: 15px;
           background-color: #1a1a1a;
           border-radius: 8px;
+          border-radius: 24px;
+
           margin-bottom: 10px;
           box-shadow: 0 2px 10px rgba(0,0,0,0.3);
           transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
@@ -289,15 +239,21 @@
         .button-container.collapsed {
           box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
-        
+
         .season-buttons {
+          padding: 1em;
+          /* gap: 12px; */
+          /* justify-content: center; */
           display: flex;
+          /* flex:1; */
           gap: 10px;
           justify-content: left;
           flex-wrap: wrap;
         }
         
+
         .season-button {
+          border-color: black;
           padding: 8px 16px;
           border: none;
           border-radius: 4px;
@@ -313,146 +269,168 @@
           transform: translateY(-2px);
         }
         
-        .toggle-button {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: 8px 16px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          background-color: #2371a5; /* #6200ea; */
-          color: white;
-          font-weight: bold;
-          min-width: 141px;
-          transition: background-color 0.3s ease, transform 0.2s ease;
-          flex-wrap: wrap;
-          max-height: fit-content;
-        }
-        
-        .toggle-button:hover {
-          background-color:  rgb(50, 150, 218); /* #7c4dff; */
-          transform: translateY(-2px);
-        }
-        
-        .toggle-icon {
-          display: inline-block;
-          transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        
-        .toggle-icon.rotate {
-          transform: rotate(180deg);
-        }
-        
-        /* Symmetrical open/close animations */
-        .outer-interface {
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          transition: max-height 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-                      opacity 0.5s ease;
-        }
-        
-        .outer-interface.expanded {
-          max-height: 3000px;
-          opacity: 1;
-        }
-        
-        .interface-content {
-          /* padding: 30px 2em;   */
-          transform: translateY(-20px);
-          transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        
-        .outer-interface.expanded .interface-content {
-          transform: translateY(0);
-        }
-        
-        .outer-interface.collapsed .interface-content {
-          transform: translateY(-20px);
-        }
-        
-        .outer-interface.collapsed {
-          padding-top: 0;
-          padding-bottom: 0;
-        }
 
-        .interface {
-          border: 1px solid #444;
-          border-radius: 8px;
-          padding: 20px;
-          background-color: #1a1a1a;
-          color: #e0e0e0;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-        }
-        
-        .current-season {
-          font-weight: bold;
-          margin-bottom: 15px;
-          color: #2371a5;  /* #bb86fc; */
-          font-size: 1.2rem;
-        }
-        
-        .fish-names {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-          gap: 12px;
-        }
-        
-        .fish-item {
-          background-color: #2d2d2d;
-          padding: 8px 12px;
-          border-radius: 6px;
-          transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        .fish-item:hover {
-          background-color: #3d3d3d;
-          transform: translateY(-2px);
-        }
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2371a5; /* #6200ea; */
+  color: white;
+  font-weight: bold;
+  min-width: 141px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-wrap: wrap;
+  max-height: fit-content;
+}
 
+.toggle-button:hover {
+  background-color: hsl(204, 65%, 49%); /* #7c4dff; */
+  transform: translateY(-2px);
+}
         
+.toggle-icon {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
-@media only screen and (max-width: 400px) {
- 
-  #root {
-    /* padding: 1rem; */
-  }
-  
-.wrapper {
-  padding: 2em;
+.toggle-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Symmetrical open/close animations */
+.outer-interface {
+  padding: 30px 4em;
+  padding-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.5s ease;
+}
+
+.outer-interface.expanded {
+  max-height: 3000px;
+  opacity: 1;
 }
 
 .interface-content {
-  padding: 0;  
+  /* padding: 30px 2em;   */
+  transform: translateY(-20px);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.nav-bar {
-  padding: 2em; 
+
+.outer-interface.expanded .interface-content {
+  transform: translateY(0);
+}
+
+.outer-interface.collapsed .interface-content {
+  transform: translateY(-20px);
+}
+
+.outer-interface.collapsed {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 
-.grid-container {
+.interface {
+  height: 100px;
+  height: fit-content;
+  min-height: 200px;
+
+  border: 1px solid #444;
+  border-radius: 8px;
+  border-radius: 24px;
+
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+
+.current-season {
+  padding-top: 1em;
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2371a5;  /* #bb86fc; */
+  font-size: 1.2rem;
+}
+
+
+.fish-names {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 15px 5px;
+}
+      
+.fish-item {
+  background-color: #2d2d2d;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.fish-item:hover {
+  background-color: #3d3d3d;
+  transform: translateY(-2px);
+}
+
+        
+
+@media only screen and (max-width: 430px) {
+ 
+    
+  .wrapper {
+    padding: 2em;
+  }
+
+  .interface-content {
+    padding: 0;  
+  }
+
   
-  grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
-}
+  .outer-interface {
+  padding: 0 2em;
+  }
 
-.grid-item {
-  font-size: medium;
-}
+  .nav-bar {
+    padding: 2em; 
+  }
 
-.grid-item-selected {
-  font-size: medium;
-}
+  .fish-names {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  }  
 
-.grid-item-selected:hover {
-  font-size: medium;
-}
+  .grid-container {
+    
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  }
+
+  .grid-item {
+    font-size: medium;
+  }
+
+  .grid-item-selected {
+    font-size: medium;
+  }
+
+  .grid-item-selected:hover {
+    font-size: medium;
+  }
 
 }
   
 
-  @media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
  
     
   .grid-container {
@@ -462,9 +440,21 @@
   .interface-content {
     padding: 0;  
   }
+  
+  .outer-interface {
+    padding: 0 2em;
+    }
+  
   .nav-bar {
     padding: 2em; 
   }
+
+
+  .fish-names {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  }  
+  
 
   .wrapper {
     padding: 2em;
@@ -482,5 +472,4 @@
     font-size: smaller;
   }
   
-  
-    }
+}
