@@ -1,5 +1,6 @@
 import { useState } from "react";
 import fishData from "./fish.json";
+import filterFishBySeasons from "./filterFish";
 
 console.log(fishData["Name"]);
 const stardewFish = [
@@ -82,11 +83,29 @@ const stardewFish = [
 const Interface = ({ selectedState }) => {
   const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   const [count, setCount] = useState(0);
+  const [startCount, setStartCount] = useState(0);
+  const [curStartSeason, setCurStartSeason] = useState("Spring");
   const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
   const [showResults, setShowResults] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  // function filterFishBySeasons(fishData, allSeasons, startSeason) {
 
+  // todo add set current season
+  // have next/prev seasons cycle through filtered fish
+
+  // need just all filtered fish
+  // and this current seasons fish based on starting season
+
+  const [allFilteredFishArr, setAllFilteredFishArr] = useState(
+    filterFishBySeasons(fishData, allSeasons, curStartSeason)
+  );
+
+  const [filteredFish, setFilteredFish] = useState(
+    allFilteredFishArr[startCount]
+  );
+
+  console.log(filterFishBySeasons(fishData, allSeasons, curStartSeason));
   const toggleResults = () => {
     setShowResults(!showResults);
     setIsExpanded(!isExpanded);
@@ -131,6 +150,7 @@ const Interface = ({ selectedState }) => {
                 const newCount = count > 0 ? count - 1 : 3;
                 setCount(newCount);
                 setCurSeason(allSeasons[newCount]);
+                setFilteredFish(allFilteredFishArr[newCount]);
               }}
             >
               Prev Season
@@ -141,9 +161,26 @@ const Interface = ({ selectedState }) => {
                 const newCount = count < 3 ? count + 1 : 0;
                 setCount(newCount);
                 setCurSeason(allSeasons[newCount]);
+                setFilteredFish(allFilteredFishArr[newCount]);
               }}
             >
               Next Season
+            </button>
+            <button
+              className="season-button"
+              onClick={() => {
+                console.log("inside set season button");
+                setStartCount(count);
+                setCurStartSeason(allSeasons[startCount]);
+                console.log(curStartSeason);
+                setAllFilteredFishArr(
+                  filterFishBySeasons(fishData, allSeasons, curStartSeason)
+                );
+
+                setFilteredFish(allFilteredFishArr[startCount]);
+              }}
+            >
+              Set Starting Season
             </button>
           </div>
           <div className="toggle-buttons">
@@ -163,27 +200,22 @@ const Interface = ({ selectedState }) => {
       >
         <div className="interface-content">
           <div className="interface">
+            <p className="starting-season">Starting Season: {curStartSeason}</p>
             <p className="current-season">Current Season: {curSeason}</p>
             <div className="fish-names">
-              {Object.values(fishData)
-                .filter(
-                  (fish) =>
-                    fish.Season.includes(curSeason) ||
-                    fish.Season.includes("All Seasons")
-                )
-                .map((fish) =>
-                  isSelectedMapState.get(fish.Name) ? (
-                    <div key={fish.Name} className="fish-item">
-                      {fish.Name}{" "}
-                      {fish.Weather !== "Any" &&
-                        (fish.Weather === "Sun"
-                          ? "☀️"
-                          : fish.Weather === "Rain"
-                          ? "🌧"
-                          : "")}
-                    </div>
-                  ) : null
-                )}
+              {Object.values(filteredFish).map((fish) =>
+                isSelectedMapState.get(fish.Name) ? (
+                  <div key={fish.Name} className="fish-item">
+                    {fish.Name}{" "}
+                    {fish.Weather !== "Any" &&
+                      (fish.Weather === "Sun"
+                        ? "☀️"
+                        : fish.Weather === "Rain"
+                        ? "🌧"
+                        : "")}
+                  </div>
+                ) : null
+              )}
             </div>
           </div>
         </div>

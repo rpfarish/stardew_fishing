@@ -354,6 +354,14 @@
 }
 
 
+.starting-season {
+  padding-top: 1em;
+  margin: 0;
+  font-weight: bold;
+  /* margin-bottom: 15px; */
+  color: #2371a5;  /* #bb86fc; */
+  font-size: 1.2rem;
+}
 .current-season {
   padding-top: 1em;
   margin: 0;

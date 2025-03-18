@@ -248,7 +248,7 @@ const GridLayout = ({ selectedState }) => {
           <div className="inner-grid">
             <img
               src={fishImages[fish.replace(" ", "")]}
-              alt="img"
+              alt={{ fish }}
               style={{ opacity: isSelectedMapState.get(fish) ? 1 : 0.3 }}
             />
             <p
