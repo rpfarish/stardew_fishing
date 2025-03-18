@@ -152,7 +152,7 @@
   padding: 15px 5px;
 }
  .wrapper {
-  padding: 2em;
+  padding: 2em 4em;
  }
 
  .current-season {
@@ -264,11 +264,13 @@
           box-shadow: 0 2px 10px rgba(0,0,0,0.3);
           transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
                       box-shadow 0.4s ease;
+          flex-wrap: wrap;
         }
         
         .button-container.expanded {
           transform: translateY(0);
           box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+          flex-wrap: wrap;
         }
         
         .button-container.collapsed {
@@ -278,6 +280,7 @@
         .season-buttons {
           display: flex;
           gap: 10px;
+          justify-content: left;
         }
         
         .season-button {
@@ -309,6 +312,8 @@
           font-weight: bold;
           min-width: 141px;
           transition: background-color 0.3s ease, transform 0.2s ease;
+          flex-wrap: wrap;
+
         }
         
         .toggle-button:hover {

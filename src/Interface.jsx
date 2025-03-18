@@ -94,64 +94,68 @@ const Interface = ({ selectedState }) => {
 
   return (
     <>
-      <div
-        className={`button-container ${isExpanded ? "expanded" : "collapsed"}`}
-      >
-        <div className="season-buttons">
-          <button
-            className="season-button"
-            onClick={() => {
-              const selectedMap = new Map();
-              for (let i = 0; i < stardewFish.length; i++) {
-                selectedMap.set(stardewFish[i], true);
-              }
-              setIsSelectedMapState(selectedMap);
-            }}
-          >
-            Select All
-          </button>
-          <button
-            className="season-button"
-            onClick={() => {
-              const selectedMap = new Map();
-              for (let i = 0; i < stardewFish.length; i++) {
-                selectedMap.set(stardewFish[i], false);
-              }
-              setIsSelectedMapState(selectedMap);
-            }}
-          >
-            Clear All
-          </button>
-          <button
-            className="season-button"
-            onClick={() => {
-              const newCount = count > 0 ? count - 1 : 3;
-              setCount(newCount);
-              setCurSeason(allSeasons[newCount]);
-            }}
-          >
-            Prev Season
-          </button>
-          <button
-            className="season-button"
-            onClick={() => {
-              const newCount = count < 3 ? count + 1 : 0;
-              setCount(newCount);
-              setCurSeason(allSeasons[newCount]);
-            }}
-          >
-            Next Season
-          </button>
-        </div>
-        <div className="toggle-buttons">
-          <button className="toggle-button" onClick={toggleResults}>
-            <span className="button-text">
-              {showResults ? "Hide Results" : "Show Results"}
-            </span>
-            <span className={`toggle-icon ${isExpanded ? "rotate" : ""}`}>
-              ▼
-            </span>
-          </button>
+      <div style={{ padding: "2em 4em" }}>
+        <div
+          className={`button-container ${
+            isExpanded ? "expanded" : "collapsed"
+          }`}
+        >
+          <div className="season-buttons">
+            <button
+              className="season-button"
+              onClick={() => {
+                const selectedMap = new Map();
+                for (let i = 0; i < stardewFish.length; i++) {
+                  selectedMap.set(stardewFish[i], true);
+                }
+                setIsSelectedMapState(selectedMap);
+              }}
+            >
+              Select All
+            </button>
+            <button
+              className="season-button"
+              onClick={() => {
+                const selectedMap = new Map();
+                for (let i = 0; i < stardewFish.length; i++) {
+                  selectedMap.set(stardewFish[i], false);
+                }
+                setIsSelectedMapState(selectedMap);
+              }}
+            >
+              Clear All
+            </button>
+            <button
+              className="season-button"
+              onClick={() => {
+                const newCount = count > 0 ? count - 1 : 3;
+                setCount(newCount);
+                setCurSeason(allSeasons[newCount]);
+              }}
+            >
+              Prev Season
+            </button>
+            <button
+              className="season-button"
+              onClick={() => {
+                const newCount = count < 3 ? count + 1 : 0;
+                setCount(newCount);
+                setCurSeason(allSeasons[newCount]);
+              }}
+            >
+              Next Season
+            </button>
+          </div>
+          <div className="toggle-buttons">
+            <button className="toggle-button" onClick={toggleResults}>
+              <span className="button-text">
+                {showResults ? "Hide Results" : "Show Results"}
+              </span>
+              <span className={`toggle-icon ${isExpanded ? "rotate" : ""}`}>
+                ▼
+              </span>
+            </button>
+          </div>
         </div>
       </div>
       <div
