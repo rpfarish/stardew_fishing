@@ -246,6 +246,7 @@
 
 .outer-interface {
   padding: 30px 2em;
+  padding-top: 0;
   /* to hide results
   set padding to 0
   height to 0
@@ -410,6 +411,14 @@
   font-size: medium;
 }
 
+.grid-item-selected {
+  font-size: medium;
+}
+
+.grid-item-selected:hover {
+  font-size: medium;
+}
+
 }
   
 
@@ -424,5 +433,13 @@
     font-size:smaller;
   }
 
+  .grid-item-selected {
+    font-size: smaller;
+  }
+  
+  .grid-item-selected:hover {
+    font-size: smaller;
+  }
+  
   
     }
