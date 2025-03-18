@@ -5,10 +5,9 @@ const Header = () => {
     <div className="header-div">
       <div
         style={{
-          margin: "15px",
-          marginTop: "15px",
-          marginLeft: "25px",
-          fontSize: "1rem",
+          margin: " 20px 15px",
+          marginLeft: "4em",
+          fontSize: "0.8rem",
           textAlign: "left",
           width: "fit-content",
         }}

@@ -94,7 +94,7 @@ const Interface = ({ selectedState }) => {
 
   return (
     <>
-      <div style={{ padding: "2em 4em" }}>
+      <div style={{ padding: "2em 4em", paddingBottom: "0" }}>
         <div
           className={`button-container ${
             isExpanded ? "expanded" : "collapsed"
