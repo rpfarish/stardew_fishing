@@ -47,11 +47,12 @@
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 10px; /* Space between items */
   padding: 10px;
-  background-color: #424242;
+  background-color: #1a1a1a; /*  #424242; */
   border-radius: 24px;
   align-content: center;
   min-height: 100vh;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid #444;
 }
 
 .grid-item {
@@ -308,7 +309,7 @@
           border: none;
           border-radius: 4px;
           cursor: pointer;
-          background-color: #6200ea;
+          background-color: #2371a5; /* #6200ea; */
           color: white;
           font-weight: bold;
           min-width: 141px;
@@ -318,7 +319,7 @@
         }
         
         .toggle-button:hover {
-          background-color: #7c4dff;
+          background-color:  rgb(50, 150, 218); /* #7c4dff; */
           transform: translateY(-2px);
         }
         
@@ -371,7 +372,7 @@
         .current-season {
           font-weight: bold;
           margin-bottom: 15px;
-          color: #bb86fc;
+          color: #2371a5;  /* #bb86fc; */
           font-size: 1.2rem;
         }
         
