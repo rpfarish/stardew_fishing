@@ -201,8 +201,12 @@ const Interface = ({ selectedState }) => {
       >
         <div className="interface-content">
           <div className="interface">
-            <p className="starting-season">Starting Season: {curStartSeason}</p>
-            <p className="current-season">Current Season: {curSeason}</p>
+            <div className="season-info">
+              <p className="starting-season">
+                Starting Season: {curStartSeason}
+              </p>
+              <p className="current-season">Current Season: {curSeason}</p>
+            </div>
             <div className="fish-names">
               {Object.values(filteredFish).map((fish) =>
                 isSelectedMapState.get(fish.Name) ? (
