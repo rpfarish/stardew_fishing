@@ -151,9 +151,6 @@ const Interface = ({ selectedState }) => {
                 setCount((count - 1 + 4) % 4);
                 setCurSeason(allSeasons[newCount]);
                 setFilteredFish(allFilteredFishArr[newCount]);
-                // setCurStartSeason(allSeasons[startCount]);
-                // console.log(startCount);
-                // console.log(count);
               }}
             >
               Prev Season
@@ -167,9 +164,6 @@ const Interface = ({ selectedState }) => {
                 console.log(allSeasons[newCount]);
                 setCurSeason(allSeasons[newCount]);
                 setFilteredFish(allFilteredFishArr[newCount]);
-                // setCurStartSeason(allSeasons[startCount]);
-                // console.log(startCount);
-                // console.log(count);
               }}
             >
               Next Season
@@ -188,9 +182,6 @@ const Interface = ({ selectedState }) => {
 
                 setAllFilteredFishArr(newFilteredFish);
                 setFilteredFish(newFilteredFish[count]);
-
-                // console.log(startCount);
-                // console.log(count);
               }}
             >
               Set Starting Season
@@ -213,13 +204,8 @@ const Interface = ({ selectedState }) => {
       >
         <div className="interface-content">
           <div className="interface">
-            <p className="starting-season">
-              Starting Season: {startCount} {allSeasons[startCount]}{" "}
-              {curStartSeason}
-            </p>
-            <p className="current-season">
-              Current Season: {count} {allSeasons[count]} {curSeason}
-            </p>
+            <p className="starting-season">Starting Season: {curStartSeason}</p>
+            <p className="current-season">Current Season: {curSeason}</p>
             <div className="fish-names">
               {Object.values(filteredFish).map((fish) =>
                 isSelectedMapState.get(fish.Name) ? (
