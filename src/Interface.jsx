@@ -150,7 +150,7 @@ const Interface = ({ selectedState }) => {
                 const newCount = count > 0 ? count - 1 : 3;
                 setCount((count - 1 + 4) % 4);
                 setCurSeason(allSeasons[newCount]);
-                // setFilteredFish(allFilteredFishArr[newCount]);
+                setFilteredFish(allFilteredFishArr[newCount]);
                 // setCurStartSeason(allSeasons[startCount]);
                 // console.log(startCount);
                 // console.log(count);
@@ -166,7 +166,7 @@ const Interface = ({ selectedState }) => {
                 console.log("new current season");
                 console.log(allSeasons[newCount]);
                 setCurSeason(allSeasons[newCount]);
-                // setFilteredFish(allFilteredFishArr[newCount]);
+                setFilteredFish(allFilteredFishArr[newCount]);
                 // setCurStartSeason(allSeasons[startCount]);
                 // console.log(startCount);
                 // console.log(count);
@@ -180,16 +180,15 @@ const Interface = ({ selectedState }) => {
                 console.log("inside set season button");
                 setStartCount(count);
                 setCurStartSeason(allSeasons[count]);
-                // // {allSeasons[startCount]} {curStartSeason}
-                // console.log(curStartSeason);
-                // setAllFilteredFishArr(
-                //   filterFishBySeasons(
-                //     fishData,
-                //     allSeasons,
-                //     allSeasons[startCount]
-                //   )
-                // );
-                // setFilteredFish(allFilteredFishArr[startCount]);
+                const newFilteredFish = filterFishBySeasons(
+                  fishData,
+                  allSeasons,
+                  allSeasons[count]
+                );
+
+                setAllFilteredFishArr(newFilteredFish);
+                setFilteredFish(newFilteredFish[count]);
+
                 // console.log(startCount);
                 // console.log(count);
               }}
