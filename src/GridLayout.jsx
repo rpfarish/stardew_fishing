@@ -239,26 +239,22 @@ const GridLayout = ({ selectedState }) => {
               new Map(oldMap).set(fish, !oldMap.get(fish))
             );
           }}
-          // style={{
-          //   backgroundColor: isSelectedMapState.get(fish)
-          //     ? "#2371a5"
-          //     : "lightslategray",
-          // }}
         >
           <div className="inner-grid">
             <img
+              className={`fish-img ${
+                isSelectedMapState.get(fish) ? "unselected" : "selected"
+              }`}
               src={fishImages[fish.replace(" ", "")]}
               alt={{ fish }}
-              style={{ opacity: isSelectedMapState.get(fish) ? 1 : 0.3 }}
             />
             <p
-              className="fish-name"
-              style={{
-                color: isSelectedMapState.get(fish) ? "white" : "#f2f2f2",
-              }}
+              className={`fish-name ${
+                isSelectedMapState.get(fish) ? "unselected" : "selected"
+              }`}
             >
               {fish}
-            </p>{" "}
+            </p>
           </div>
         </div>
       ))}

@@ -1,4 +1,8 @@
 
+:root {
+  --main-background-dark:
+}
+
 #root {
   /* max-width: 1280px; */
   /* margin: 0 auto; */
@@ -169,6 +173,23 @@
 .fish-name {
   margin: 0;
   max-width: 150px;
+  cursor: default;
+}
+
+.fish-name.unselected {
+  color: white;
+}
+
+.fish-name.selected {
+  color: #f2f2f2;
+}
+
+
+.fish-img.unselected{
+  opacity: 1;
+}
+.fish-img.selected{
+  opacity: 0.3;
 }
 
  .wrapper {
