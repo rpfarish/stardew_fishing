@@ -147,8 +147,8 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
-                const newCount = count > 0 ? count - 1 : 3;
-                setCount((count - 1 + 4) % 4);
+                const newCount = (count - 1 + 4) % 4;
+                setCount(newCount);
                 setCurSeason(allSeasons[newCount]);
                 setFilteredFish(allFilteredFishArr[newCount]);
               }}
@@ -158,10 +158,8 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
-                const newCount = count < 3 ? count + 1 : 0;
-                setCount((count + 1) % 4);
-                console.log("new current season");
-                console.log(allSeasons[newCount]);
+                const newCount = (count + 1) % 4;
+                setCount(newCount);
                 setCurSeason(allSeasons[newCount]);
                 setFilteredFish(allFilteredFishArr[newCount]);
               }}
@@ -171,7 +169,6 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
-                console.log("inside set season button");
                 setStartCount(count);
                 setCurStartSeason(allSeasons[count]);
                 const newFilteredFish = filterFishBySeasons(
