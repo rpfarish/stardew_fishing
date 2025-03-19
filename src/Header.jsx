@@ -3,15 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="header-div">
-      <div
-        style={{
-          margin: " 20px 15px",
-          marginLeft: "4em",
-          fontSize: "0.8rem",
-          textAlign: "left",
-          width: "fit-content",
-        }}
-      >
+      <div className="inner-header-div">
         <h1 className="title">
           <a className="title-link" href="/">
             Stardew Fishing Route Planner

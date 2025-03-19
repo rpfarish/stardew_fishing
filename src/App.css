@@ -21,8 +21,14 @@
   background-color: #1c1e20;
   display:flex;
   border-bottom: 1px solid #444;
-  
-  
+}
+
+.inner-header-div {
+  margin: 20px 15px;
+  margin-left: 4em;
+  font-size: 0.8rem;
+  text-align: left;
+  width: fit-content;
 }
 
 .title {
