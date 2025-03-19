@@ -88,15 +88,15 @@ export default function filterFishByCircularSeasons(
   if (startIndex === -1) {
     throw new Error(`Start season "${startSeason}" not found in allSeasons.`);
   }
-  console.log("Start index:");
-  console.log(startIndex);
-  console.log("start season");
-  console.log(startSeason);
+  // console.log("Start index:");
+  // console.log(startIndex);
+  // console.log("start season");
+  // console.log(startSeason);
 
   for (let i = 0; i < allSeasons.length; i++) {
     let season = allSeasons[(startIndex + i) % allSeasons.length];
-    console.log("season");
-    console.log(season);
+    // console.log("season");
+    // console.log(season);
     let filteredFish = remainingFish.filter(
       (fish) =>
         fish.Season.includes(season) || fish.Season.includes("All Seasons")

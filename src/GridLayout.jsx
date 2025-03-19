@@ -233,8 +233,8 @@ const GridLayout = ({ selectedState }) => {
             !isSelectedMapState.get(fish) ? "grid-item-selected" : "grid-item"
           }
           onClick={() => {
-            console.log({ index });
-            console.log({ isSelectedMapState });
+            // console.log({ index });
+            // console.log({ isSelectedMapState });
             setIsSelectedMapState((oldMap) =>
               new Map(oldMap).set(fish, !oldMap.get(fish))
             );

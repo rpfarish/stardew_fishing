@@ -105,7 +105,7 @@ const Interface = ({ selectedState }) => {
     allFilteredFishArr[startCount]
   );
 
-  console.log(filterFishBySeasons(fishData, allSeasons, curStartSeason));
+  // console.log(filterFishBySeasons(fishData, allSeasons, curStartSeason));
   const toggleResults = () => {
     setShowResults(!showResults);
     setIsExpanded(!isExpanded);
@@ -148,9 +148,12 @@ const Interface = ({ selectedState }) => {
               className="season-button"
               onClick={() => {
                 const newCount = count > 0 ? count - 1 : 3;
-                setCount(newCount);
+                setCount((count - 1 + 4) % 4);
                 setCurSeason(allSeasons[newCount]);
-                setFilteredFish(allFilteredFishArr[newCount]);
+                // setFilteredFish(allFilteredFishArr[newCount]);
+                // setCurStartSeason(allSeasons[startCount]);
+                // console.log(startCount);
+                // console.log(count);
               }}
             >
               Prev Season
@@ -159,9 +162,14 @@ const Interface = ({ selectedState }) => {
               className="season-button"
               onClick={() => {
                 const newCount = count < 3 ? count + 1 : 0;
-                setCount(newCount);
+                setCount((count + 1) % 4);
+                console.log("new current season");
+                console.log(allSeasons[newCount]);
                 setCurSeason(allSeasons[newCount]);
-                setFilteredFish(allFilteredFishArr[newCount]);
+                // setFilteredFish(allFilteredFishArr[newCount]);
+                // setCurStartSeason(allSeasons[startCount]);
+                // console.log(startCount);
+                // console.log(count);
               }}
             >
               Next Season
@@ -171,13 +179,19 @@ const Interface = ({ selectedState }) => {
               onClick={() => {
                 console.log("inside set season button");
                 setStartCount(count);
-                setCurStartSeason(allSeasons[startCount]);
-                console.log(curStartSeason);
-                setAllFilteredFishArr(
-                  filterFishBySeasons(fishData, allSeasons, curStartSeason)
-                );
-
-                setFilteredFish(allFilteredFishArr[startCount]);
+                setCurStartSeason(allSeasons[count]);
+                // // {allSeasons[startCount]} {curStartSeason}
+                // console.log(curStartSeason);
+                // setAllFilteredFishArr(
+                //   filterFishBySeasons(
+                //     fishData,
+                //     allSeasons,
+                //     allSeasons[startCount]
+                //   )
+                // );
+                // setFilteredFish(allFilteredFishArr[startCount]);
+                // console.log(startCount);
+                // console.log(count);
               }}
             >
               Set Starting Season
@@ -200,8 +214,13 @@ const Interface = ({ selectedState }) => {
       >
         <div className="interface-content">
           <div className="interface">
-            <p className="starting-season">Starting Season: {curStartSeason}</p>
-            <p className="current-season">Current Season: {curSeason}</p>
+            <p className="starting-season">
+              Starting Season: {startCount} {allSeasons[startCount]}{" "}
+              {curStartSeason}
+            </p>
+            <p className="current-season">
+              Current Season: {count} {allSeasons[count]} {curSeason}
+            </p>
             <div className="fish-names">
               {Object.values(filteredFish).map((fish) =>
                 isSelectedMapState.get(fish.Name) ? (
