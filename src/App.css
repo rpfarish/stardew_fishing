@@ -1,20 +1,48 @@
 :root {
-  /* --main-background-dark: */
+
+  color-scheme: light dark;
+
+  /* Dark Mode */
   --grid-item-background-color-dark: #1A5D8A; 
+  --grid-item-hover-background-color-dark: hsl(204, 68%, 42%);
   --grid-item-greyed-out-background-color-dark: lightslategray; 
   
-  --grid-item-hover-background-color-dark: hsl(204, 68%, 42%);
   --toggle-button-background-color-dark: var(--grid-item-background-color-dark);
   --toggle-button-hover-background-color-dark: var(--grid-item-hover-background-color-dark); 
+
   --body-background-color-dark: #242424;
   --header-footer-background-color-dark: rgb(28, 30, 32);
   --background-color-dark: rgb(26, 26, 26);
   --border-color-dark: #444;
   --text-color-dark: #E6E8E6;
+  --greyed-out-text-color-dark: white;
+    
   --nav-button-background-color-dark: #444;
   --nav-button-hover-background-color-dark: #555;
+  
   --result-fish-background-dark: #2d2d2d;
   --result-fish-hover-background-dark: #3d3d3d;
+
+  /* Light Mode */
+  --grid-item-background-color-light: #c5e4f7;
+  --grid-item-hover-background-color-light: #e0f0fa;
+  --grid-item-greyed-out-background-color-light: #d4dce3;
+
+  --toggle-button-background-color-light: var(--grid-item-background-color-light);
+  --toggle-button-hover-background-color-light: var(--grid-item-hover-background-color-light);
+
+  --body-background-color-light: #f0f0f0;
+  --header-footer-background-color-light: #dbdbdb;
+  --background-color-light: #f5f5f5;
+  --border-color-light: #e0e0e0;
+  --text-color-light: #000000;
+  --greyed-out-text-color-light: #2b2b2b;
+
+  --nav-button-background-color-light: #d8d8d8;
+  --nav-button-hover-background-color-light: #eaeaea;
+
+  --result-fish-background-light: #e5e5e5;
+  --result-fish-hover-background-light: #f0f0f0;
 }
 
 #root {
@@ -32,7 +60,7 @@
 
 
 html, body {
-  background-color: var(--body-background-color-dark);
+  background-color: light-dark(var(--body-background-color-light), var(--body-background-color-dark));
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -45,9 +73,9 @@ html, body {
 
 
 .header-div {
-  background-color: var(--header-footer-background-color-dark);
+  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
   display:flex;
-  border-bottom: 1px solid var(--border-color-dark);
+  border-bottom: 1px solid light-dark(var(--border-color-light, var(--border-color-dark)));
 }
 
 .inner-header-div {
@@ -59,7 +87,7 @@ html, body {
 }
 
 .title {
-  background-color: var(--header-footer-background-color-dark);
+  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
   border-radius: 8px;
   margin: 0;
   margin-top: 0;
@@ -70,7 +98,7 @@ html, body {
 .title-link {
   text-decoration: none;
   background-color: inherit;
-  color: var(--text-color-dark);
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
 }
 
 .nav-bar {
@@ -108,17 +136,17 @@ html, body {
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   gap: 10px; /* Space between items */
   padding: 10px;
-  background-color: var(--background-color-dark); /*  #424242; */
+  background-color: light-dark(var(--background-color-light), var(--background-color-dark)); /*  #424242; */
   border-radius: 24px;
   align-content: center;
   /* min-height: 100vh; */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--border-color-dark);
+  border: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
 }
 
 .grid-item {
-  background-color: var(--grid-item-background-color-dark);
-  color: var(--text-color-dark);
+  background-color: light-dark(var(--grid-item-background-color-light), var(--grid-item-background-color-dark));
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
    /* rgb(248, 247, 247); */
   font-size: 20px;
   font-weight: bold;
@@ -152,12 +180,13 @@ html, body {
 
 
 .grid-item:hover {
-  background-color: var(--grid-item-hover-background-color-dark);
+  background-color: light-dark(var(--grid-item-hover-background-color-light), var(--grid-item-hover-background-color-dark));
 }
 
 .grid-item-selected {
-  background-color: var(--grid-item-greyed-out-background-color-dark);
-  color: var(--text-color-dark);
+  background-color: light-dark(var(--grid-item-greyed-out-background-color-light), var(--grid-item-greyed-out-background-color-dark));
+  color: light-dark(var(--greyed-out-text-color-light), var(--greyed-out-text-color-dark));
+
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -208,11 +237,12 @@ html, body {
 }
 
 .fish-name.unselected {
-  color: var(--text-color-dark);
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
 }
 
 .fish-name.selected {
-  color: var(--text-color-dark);
+  color: light-dark(var(--greyed-out-text-color-light), var(--greyed-out-text-color-dark));
+
 }
 
 
@@ -240,16 +270,16 @@ html, body {
 
 
 .button-container {
-  border: 1px solid var(--border-color-dark);
+  border: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
   padding-top: 2em;
 }
 
 
  .footer {
   margin-top:auto;
-  background-color: var(--header-footer-background-color-dark);
+  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
   height:100%; 
-  border-top: 1px solid var(--border-color-dark);
+  border-top: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
 }
 
 .footer-text{
@@ -259,7 +289,7 @@ html, body {
 }
 
 .copyright {
-  background-color: var(--header-footer-background-color-dark);
+  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
   width: 100%;
   text-align: center;
   padding: 28px 0;
@@ -269,13 +299,15 @@ html, body {
 
 .heart {
   color: #FF004f;
-  background-color: var(--header-footer-background-color-dark);
+  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
+
 }
 
 .footer-text{
   /* max-width: 33ch; */
   background-color: inherit;
-  color: var(--text-color-dark);
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
+
   padding:0 20px;
   text-wrap:balance;
 }
@@ -288,7 +320,7 @@ html, body {
           display: flex;
           justify-content: space-between;
           padding: 15px;
-          background-color: var(--background-color-dark);
+          background-color: light-dark(var(--background-color-light),var(--background-color-dark));
           border-radius: 8px;
           border-radius: 24px;
 
@@ -326,14 +358,14 @@ html, body {
           border: none;
           border-radius: 4px;
           cursor: pointer;
-          background-color: var(--nav-button-background-color-dark);
-          color: var(--text-color-dark);
+          background-color: light-dark(var(--nav-button-background-color-light), var(--nav-button-background-color-dark));
+          color: light-dark(var(--text-color-light), var(--text-color-dark));
           font-weight: bold;
           transition: background-color 0.3s ease, transform 0.2s ease;
         }
         
         .season-button:hover {
-          background-color: var(--nav-button-hover-background-color-dark);
+          background-color: light-dark(var(--nav-button-hover-background-color-light), var(--nav-button-hover-background-color-dark));
           transform: translateY(-2px);
         }
         
@@ -346,8 +378,8 @@ html, body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--toggle-button-background-color-dark); /* #6200ea; */
-  color: var(--text-color-dark);
+  background-color: light-dark(var(--toggle-button-background-color-light), var(--toggle-button-background-color-dark)); /* #6200ea; */
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
   font-weight: bold;
   min-width: 141px;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -356,7 +388,7 @@ html, body {
 }
 
 .toggle-button:hover {
-  background-color: var(--toggle-button-hover-background-color-dark); /* #7c4dff; */
+  background-color: light-dark(var(--toggle-button-hover-background-color-light), var(--toggle-button-hover-background-color-dark)); /* #7c4dff; */
   transform: translateY(-2px);
 }
         
@@ -411,13 +443,13 @@ html, body {
   height: fit-content;
   min-height: 200px;
 
-  border: 1px solid var(--border-color-dark);
+  border: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
   border-radius: 8px;
   border-radius: 24px;
 
   padding: 20px;
-  background-color: var(--background-color-dark);
-  color: var(--text-color-dark);
+  background-color: light-dark(var(--background-color-light), var(--background-color-dark));
+  color: light-dark(var(--text-color-light), var(--text-color-dark));
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
@@ -447,14 +479,14 @@ html, body {
 }
       
 .fish-item {
-  background-color: var(--result-fish-background-dark);
+  background-color: light-dark(var(--result-fish-background-light), var(--result-fish-background-dark));
   padding: 8px 12px;
   border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .fish-item:hover {
-  background-color: var(--result-fish-hover-background-dark);
+  background-color: light-dark(var(--result-fish-hover-background-light), var(--result-fish-hover-background-dark));
   transform: translateY(-2px);
 }
 
