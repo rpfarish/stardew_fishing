@@ -78,6 +78,27 @@ const stardewFish = [
   "White Algae",
 ];
 
+const allCCFish = new Set([
+  "Sunfish",
+  "Catfish",
+  "Shad",
+  "Tiger Trout",
+  "Largemouth Bass",
+  "Bullhead",
+  "Carp",
+  "Sturgeon",
+  "Sardine",
+  "Tuna",
+  "Red Snapper",
+  "Tilapia",
+  "Walleye",
+  "Bream",
+  "Eel",
+  "Woodskip",
+  "Sandfish",
+  "Pufferfish",
+  "Ghostfish",
+]);
 // todo add back in secret woods
 // and rain totem
 const Interface = ({ selectedState }) => {
@@ -124,9 +145,11 @@ const Interface = ({ selectedState }) => {
               className="season-button"
               onClick={() => {
                 const selectedMap = new Map();
+
                 for (let i = 0; i < stardewFish.length; i++) {
                   selectedMap.set(stardewFish[i], true);
                 }
+
                 setIsSelectedMapState(selectedMap);
               }}
             >
@@ -135,14 +158,51 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
-                const selectedMap = new Map();
-                for (let i = 0; i < stardewFish.length; i++) {
-                  selectedMap.set(stardewFish[i], false);
-                }
+                console.log(isSelectedMapState);
+                let selectedMap = new Map(
+                  stardewFish.map((fish) => [fish, false])
+                );
+
+                console.log("Before update:", selectedMap);
+                stardewFish.forEach((fish) => {
+                  selectedMap.set(fish, allCCFish.has(fish));
+                  console.log(fish, allCCFish.has(fish), selectedMap[fish]);
+                });
+                console.log("After update:", selectedMap);
+
+                console.log(selectedMap);
+                setIsSelectedMapState(selectedMap);
+              }}
+            >
+              Select All CC
+            </button>
+            <button
+              className="season-button"
+              onClick={() => {
+                const selectedMap = new Map(
+                  stardewFish.map((fish) => [fish, false])
+                );
                 setIsSelectedMapState(selectedMap);
               }}
             >
               Clear All
+            </button>
+            <button
+              className="season-button"
+              onClick={() => {
+                setStartCount(count);
+                setCurStartSeason(allSeasons[count]);
+                const newFilteredFish = filterFishBySeasons(
+                  fishData,
+                  allSeasons,
+                  allSeasons[count]
+                );
+
+                setAllFilteredFishArr(newFilteredFish);
+                setFilteredFish(newFilteredFish[count]);
+              }}
+            >
+              Set Starting Season
             </button>
             <button
               className="season-button"
@@ -165,23 +225,6 @@ const Interface = ({ selectedState }) => {
               }}
             >
               Next Season
-            </button>
-            <button
-              className="season-button"
-              onClick={() => {
-                setStartCount(count);
-                setCurStartSeason(allSeasons[count]);
-                const newFilteredFish = filterFishBySeasons(
-                  fishData,
-                  allSeasons,
-                  allSeasons[count]
-                );
-
-                setAllFilteredFishArr(newFilteredFish);
-                setFilteredFish(newFilteredFish[count]);
-              }}
-            >
-              Set Starting Season
             </button>
           </div>
           <div className="toggle-buttons">
