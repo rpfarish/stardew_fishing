@@ -75,7 +75,7 @@ html, body {
 .header-div {
   background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
   display:flex;
-  border-bottom: 1px solid light-dark(var(--border-color-light, var(--border-color-dark)));
+  border-bottom: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
 }
 
 .inner-header-div {
