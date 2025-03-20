@@ -1,6 +1,27 @@
 import React from "react";
-
+import { useState, useEffect } from "react";
 const Header = () => {
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useState(prefersDark);
+
+  /* window.matchMedia('(prefers-color-scheme: dark)').matches */
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+
+    setIsDark(mq.matches);
+
+    // This callback will fire if the perferred color scheme changes without a reload
+    mq.addEventListener("change", (evt) => setIsDark(evt.matches));
+  }, [isDark]);
+
+  const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
+  if (isDarkTheme) {
+    document.body.classList.add("gf-dark-theme");
+  } else {
+    document.body.classList.remove("gf-dark-theme");
+  }
+
   return (
     <div className="header-div">
       <div className="inner-header-div">
@@ -19,6 +40,11 @@ const Header = () => {
           //   setMenuSlideout("0");
         }}
       ></i> */}
+      {/* <button
+        onClick={() => {
+          setIsDark(!isDark);
+        }}
+      ></button> */}
     </div>
   );
 };

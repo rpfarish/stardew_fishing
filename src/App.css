@@ -45,6 +45,105 @@
   --result-fish-hover-background-light: #f0f0f0;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --grid-item-background-color: var(--grid-item-background-color-dark); 
+    --grid-item-hover-background-color: var(--grid-item-hover-background-color-dark);
+    --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-dark); 
+    
+    --toggle-button-background-color: var(--toggle-button-background-color-dark);
+    --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-dark); 
+
+    --body-background-color: var(--body-background-color-dark);
+    --header-footer-background-color: var(--header-footer-background-color-dark);
+    --background-color: var(--background-color-dark);
+    --border-color: var(--border-color-dark);
+    --text-color: var(--text-color-dark);
+    --greyed-out-text-color: var(--greyed-out-text-color-dark);
+      
+    --nav-button-background-color: var(--nav-button-background-color-dark);
+    --nav-button-hover-background-color: var(--nav-button-hover-background-color-dark);
+    
+    --result-fish-background: var(--result-fish-background-dark);
+    --result-fish-hover-background: var(--result-fish-hover-background-dark);
+
+  }
+}
+
+[color-scheme="dark"] {
+  color-scheme: dark;
+  --grid-item-background-color: var(--grid-item-background-color-dark); 
+  --grid-item-hover-background-color: var(--grid-item-hover-background-color-dark);
+  --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-dark); 
+  
+  --toggle-button-background-color: var(--toggle-button-background-color-dark);
+  --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-dark); 
+
+  --body-background-color: var(--body-background-color-dark);
+  --header-footer-background-color: var(--header-footer-background-color-dark);
+  --background-color: var(--background-color-dark);
+  --border-color: var(--border-color-dark);
+  --text-color: var(--text-color-dark);
+  --greyed-out-text-color: var(--greyed-out-text-color-dark);
+    
+  --nav-button-background-color: var(--nav-button-background-color-dark);
+  --nav-button-hover-background-color: var(--nav-button-hover-background-color-dark);
+  
+  --result-fish-background: var(--result-fish-background-dark);
+  --result-fish-hover-background: var(--result-fish-hover-background-dark);
+
+}
+
+@media (prefers-color-scheme: light) {
+  :root{
+    color-scheme: light;
+    --grid-item-background-color: var(--grid-item-background-color-light); 
+    --grid-item-hover-background-color: var(--grid-item-hover-background-color-light);
+    --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-light); 
+    
+    --toggle-button-background-color: var(--toggle-button-background-color-light);
+    --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-light); 
+
+    --body-background-color: var(--body-background-color-light);
+    --header-footer-background-color: var(--header-footer-background-color-light);
+    --background-color: var(--background-color-light);
+    --border-color: var(--border-color-light);
+    --text-color: var(--text-color-light);
+    --greyed-out-text-color: var(--greyed-out-text-color-light);
+      
+    --nav-button-background-color: var(--nav-button-background-color-light);
+    --nav-button-hover-background-color: var(--nav-button-hover-background-color-light);
+    
+    --result-fish-background: var(--result-fish-background-light);
+    --result-fish-hover-background: var(--result-fish-hover-background-light);
+  }
+}
+
+[color-scheme="light"] {
+  color-scheme: light;
+  --grid-item-background-color: var(--grid-item-background-color-light); 
+  --grid-item-hover-background-color: var(--grid-item-hover-background-color-light);
+  --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-light); 
+  
+  --toggle-button-background-color: var(--toggle-button-background-color-light);
+  --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-light); 
+
+  --body-background-color: var(--body-background-color-light);
+  --header-footer-background-color: var(--header-footer-background-color-light);
+  --background-color: var(--background-color-light);
+  --border-color: var(--border-color-light);
+  --text-color: var(--text-color-light);
+  --greyed-out-text-color: var(--greyed-out-text-color-light);
+    
+  --nav-button-background-color: var(--nav-button-background-color-light);
+  --nav-button-hover-background-color: var(--nav-button-hover-background-color-light);
+  
+  --result-fish-background: var(--result-fish-background-light);
+  --result-fish-hover-background: var(--result-fish-hover-background-light);
+}
+
+
 #root {
   /* max-width: 1280px; */
   /* margin: 0 auto; */
@@ -55,12 +154,12 @@
   min-height: 100vh;
   /* padding: 2rem; */
   text-align: center;
-  font-family: monospace
+  font-family: roboto-mono, monospace
 }
 
 
 html, body {
-  background-color: light-dark(var(--body-background-color-light), var(--body-background-color-dark));
+  background-color: var(--body-background-color);
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -73,9 +172,9 @@ html, body {
 
 
 .header-div {
-  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
+  background-color: var(--header-footer-background-color);
   display:flex;
-  border-bottom: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
+  border-bottom: 1px solid var(--border-color);
 }
 
 .inner-header-div {
@@ -87,7 +186,7 @@ html, body {
 }
 
 .title {
-  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
+  background-color: var(--header-footer-background-color);
   border-radius: 8px;
   margin: 0;
   margin-top: 0;
@@ -98,7 +197,7 @@ html, body {
 .title-link {
   text-decoration: none;
   background-color: inherit;
-  color: light-dark(var(--text-color-light), var(--text-color-dark));
+  color: var(--text-color);
 }
 
 .nav-bar {
@@ -136,17 +235,17 @@ html, body {
   grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
   gap: 10px; /* Space between items */
   padding: 10px;
-  background-color: light-dark(var(--background-color-light), var(--background-color-dark)); /*  #424242; */
+  background-color: var(--background-color); /*  #424242; */
   border-radius: 24px;
   align-content: center;
   /* min-height: 100vh; */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  border: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
+  border: 1px solid var(--border-color);
 }
 
 .grid-item {
-  background-color: light-dark(var(--grid-item-background-color-light), var(--grid-item-background-color-dark));
-  color: light-dark(var(--text-color-light), var(--text-color-dark));
+  background-color: var(--grid-item-background-color);
+  color: var(--text-color);
    /* rgb(248, 247, 247); */
   font-size: 20px;
   font-weight: bold;
@@ -180,13 +279,12 @@ html, body {
 
 
 .grid-item:hover {
-  background-color: light-dark(var(--grid-item-hover-background-color-light), var(--grid-item-hover-background-color-dark));
+  background-color: var(--grid-item-hover-background-color);
 }
 
 .grid-item-selected {
-  background-color: light-dark(var(--grid-item-greyed-out-background-color-light), var(--grid-item-greyed-out-background-color-dark));
-  color: light-dark(var(--greyed-out-text-color-light), var(--greyed-out-text-color-dark));
-
+  background-color: var(--grid-item-greyed-out-background-color);
+  color: var(--text-color);
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -237,12 +335,11 @@ html, body {
 }
 
 .fish-name.unselected {
-  color: light-dark(var(--text-color-light), var(--text-color-dark));
+  color: var(--text-color);
 }
 
 .fish-name.selected {
-  color: light-dark(var(--greyed-out-text-color-light), var(--greyed-out-text-color-dark));
-
+  color: var(--text-color);
 }
 
 
@@ -270,16 +367,16 @@ html, body {
 
 
 .button-container {
-  border: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
+  border: 1px solid var(--border-color);
   padding-top: 2em;
 }
 
 
  .footer {
   margin-top:auto;
-  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
+  background-color: var(--header-footer-background-color);
   height:100%; 
-  border-top: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-text{
@@ -289,7 +386,7 @@ html, body {
 }
 
 .copyright {
-  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
+  background-color: var(--header-footer-background-color);
   width: 100%;
   text-align: center;
   padding: 28px 0;
@@ -299,15 +396,13 @@ html, body {
 
 .heart {
   color: #FF004f;
-  background-color: light-dark(var(--header-footer-background-color-light), var(--header-footer-background-color-dark));
-
+  background-color: var(--header-footer-background-color);
 }
 
 .footer-text{
   /* max-width: 33ch; */
   background-color: inherit;
-  color: light-dark(var(--text-color-light), var(--text-color-dark));
-
+  color: var(--text-color);
   padding:0 20px;
   text-wrap:balance;
 }
@@ -320,7 +415,7 @@ html, body {
           display: flex;
           justify-content: space-between;
           padding: 15px;
-          background-color: light-dark(var(--background-color-light),var(--background-color-dark));
+          background-color: var(--background-color);
           border-radius: 8px;
           border-radius: 24px;
 
@@ -358,14 +453,14 @@ html, body {
           border: none;
           border-radius: 4px;
           cursor: pointer;
-          background-color: light-dark(var(--nav-button-background-color-light), var(--nav-button-background-color-dark));
-          color: light-dark(var(--text-color-light), var(--text-color-dark));
+          background-color: var(--nav-button-background-color);
+          color: var(--text-color);
           font-weight: bold;
           transition: background-color 0.3s ease, transform 0.2s ease;
         }
         
         .season-button:hover {
-          background-color: light-dark(var(--nav-button-hover-background-color-light), var(--nav-button-hover-background-color-dark));
+          background-color: var(--nav-button-hover-background-color);
           transform: translateY(-2px);
         }
         
@@ -378,8 +473,8 @@ html, body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: light-dark(var(--toggle-button-background-color-light), var(--toggle-button-background-color-dark)); /* #6200ea; */
-  color: light-dark(var(--text-color-light), var(--text-color-dark));
+  background-color: var(--toggle-button-background-color); /* #6200ea; */
+  color: var(--text-color);
   font-weight: bold;
   min-width: 141px;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -388,7 +483,7 @@ html, body {
 }
 
 .toggle-button:hover {
-  background-color: light-dark(var(--toggle-button-hover-background-color-light), var(--toggle-button-hover-background-color-dark)); /* #7c4dff; */
+  background-color: var(--toggle-button-hover-background-color); /* #7c4dff; */
   transform: translateY(-2px);
 }
         
@@ -413,7 +508,7 @@ html, body {
 }
 
 .outer-interface.expanded {
-  max-height: 3200px;
+  max-height: 3000px;
   opacity: 1;
 }
 
@@ -443,13 +538,13 @@ html, body {
   height: fit-content;
   min-height: 200px;
 
-  border: 1px solid light-dark(var(--border-color-light), var(--border-color-dark));
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   border-radius: 24px;
 
   padding: 20px;
-  background-color: light-dark(var(--background-color-light), var(--background-color-dark));
-  color: light-dark(var(--text-color-light), var(--text-color-dark));
+  background-color: var(--background-color);
+  color: var(--text-color);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
@@ -479,14 +574,14 @@ html, body {
 }
       
 .fish-item {
-  background-color: light-dark(var(--result-fish-background-light), var(--result-fish-background-dark));
+  background-color: var(--result-fish-background);
   padding: 8px 12px;
   border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .fish-item:hover {
-  background-color: light-dark(var(--result-fish-hover-background-light), var(--result-fish-hover-background-dark));
+  background-color: var(--result-fish-hover-background);
   transform: translateY(-2px);
 }
 

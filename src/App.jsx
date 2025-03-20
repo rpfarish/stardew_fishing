@@ -81,12 +81,10 @@ const stardewFish = [
 ];
 
 function App() {
-  const selectedMap = new Map();
-  for (let i = 0; i < stardewFish.length; i++) {
-    selectedMap.set(stardewFish[i], true);
-  }
+  const selectedMap = new Map(stardewFish.map((fish) => [fish, true]));
 
   const [isSelectedMapState, setIsSelectedMapState] = useState(selectedMap);
+
   return (
     <>
       <Header />
