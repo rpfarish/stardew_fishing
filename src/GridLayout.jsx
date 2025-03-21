@@ -225,40 +225,45 @@ const stardewFish = [
 const GridLayout = ({ selectedState }) => {
   const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   return (
-    <div className="grid-container">
-      {stardewFish.map((fish, index) => (
-        <div
-          key={index}
-          className={
-            !isSelectedMapState.get(fish) ? "grid-item-selected" : "grid-item"
-          }
-          onClick={() => {
-            // console.log({ index });
-            // console.log({ isSelectedMapState });
-            setIsSelectedMapState((oldMap) =>
-              new Map(oldMap).set(fish, !oldMap.get(fish))
-            );
-          }}
-        >
-          <div className="inner-grid">
-            <img
-              className={`fish-img ${
-                isSelectedMapState.get(fish) ? "unselected" : "selected"
-              }`}
-              src={fishImages[fish.replace(" ", "")]}
-              alt={{ fish }}
-            />
-            <p
-              className={`fish-name ${
-                isSelectedMapState.get(fish) ? "unselected" : "selected"
-              }`}
-            >
-              {fish}
-            </p>
+    <>
+      <div className="grid-info">
+        <h1>Remaining Fish</h1>
+      </div>
+      <div className="grid-container">
+        {stardewFish.map((fish, index) => (
+          <div
+            key={index}
+            className={
+              !isSelectedMapState.get(fish) ? "grid-item-selected" : "grid-item"
+            }
+            onClick={() => {
+              // console.log({ index });
+              // console.log({ isSelectedMapState });
+              setIsSelectedMapState((oldMap) =>
+                new Map(oldMap).set(fish, !oldMap.get(fish))
+              );
+            }}
+          >
+            <div className="inner-grid">
+              <img
+                className={`fish-img ${
+                  isSelectedMapState.get(fish) ? "unselected" : "selected"
+                }`}
+                src={fishImages[fish.replace(" ", "")]}
+                alt={{ fish }}
+              />
+              <p
+                className={`fish-name ${
+                  isSelectedMapState.get(fish) ? "unselected" : "selected"
+                }`}
+              >
+                {fish}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 

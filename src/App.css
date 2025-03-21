@@ -1,8 +1,13 @@
 :root {
 
   color-scheme: light dark;
+  transition: all 0.3s ease;
 
   /* Dark Mode */
+   
+  /* --light-theme-toggle: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%); */
+
+
   --grid-item-background-color-dark: #1A5D8A; 
   --grid-item-hover-background-color-dark: hsl(204, 68%, 42%);
   --grid-item-greyed-out-background-color-dark: lightslategray; 
@@ -48,6 +53,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+
+    /* --light-theme-toggle: filter: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%); */
+    --light-theme-toggle: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%);
+
+
     --grid-item-background-color: var(--grid-item-background-color-dark); 
     --grid-item-hover-background-color: var(--grid-item-hover-background-color-dark);
     --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-dark); 
@@ -73,6 +83,8 @@
 
 [color-scheme="dark"] {
   color-scheme: dark;
+  --light-theme-toggle: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%);
+
   --grid-item-background-color: var(--grid-item-background-color-dark); 
   --grid-item-hover-background-color: var(--grid-item-hover-background-color-dark);
   --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-dark); 
@@ -98,6 +110,9 @@
 @media (prefers-color-scheme: light) {
   :root{
     color-scheme: light;
+    
+    --light-theme-toggle: invert(0%) sepia(2%) saturate(0%) hue-rotate(137deg) brightness(101%) contrast(100%);
+
     --grid-item-background-color: var(--grid-item-background-color-light); 
     --grid-item-hover-background-color: var(--grid-item-hover-background-color-light);
     --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-light); 
@@ -122,6 +137,8 @@
 
 [color-scheme="light"] {
   color-scheme: light;
+  --light-theme-toggle: invert(0%) sepia(2%) saturate(0%) hue-rotate(137deg) brightness(101%) contrast(100%);
+
   --grid-item-background-color: var(--grid-item-background-color-light); 
   --grid-item-hover-background-color: var(--grid-item-hover-background-color-light);
   --grid-item-greyed-out-background-color: var(--grid-item-greyed-out-background-color-light); 
@@ -154,12 +171,13 @@
   min-height: 100vh;
   /* padding: 2rem; */
   text-align: center;
-  font-family: roboto-mono, monospace
+  font-family: roboto-mono, monospace;
+  background-color: var(--body-background-color);
+
 }
 
 
 html, body {
-  background-color: var(--body-background-color);
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -175,11 +193,12 @@ html, body {
   background-color: var(--header-footer-background-color);
   display:flex;
   border-bottom: 1px solid var(--border-color);
+  justify-content: space-around;
 }
 
 .inner-header-div {
-  margin: 20px 15px;
-  margin-left: 4em;
+  margin: 20px 0;
+  /* margin-left: 4em; */
   font-size: 0.8rem;
   text-align: left;
   width: fit-content;
@@ -198,6 +217,14 @@ html, body {
   text-decoration: none;
   background-color: inherit;
   color: var(--text-color);
+}
+
+
+.light-theme-toggle {
+  width:35px;
+  height: auto;
+  color: var(--text-color);
+  filter: var(--light-theme-toggle);
 }
 
 .nav-bar {
@@ -228,6 +255,10 @@ html, body {
   border-radius: 5px;
   flex: 1;
   min-width: fit-content;
+}
+
+.grid-info {
+  color: var(--text-color);
 }
 
 .grid-container {
