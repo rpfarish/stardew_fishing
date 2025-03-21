@@ -13,11 +13,11 @@ const Header = () => {
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
 
     // setIsDark(mq.matches);
-    console.log("inside useEffect", isDark);
-
+    // console.log("inside useEffect", isDark);
+    console.log("WE LIKE IT DARK:", isDark);
     // This callback will fire if the perferred color scheme changes without a reload
     mq.addEventListener("change", (evt) => {
-      setIsDark(!evt.matches);
+      setIsDark(evt.matches);
       console.log("current mq event value", evt.matches);
       if (!evt.matches) {
         root.setAttribute("color-scheme", "light");
