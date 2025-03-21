@@ -5,7 +5,27 @@ const Header = () => {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [isDark, setIsDark] = useState(prefersDark);
 
-  /* window.matchMedia('(prefers-color-scheme: dark)').matches */
+  console.log(
+    "is-dark",
+    localStorage.getItem("stardew-fish-route-planner-is-dark-theme")
+  );
+  console.log("brody", "" || localStorage.getItem("brody"));
+  console.log(null || "chicken");
+
+  // if (prefersDark) {
+  //   root.setAttribute("color-scheme", "dark");
+  // } else {
+  //   root.setAttribute("color-scheme", "light");
+  // }
+
+  // localStorage.setItem("myCat", "Tom");
+
+  // check if stored in local storage
+  // if null use system preference
+  // else use local storage
+
+  // each button press toggle value in local storage
+  // if system preference changes overwrite local storage
 
   // root.setAttribute("color-scheme", "dark");
 
@@ -29,7 +49,7 @@ const Header = () => {
 
   const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
   if (isDarkTheme) {
-    document.body.classList.add("stardew-fish-route-planner-dark-theme");
+    document.body.classList.add();
   } else {
     document.body.classList.remove("stardew-fish-route-planner-dark-theme");
   }
@@ -44,7 +64,6 @@ const Header = () => {
         </h1>
       </div>
       <div className="topnav"></div>
-
       {/* <i
         className="fa-solid fa-bars menu fa-2x"
         onClick={() => {

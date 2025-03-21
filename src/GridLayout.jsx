@@ -227,7 +227,7 @@ const GridLayout = ({ selectedState }) => {
   return (
     <>
       <div className="grid-info">
-        <h1>Remaining Fish</h1>
+        <h2>Remaining Fish</h2>
       </div>
       <div className="grid-container">
         {stardewFish.map((fish, index) => (
