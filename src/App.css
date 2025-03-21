@@ -227,6 +227,15 @@ html, body {
   filter: var(--light-theme-toggle);
 }
 
+
+.light-theme-toggle:hover {
+  background:fixed;
+  background-color: rgb(192, 192, 192); 
+  border-radius: 100%;
+  transition: background-color 150ms ease-in-out;
+
+}
+
 .nav-bar {
   padding: 1.2em 4em; 
 }
