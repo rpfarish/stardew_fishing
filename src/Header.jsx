@@ -12,10 +12,16 @@ const Header = () => {
   console.log("brody", "" || localStorage.getItem("brody"));
   console.log(null || "chicken");
 
-  // if (prefersDark) {
+  const curTheme =
+    localStorage.getItem("stardew-fish-route-planner-is-dark-theme") ||
+    prefersDark;
+
+  // if (curTheme) {
   //   root.setAttribute("color-scheme", "dark");
+  //   localStorage.setItem("stardew-fish-route-planner-is-dark-theme", true);
   // } else {
   //   root.setAttribute("color-scheme", "light");
+  //   localStorage.setItem("stardew-fish-route-planner-is-dark-theme", false);
   // }
 
   // localStorage.setItem("myCat", "Tom");
@@ -44,6 +50,10 @@ const Header = () => {
       } else {
         root.setAttribute("color-scheme", "dark");
       }
+      localStorage.setItem(
+        "stardew-fish-route-planner-is-dark-theme",
+        evt.matches
+      );
     });
   }, [isDark]);
 
@@ -51,7 +61,7 @@ const Header = () => {
   if (isDarkTheme) {
     document.body.classList.add();
   } else {
-    document.body.classList.remove("stardew-fish-route-planner-dark-theme");
+    document.body.classList.remove("stardew-fish-route-planner-is-dark-theme");
   }
 
   return (
@@ -84,6 +94,11 @@ const Header = () => {
             } else {
               root.setAttribute("color-scheme", "dark");
             }
+            localStorage.setItem(
+              "stardew-fish-route-planner-is-dark-theme",
+              !isDark
+            );
+
             setIsDark(!isDark);
             console.log("toggling inside onClick", !isDark);
           }}

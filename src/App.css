@@ -171,7 +171,10 @@
   min-height: 100vh;
   /* padding: 2rem; */
   text-align: center;
-  font-family: roboto-mono, monospace;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
   background-color: var(--body-background-color);
 
 }
@@ -252,7 +255,7 @@ html, body {
 
 .season-info {
   display: flex;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
   padding: 0 4em;
   flex-wrap: wrap;
 }
@@ -274,7 +277,7 @@ html, body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(120px, 100%), 1fr));
   gap: 10px; /* Space between items */
   padding: 10px;
   background-color: var(--background-color); /*  #424242; */
@@ -285,11 +288,13 @@ html, body {
   border: 1px solid var(--border-color);
 }
 
+
+
 .grid-item {
   background-color: var(--grid-item-background-color);
   color: var(--text-color);
    /* rgb(248, 247, 247); */
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -372,8 +377,9 @@ html, body {
 
 .fish-name {
   margin: 0;
-  max-width: 150px;
+  /* max-width: 150px; */
   cursor: default;
+  /* font-size: 0.8rem; */
 }
 
 .fish-name.unselected {
@@ -432,8 +438,9 @@ html, body {
   width: 100%;
   text-align: center;
   padding: 28px 0;
-  font-weight: 300;
-  letter-spacing: 1.1px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  /* letter-spacing: 1.1px; */
 }
 
 .heart {
@@ -610,7 +617,7 @@ html, body {
 
 .fish-names {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
   gap: 12px;
   padding: 15px 5px;
 }
@@ -651,24 +658,24 @@ html, body {
 
   .fish-names {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(125px, 100%), 1fr));
   }  
 
   .grid-container {
     
-    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(85px, 100%), 1fr));
   }
 
   .grid-item {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   .grid-item-selected {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   .grid-item-selected:hover {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
 }
@@ -678,12 +685,12 @@ html, body {
     padding: 0;
   }
 }
-/* 
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 390px) {
  
     
   .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(70px, 100%), 1fr));
   }
   
   .interface-content {
@@ -701,7 +708,8 @@ html, body {
 
   .fish-names {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(125px, 100%), 1fr));
+    
   }  
   
 
@@ -710,15 +718,15 @@ html, body {
   }
   
   .grid-item {
-    font-size:smaller;
+    font-size: 0.75rem;
   }
 
   .grid-item-selected {
-    font-size: smaller;
+    font-size: 0.75rem;
   }
   
   .grid-item-selected:hover {
-    font-size: smaller;
+    font-size: 0.75rem;
   }
   
-} */
+}
