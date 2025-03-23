@@ -1,68 +1,74 @@
 import React from "react";
-
 import { useState, useEffect } from "react";
+
 const Header = () => {
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [isDark, setIsDark] = useState(prefersDark);
+  const root = document.documentElement;
 
-  console.log(
-    "is-dark",
-    localStorage.getItem("stardew-fish-route-planner-is-dark-theme")
-  );
-  console.log("brody", "" || localStorage.getItem("brody"));
-  console.log(null || "chicken");
-
-  const curTheme =
-    localStorage.getItem("stardew-fish-route-planner-is-dark-theme") ||
-    prefersDark;
-
-  // if (curTheme) {
-  //   root.setAttribute("color-scheme", "dark");
-  //   localStorage.setItem("stardew-fish-route-planner-is-dark-theme", true);
-  // } else {
-  //   root.setAttribute("color-scheme", "light");
-  //   localStorage.setItem("stardew-fish-route-planner-is-dark-theme", false);
-  // }
-
-  // localStorage.setItem("myCat", "Tom");
-
-  // check if stored in local storage
-  // if null use system preference
-  // else use local storage
-
-  // each button press toggle value in local storage
-  // if system preference changes overwrite local storage
-
-  // root.setAttribute("color-scheme", "dark");
+  // Theme initialization - using useEffect to avoid hydration issues
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    // Get system preference
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
+    // Get saved preference from localStorage (if exists)
+    const savedTheme = localStorage.getItem(
+      "stardew-fish-route-planner-is-dark-theme"
+    );
+
+    // Determine initial theme
+    let initialIsDark;
+    if (savedTheme === null) {
+      // No saved preference, use system preference
+      initialIsDark = prefersDark;
+    } else {
+      // Use saved preference
+      initialIsDark = savedTheme === "true";
+    }
+
+    // Set initial state
+    setIsDark(initialIsDark);
+
+    // Apply theme
+    root.setAttribute("color-scheme", initialIsDark ? "dark" : "light");
+
+    // Add listener for system preference changes
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
-
-    // setIsDark(mq.matches);
-    // console.log("inside useEffect", isDark);
-    console.log("WE LIKE IT DARK:", isDark);
-    // This callback will fire if the perferred color scheme changes without a reload
-    mq.addEventListener("change", (evt) => {
-      setIsDark(evt.matches);
-      console.log("current mq event value", evt.matches);
-      if (!evt.matches) {
-        root.setAttribute("color-scheme", "light");
-      } else {
-        root.setAttribute("color-scheme", "dark");
+    const handleChange = (evt) => {
+      // Only update if there's no saved preference
+      if (
+        localStorage.getItem("stardew-fish-route-planner-is-dark-theme") ===
+        null
+      ) {
+        setIsDark(evt.matches);
+        root.setAttribute("color-scheme", evt.matches ? "dark" : "light");
       }
-      localStorage.setItem(
-        "stardew-fish-route-planner-is-dark-theme",
-        evt.matches
-      );
-    });
-  }, [isDark]);
+    };
 
-  const isDarkTheme = localStorage.getItem("isDarkTheme") === "true";
-  if (isDarkTheme) {
-    document.body.classList.add();
-  } else {
-    document.body.classList.remove("stardew-fish-route-planner-is-dark-theme");
-  }
+    mq.addEventListener("change", handleChange);
+
+    // Clean up listener
+    return () => {
+      mq.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  // Toggle theme function
+  const toggleTheme = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+
+    // Update DOM
+    root.setAttribute("color-scheme", newIsDark ? "dark" : "light");
+
+    // Save to localStorage
+    localStorage.setItem(
+      "stardew-fish-route-planner-is-dark-theme",
+      String(newIsDark)
+    );
+  };
 
   return (
     <div className="header-div">
@@ -74,34 +80,9 @@ const Header = () => {
         </h1>
       </div>
       <div className="topnav"></div>
-      {/* <i
-        className="fa-solid fa-bars menu fa-2x"
-        onClick={() => {
-          // console.log("pressing menu");
-          //   setMenuSlideout("0");
-        }}
-      ></i> */}
-      {/* <button
-        onClick={() => {
-          setIsDark(!isDark);
-        }}
-      ></button> */}
       <button style={{ background: "transparent", border: "none" }}>
         <svg
-          onClick={() => {
-            if (isDark) {
-              root.setAttribute("color-scheme", "light");
-            } else {
-              root.setAttribute("color-scheme", "dark");
-            }
-            localStorage.setItem(
-              "stardew-fish-route-planner-is-dark-theme",
-              !isDark
-            );
-
-            setIsDark(!isDark);
-            console.log("toggling inside onClick", !isDark);
-          }}
+          onClick={toggleTheme}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
           className="light-theme-toggle"
