@@ -2,6 +2,7 @@ import { useState } from "react";
 import fishData from "./fish.json";
 import filterFishBySeasons from "./filterFish";
 
+console.log(fishData["Name"]);
 const stardewFish = [
   "Albacore",
   "Anchovy",
@@ -125,6 +126,7 @@ const Interface = ({ selectedState }) => {
     allFilteredFishArr[startCount]
   );
 
+  // console.log(filterFishBySeasons(fishData, allSeasons, curStartSeason));
   const toggleResults = () => {
     setShowResults(!showResults);
     setIsExpanded(!isExpanded);
@@ -156,14 +158,19 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
+                console.log(isSelectedMapState);
                 let selectedMap = new Map(
                   stardewFish.map((fish) => [fish, false])
                 );
 
+                console.log("Before update:", selectedMap);
                 stardewFish.forEach((fish) => {
                   selectedMap.set(fish, allCCFish.has(fish));
+                  console.log(fish, allCCFish.has(fish), selectedMap[fish]);
                 });
+                console.log("After update:", selectedMap);
 
+                console.log(selectedMap);
                 setIsSelectedMapState(selectedMap);
               }}
             >
