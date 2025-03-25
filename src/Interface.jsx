@@ -265,7 +265,7 @@ const Interface = ({ selectedState }) => {
               {Object.values(filteredFish).map((fish) =>
                 isSelectedMapState.get(fish.Name) ? (
                   <div key={fish.Name} className="fish-item">
-                    {fish.Name}
+                    {fish.Name}{" "}
                     {fish.Weather !== "Any" &&
                       (fish.Weather === "Sun"
                         ? "☀️"
