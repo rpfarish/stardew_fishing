@@ -109,6 +109,7 @@ const Interface = ({ selectedState }) => {
   const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
   const [showResults, setShowResults] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   // function filterFishBySeasons(fishData, allSeasons, startSeason) {
 
@@ -228,6 +229,16 @@ const Interface = ({ selectedState }) => {
             </button>
           </div>
           <div className="toggle-buttons">
+            <button
+              className="toggle-info-button"
+              onClick={() => {
+                setShowInfo(!showInfo);
+              }}
+            >
+              <span className="button-text">
+                {showInfo ? "Hide Info" : "Show Info"}
+              </span>
+            </button>
             <button className="toggle-button" onClick={toggleResults}>
               <span className="button-text">
                 {showResults ? "Hide Results" : "Show Results"}
@@ -254,13 +265,19 @@ const Interface = ({ selectedState }) => {
               {Object.values(filteredFish).map((fish) =>
                 isSelectedMapState.get(fish.Name) ? (
                   <div key={fish.Name} className="fish-item">
-                    {fish.Name}{" "}
+                    <bold>{fish.Name} </bold>
                     {fish.Weather !== "Any" &&
                       (fish.Weather === "Sun"
                         ? "☀️"
                         : fish.Weather === "Rain"
                         ? "🌧"
                         : "")}
+                    <br />
+                    <div
+                      className={`fish-sub-info ${showInfo ? "show" : "hide"}`}
+                    >
+                      {fish.Location} <br /> {fish.Time}
+                    </div>
                   </div>
                 ) : null
               )}
