@@ -573,7 +573,7 @@ html, body {
 }
 
 .outer-interface.expanded {
-  max-height: 3000px;
+  max-height: 10000px;
   opacity: 1;
 }
 
