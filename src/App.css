@@ -196,12 +196,13 @@ html, body {
   background-color: var(--header-footer-background-color);
   display:flex;
   border-bottom: 1px solid var(--border-color);
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 0.75rem;
 }
 
 .inner-header-div {
   margin: 20px 0;
-  /* margin-left: 4em; */
+  padding-left: 4rem;
   font-size: 0.8rem;
   text-align: left;
   width: fit-content;
@@ -654,7 +655,13 @@ html, body {
 
 @media only screen and (max-width: 430px) {
  
-    
+  
+  
+.inner-header-div {
+  padding: 0 2rem; 
+}
+
+
   .wrapper {
     padding: 2em;
   }
@@ -664,6 +671,7 @@ html, body {
   }
 
   
+
   .outer-interface {
   padding: 0 2em;
   }
@@ -704,6 +712,11 @@ html, body {
 
 @media only screen and (max-width: 390px) {
  
+   
+.inner-header-div {
+  padding: 0 2rem; 
+}
+
     
   .grid-container {
     grid-template-columns: repeat(auto-fill, minmax(min(70px, 100%), 1fr));
