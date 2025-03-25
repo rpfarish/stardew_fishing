@@ -205,28 +205,31 @@ const Interface = ({ selectedState }) => {
             >
               Set Starting Season
             </button>
-            <button
-              className="season-button"
-              onClick={() => {
-                const newCount = (count - 1 + 4) % 4;
-                setCount(newCount);
-                setCurSeason(allSeasons[newCount]);
-                setFilteredFish(allFilteredFishArr[newCount]);
-              }}
-            >
-              Prev Season
-            </button>
-            <button
-              className="season-button"
-              onClick={() => {
-                const newCount = (count + 1) % 4;
-                setCount(newCount);
-                setCurSeason(allSeasons[newCount]);
-                setFilteredFish(allFilteredFishArr[newCount]);
-              }}
-            >
-              Next Season
-            </button>
+            {/* todo set gap for prev next season */}
+            <div className="season-selector">
+              <button
+                className="season-button"
+                onClick={() => {
+                  const newCount = (count - 1 + 4) % 4;
+                  setCount(newCount);
+                  setCurSeason(allSeasons[newCount]);
+                  setFilteredFish(allFilteredFishArr[newCount]);
+                }}
+              >
+                Prev Season
+              </button>
+              <button
+                className="season-button"
+                onClick={() => {
+                  const newCount = (count + 1) % 4;
+                  setCount(newCount);
+                  setCurSeason(allSeasons[newCount]);
+                  setFilteredFish(allFilteredFishArr[newCount]);
+                }}
+              >
+                Next Season
+              </button>
+            </div>
           </div>
           <div className="toggle-buttons">
             <button

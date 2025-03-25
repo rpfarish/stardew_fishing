@@ -254,6 +254,11 @@ html, body {
   margin-right: auto;
 }
 
+.season-selector {
+  display: flex; 
+  gap: inherit;
+}
+
 .season-info {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
