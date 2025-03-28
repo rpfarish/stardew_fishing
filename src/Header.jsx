@@ -87,6 +87,19 @@ const Header = () => {
         }}
       ></button> */}
       <button style={{ background: "transparent", border: "none" }}>
+        {/* <div style={{ height: "30px", width: "auto" }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
+          </svg>
+        </div> */}
         <svg
           onClick={() => {
             if (isDark) {
@@ -107,6 +120,7 @@ const Header = () => {
           className="light-theme-toggle"
         >
           {/* <!-- Center circle (sun body) --> */}
+
           <circle
             cx="256"
             cy="256"

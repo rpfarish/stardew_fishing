@@ -132,6 +132,24 @@ const Interface = ({ selectedState }) => {
     setShowResults(!showResults);
     setIsExpanded(!isExpanded);
   };
+  // what shape should the filtered sorted fish be
+  // how can I get it to sort cleanly
+
+  // the uncleaned data is really the problem
+  // how should a {
+  // 1: locations : [ocean, river],
+  // 2: locations : [river, lake],
+  // 3: locations : [ocean]
+  // }
+  // be sorted?
+
+  // observation
+  // all ocean fish are exclusive to ocean or ginger island
+  // => no ocean fish can be caught anywhere else in the valley
+
+  // that doesn't help with lake and river fish
+  // what if the ordering of the fish was ranked by the count of fish possible in one location
+  // for each season and location count the total number of fish that you can catch
 
   return (
     <>
