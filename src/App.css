@@ -1,5 +1,4 @@
 :root {
-
   color-scheme: light dark;
   /* transition: none;
   animation: none; */
@@ -16,11 +15,15 @@
   --toggle-button-background-color-dark: var(--grid-item-background-color-dark);
   --toggle-button-hover-background-color-dark: var(--grid-item-hover-background-color-dark); 
 
+  --text-color-dark: #e7e9e7;
+
+  --theme-toggle-button-background-color-dark: rgb(55, 56, 59);
+  --theme-toggle-button-color-dark: var(--text-color);
+
   --body-background-color-dark: #242424;
   --header-footer-background-color-dark: rgb(28, 30, 32);
   --background-color-dark: rgb(26, 26, 26);
   --border-color-dark: #444;
-  --text-color-dark: #e7e9e7;
   --greyed-out-text-color-dark: white;
     
   --nav-button-background-color-dark: #454545;
@@ -37,11 +40,16 @@
   --toggle-button-background-color-light: var(--grid-item-background-color-light);
   --toggle-button-hover-background-color-light: var(--grid-item-hover-background-color-light);
 
+  --text-color-light: #000000;
+
+  --theme-toggle-button-background-color-light: rgb(192, 192, 192);
+  --theme-toggle-button-color-light: var(--text-color);
+
+
   --body-background-color-light: hsl(0, 0%, 94%);
   --header-footer-background-color-light: #dbdbdb;
   --background-color-light: #f5f5f5;
   --border-color-light: #e0e0e0;
-  --text-color-light: #000000;
   --greyed-out-text-color-light: #2b2b2b;
 
   --nav-button-background-color-light: hsl(0, 0%, 85%);
@@ -66,11 +74,14 @@
     --toggle-button-background-color: var(--toggle-button-background-color-dark);
     --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-dark); 
 
+    --text-color: var(--text-color-dark);
+    --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-dark);
+    --theme-toggle-button-color: var(--text-color);
+
     --body-background-color: var(--body-background-color-dark);
     --header-footer-background-color: var(--header-footer-background-color-dark);
     --background-color: var(--background-color-dark);
     --border-color: var(--border-color-dark);
-    --text-color: var(--text-color-dark);
     --greyed-out-text-color: var(--greyed-out-text-color-dark);
       
     --nav-button-background-color: var(--nav-button-background-color-dark);
@@ -93,11 +104,15 @@
   --toggle-button-background-color: var(--toggle-button-background-color-dark);
   --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-dark); 
 
+  --text-color: var(--text-color-dark);
+  --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-dark);
+  --theme-toggle-button-color: var(--text-color);
+
+
   --body-background-color: var(--body-background-color-dark);
   --header-footer-background-color: var(--header-footer-background-color-dark);
   --background-color: var(--background-color-dark);
   --border-color: var(--border-color-dark);
-  --text-color: var(--text-color-dark);
   --greyed-out-text-color: var(--greyed-out-text-color-dark);
     
   --nav-button-background-color: var(--nav-button-background-color-dark);
@@ -121,11 +136,16 @@
     --toggle-button-background-color: var(--toggle-button-background-color-light);
     --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-light); 
 
+    --text-color: var(--text-color-light);
+
+    --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-light);
+    --theme-toggle-button-color: var(--text-color);
+
+
     --body-background-color: var(--body-background-color-light);
     --header-footer-background-color: var(--header-footer-background-color-light);
     --background-color: var(--background-color-light);
     --border-color: var(--border-color-light);
-    --text-color: var(--text-color-light);
     --greyed-out-text-color: var(--greyed-out-text-color-light);
       
     --nav-button-background-color: var(--nav-button-background-color-light);
@@ -147,11 +167,15 @@
   --toggle-button-background-color: var(--toggle-button-background-color-light);
   --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-light); 
 
+  --text-color: var(--text-color-light);
+
+  --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-light);
+  --theme-toggle-button-color: var(--text-color);
+
   --body-background-color: var(--body-background-color-light);
   --header-footer-background-color: var(--header-footer-background-color-light);
   --background-color: var(--background-color-light);
   --border-color: var(--border-color-light);
-  --text-color: var(--text-color-light);
   --greyed-out-text-color: var(--greyed-out-text-color-light);
     
   --nav-button-background-color: var(--nav-button-background-color-light);
@@ -228,7 +252,6 @@ html, body {
 .light-theme-toggle {
   width:35px;
   height: auto;
-  color: var(--text-color);
   filter: var(--light-theme-toggle);
 }
 
@@ -239,7 +262,7 @@ circle {
 
 .light-theme-toggle:hover {
   background:fixed;
-  background-color: rgb(192, 192, 192); 
+  background-color: var(--theme-toggle-button-background-color); 
   border-radius: 100%;
   transition: background-color 150ms ease-in-out;
   /* transform: translateY(-2px); */
