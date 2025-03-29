@@ -277,6 +277,14 @@ html, body {
   min-width: fit-content;
 }
 
+
+.no-fish {
+  text-align: center;
+  /* padding-top: .8rem; */
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
 .grid-info {
   color: var(--text-color);
 }
@@ -284,7 +292,7 @@ html, body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(110px, 100%), 1fr));
-  gap: 10px; /* Space between items */
+  gap: 8px; /* Space between items */
   padding: 10px;
   background-color: var(--background-color); /*  #424242; */
   border-radius: 24px;
@@ -314,6 +322,12 @@ html, body {
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   /* text-align: center; */
+  user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 
@@ -375,6 +389,12 @@ html, body {
   /* max-width: 150px; */
   cursor: default;
   /* font-size: 0.8rem; */
+  user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .fish-name.unselected {
@@ -383,6 +403,15 @@ html, body {
 
 .fish-name.selected {
   color: var(--text-color);
+}
+
+.fish-img {
+  user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 
@@ -401,6 +430,12 @@ html, body {
  .wrapper {
   padding: 2em 4em;
   padding-top: 0;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
  }
 
 
@@ -700,10 +735,22 @@ html, body {
   .grid-container {
     
     grid-template-columns: repeat(auto-fill, minmax(min(85px, 100%), 1fr));
+    user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 
   .grid-item {
     font-size: .9rem;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 
   .grid-item-selected {

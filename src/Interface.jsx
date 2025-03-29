@@ -77,6 +77,12 @@ const Interface = ({ selectedState }) => {
   // what if the ordering of the fish was ranked by the count of fish possible in one location
   // for each season and location count the total number of fish that you can catch
 
+  console.log("Filtered fish", filteredFish);
+
+  const displayableFish = filteredFish.filter((fish) =>
+    isSelectedMapState.get(fish.Name)
+  );
+
   return (
     <>
       <div className="nav-bar">
@@ -208,9 +214,11 @@ const Interface = ({ selectedState }) => {
               </p>
               <p className="current-season">Current Season: {curSeason}</p>
             </div>
-            <div className="fish-names">
-              {Object.values(filteredFish).map((fish) =>
-                isSelectedMapState.get(fish.Name) ? (
+            {displayableFish.length === 0 ? (
+              <p className="no-fish">No Fish</p>
+            ) : (
+              <div className="fish-names">
+                {displayableFish.map((fish) => (
                   <div key={fish.Name} className="fish-item">
                     {fish.Name}{" "}
                     {fish.Weather !== "Any" &&
@@ -226,9 +234,9 @@ const Interface = ({ selectedState }) => {
                       {fish.Location} <br /> {fish.Time}
                     </div>
                   </div>
-                ) : null
-              )}
-            </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
