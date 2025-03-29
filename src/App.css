@@ -81,7 +81,7 @@
   }
 }
 
-[color-scheme="dark"] {
+:root[color-scheme="dark"] {
   color-scheme: dark;
   --light-theme-toggle: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%);
 
@@ -135,7 +135,7 @@
   }
 }
 
-[color-scheme="light"] {
+:root[color-scheme="light"] {
   color-scheme: light;
   --light-theme-toggle: invert(0%) sepia(2%) saturate(0%) hue-rotate(137deg) brightness(101%) contrast(100%);
 
@@ -231,6 +231,10 @@ html, body {
   filter: var(--light-theme-toggle);
 }
 
+
+circle {
+  color:#000000;
+}
 
 .light-theme-toggle:hover {
   background:fixed;

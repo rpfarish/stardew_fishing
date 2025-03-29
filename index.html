@@ -8,6 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stardew Fishing</title>
+    <script>
+      (function () {
+        const THEME_STORAGE_KEY = "stardew-fish-route-planner-theme";
+        const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const theme = savedTheme || (prefersDark ? "dark" : "light");
+    
+        document.documentElement.setAttribute("color-scheme", theme);
+        document.documentElement.style.backgroundColor = theme === "dark" ? "#121212" : "#ffffff";
+      })();
+    </script>
+    
+    
   </head>
   <body>
     <div id="root"></div>
