@@ -1,4 +1,5 @@
 import React from "react";
+import "./Header.css";
 
 // Updated Header to receive theme props from App
 const Header = ({ currentTheme, toggleTheme }) => {
@@ -16,8 +17,9 @@ const Header = ({ currentTheme, toggleTheme }) => {
       </div>
       <div className="topnav"></div>
       <button
+        className="theme-toggle-button"
         onClick={toggleTheme}
-        style={{ background: "transparent", border: "none" }}
+        // style={{ background: "transparent", border: "none" }}
         aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
       >
         <svg

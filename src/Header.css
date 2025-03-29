@@ -1,0 +1,45 @@
+.theme-toggle-button {
+    height: 50px;
+    width: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    background: none;
+
+}
+.theme-toggle-button:hover {
+    background:fixed;
+    background-color: var(--I-love-my-mom); 
+    background-color: var(--theme-toggle-button-background-color); 
+    border-radius: 100%;
+    transition: background-color 150ms ease-in-out;
+    /* transform: translateY(-2px); */
+    /* transition: all 150ms ease-in-out; */
+}
+
+
+.light-theme-toggle {
+    width:35px;
+    height: auto;
+    color: var(--text-color);
+    filter: var(--light-theme-toggle);
+  }
+  
+  
+  circle {
+    color:#000000;
+  }
+  
+  .light-theme-toggle:hover {
+
+  
+  }
+  
+  svg.light-theme-toggle {
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: none;
+  }

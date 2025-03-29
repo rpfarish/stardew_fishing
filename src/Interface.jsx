@@ -2,7 +2,6 @@ import { useState } from "react";
 import fishData from "./fish.json";
 import filterFishBySeasons from "./filterFish";
 import stardewFish from "./stardewFish";
-// console.log(fishData["Name"]);
 
 const allCCFish = new Set([
   "Sunfish",

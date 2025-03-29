@@ -1,5 +1,4 @@
 :root {
-
   color-scheme: light dark;
   /* transition: none;
   animation: none; */
@@ -15,6 +14,8 @@
   
   --toggle-button-background-color-dark: var(--grid-item-background-color-dark);
   --toggle-button-hover-background-color-dark: var(--grid-item-hover-background-color-dark); 
+
+  --theme-toggle-button-background-color-dark: rgb(55, 56, 59);
 
   --body-background-color-dark: #242424;
   --header-footer-background-color-dark: rgb(28, 30, 32);
@@ -36,6 +37,9 @@
 
   --toggle-button-background-color-light: var(--grid-item-background-color-light);
   --toggle-button-hover-background-color-light: var(--grid-item-hover-background-color-light);
+
+  --theme-toggle-button-background-color-light: rgb(192, 192, 192);
+
 
   --body-background-color-light: hsl(0, 0%, 94%);
   --header-footer-background-color-light: #dbdbdb;
@@ -66,6 +70,8 @@
     --toggle-button-background-color: var(--toggle-button-background-color-dark);
     --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-dark); 
 
+    --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-dark);
+
     --body-background-color: var(--body-background-color-dark);
     --header-footer-background-color: var(--header-footer-background-color-dark);
     --background-color: var(--background-color-dark);
@@ -92,6 +98,9 @@
   
   --toggle-button-background-color: var(--toggle-button-background-color-dark);
   --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-dark); 
+
+  --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-dark);
+
 
   --body-background-color: var(--body-background-color-dark);
   --header-footer-background-color: var(--header-footer-background-color-dark);
@@ -121,6 +130,9 @@
     --toggle-button-background-color: var(--toggle-button-background-color-light);
     --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-light); 
 
+    --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-light);
+
+
     --body-background-color: var(--body-background-color-light);
     --header-footer-background-color: var(--header-footer-background-color-light);
     --background-color: var(--background-color-light);
@@ -146,6 +158,8 @@
   
   --toggle-button-background-color: var(--toggle-button-background-color-light);
   --toggle-button-hover-background-color: var(--toggle-button-hover-background-color-light); 
+
+  --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-light);
 
   --body-background-color: var(--body-background-color-light);
   --header-footer-background-color: var(--header-footer-background-color-light);
@@ -224,28 +238,6 @@ html, body {
   color: var(--text-color);
 }
 
-
-.light-theme-toggle {
-  width:35px;
-  height: auto;
-  color: var(--text-color);
-  filter: var(--light-theme-toggle);
-}
-
-
-circle {
-  color:#000000;
-}
-
-.light-theme-toggle:hover {
-  background:fixed;
-  background-color: rgb(192, 192, 192); 
-  border-radius: 100%;
-  transition: background-color 150ms ease-in-out;
-  /* transform: translateY(-2px); */
-  /* transition: all 150ms ease-in-out; */
-
-}
 
 .nav-bar {
   padding: 1.2em 4em; 
