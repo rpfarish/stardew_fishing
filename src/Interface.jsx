@@ -1,82 +1,8 @@
 import { useState } from "react";
 import fishData from "./fish.json";
 import filterFishBySeasons from "./filterFish";
-
-console.log(fishData["Name"]);
-const stardewFish = [
-  "Albacore",
-  "Anchovy",
-  "Angler",
-  "Blobfish",
-  "Bream",
-  "Bullhead",
-  "Carp",
-  "Catfish",
-  "Chub",
-  "Clam",
-  "Cockle",
-  "Crab",
-  "Crayfish",
-  "Crimsonfish",
-  "Dorado",
-  "Eel",
-  "Flounder",
-  "Ghostfish",
-  "Glacierfish",
-  "Goby",
-  "Halibut",
-  "Herring",
-  "Legend",
-  "Lingcod",
-  "Lionfish",
-  "Lobster",
-  "Mussel",
-  "Octopus",
-  "Oyster",
-  "Perch",
-  "Periwinkle",
-  "Pike",
-  "Pufferfish",
-  "Salmon",
-  "Sandfish",
-  "Sardine",
-  "Seaweed",
-  "Shad",
-  "Shrimp",
-  "Slimejack",
-  "Snail",
-  "Squid",
-  "Stingray",
-  "Stonefish",
-  "Sturgeon",
-  "Sunfish",
-  "Tilapia",
-  "Tuna",
-  "Walleye",
-  "Woodskip",
-  "Blue Discus",
-  "Cave Jelly",
-  "Green Algae",
-  "Ice Pip",
-  "Largemouth Bass",
-  "Lava Eel",
-  "Midnight Carp",
-  "Midnight Squid",
-  "Mutant Carp",
-  "Rainbow Trout",
-  "Red Mullet",
-  "Red Snapper",
-  "River Jelly",
-  "Scorpion Carp",
-  "Sea Cucumber",
-  "Sea Jelly",
-  "Smallmouth Bass",
-  "Spook Fish",
-  "Super Cucumber",
-  "Tiger Trout",
-  "Void Salmon",
-  "White Algae",
-];
+import stardewFish from "./stardewFish";
+// console.log(fishData["Name"]);
 
 const allCCFish = new Set([
   "Sunfish",
@@ -177,19 +103,19 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
-                console.log(isSelectedMapState);
+                // console.log(isSelectedMapState);
                 let selectedMap = new Map(
                   stardewFish.map((fish) => [fish, false])
                 );
 
-                console.log("Before update:", selectedMap);
+                // console.log("Before update:", selectedMap);
                 stardewFish.forEach((fish) => {
                   selectedMap.set(fish, allCCFish.has(fish));
-                  console.log(fish, allCCFish.has(fish), selectedMap[fish]);
+                  // console.log(fish, allCCFish.has(fish), selectedMap[fish]);
                 });
-                console.log("After update:", selectedMap);
+                // console.log("After update:", selectedMap);
 
-                console.log(selectedMap);
+                // console.log(selectedMap);
                 setIsSelectedMapState(selectedMap);
               }}
             >

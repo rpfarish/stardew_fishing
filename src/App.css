@@ -283,7 +283,7 @@ html, body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(120px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(110px, 100%), 1fr));
   gap: 10px; /* Space between items */
   padding: 10px;
   background-color: var(--background-color); /*  #424242; */
@@ -300,8 +300,8 @@ html, body {
   background-color: var(--grid-item-background-color);
   color: var(--text-color);
    /* rgb(248, 247, 247); */
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -324,7 +324,7 @@ html, body {
 .grid-item-selected {
   background-color: var(--grid-item-greyed-out-background-color);
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -390,7 +390,10 @@ html, body {
   opacity: 1;
 }
 .fish-img.selected{
-  opacity: 0.3;
+  /* opacity: 0.3; */
+  opacity: 0.5;
+  filter: brightness(0.3);
+
 }
 
 
