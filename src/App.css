@@ -468,7 +468,7 @@ circle {
 
 
 
-.toggle-buttons {
+.toggle-info-buttons {
   padding: 1em;
   display:flex;
   gap: 12px;
@@ -540,7 +540,7 @@ circle {
         }
         
 
-.toggle-button {
+.toggle-info-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -558,7 +558,7 @@ circle {
   max-height: fit-content;
 }
 
-.toggle-button:hover {
+.toggle-info-button:hover {
   background-color: var(--toggle-button-hover-background-color); /* #7c4dff; */
   transform: translateY(-2px);
 }
@@ -587,12 +587,12 @@ circle {
   transform: translateY(-2px);
 }
 
-.toggle-icon {
+.toggle-info-icon {
   display: inline-block;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.toggle-icon.rotate {
+.toggle-info-icon.rotate {
   transform: rotate(180deg);
 }
 

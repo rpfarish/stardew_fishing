@@ -1,0 +1,87 @@
+/* Theme Toggle Button Styles */
+.theme-toggle-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    transition: background-color 0.3s;
+  }
+  
+  .theme-toggle-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  [color-scheme="dark"] .theme-toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .toggle-icons-container {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    transition: opacity 0.3s, transform 0.4s;
+  }
+  
+  .sun-icon {
+    width: 30px;
+    height: 30px;
+    color: #f59e0b;
+  }
+  
+  .moon-icon {
+    width: 24px;
+    height: 24px;
+    color: #4b5563;
+  }
+  
+  [color-scheme="dark"] .moon-icon {
+    color: #e2e8f0;
+  }
+  
+  .toggle-icon.hidden {
+    opacity: 0;
+    transform: scale(0.5) rotate(-180deg);
+  }
+  
+  /* Circle overlay that slides */
+  .toggle-circle {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transform: translateX(-16px);
+    transition: transform 0.3s ease, background-color 0.3s;
+    z-index: -1;
+  }
+  
+  .toggle-circle.dark {
+    transform: translateX(16px);
+    background-color: #1f2937;
+  }
+  
+  /* Focus styles for accessibility */
+  .theme-toggle-button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  /* Remove outline on click but not on keyboard focus */
+  .theme-toggle-button:focus:not(:focus-visible) {
+    outline: none;
+  }

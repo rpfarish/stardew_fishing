@@ -181,7 +181,7 @@ const Interface = ({ selectedState }) => {
               </button>
             </div>
           </div>
-          <div className="toggle-buttons">
+          <div className="toggle-info-buttons">
             <button
               className="toggle-info-button"
               onClick={() => {
@@ -192,11 +192,13 @@ const Interface = ({ selectedState }) => {
                 {showInfo ? "Hide Info" : "Show Info"}
               </span>
             </button>
-            <button className="toggle-button" onClick={toggleResults}>
+            <button className="toggle-info-button" onClick={toggleResults}>
               <span className="button-text">
                 {showResults ? "Hide Results" : "Show Results"}
               </span>
-              <span className={`toggle-icon ${isExpanded ? "rotate" : ""}`}>
+              <span
+                className={`toggle-info-icon ${isExpanded ? "rotate" : ""}`}
+              >
                 ▼
               </span>
             </button>
