@@ -152,7 +152,7 @@ const fishImages = {
 const GridLayout = ({ selectedState }) => {
   const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   return (
-    <>
+    <div className="wrapper">
       <div className="grid-info">
         <h2>Remaining Fish</h2>
       </div>
@@ -191,7 +191,7 @@ const GridLayout = ({ selectedState }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
