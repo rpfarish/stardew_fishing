@@ -18,6 +18,7 @@
   --text-color-dark: #e7e9e7;
 
   --theme-toggle-button-background-color-dark: rgb(55, 56, 59);
+  --theme-toggle-button-background-color-active-dark: hsl(225, 4%, 30%);
   --theme-toggle-button-color-dark: var(--text-color);
 
   --body-background-color-dark: #242424;
@@ -42,7 +43,8 @@
 
   --text-color-light: #000000;
 
-  --theme-toggle-button-background-color-light: rgb(192, 192, 192);
+  --theme-toggle-button-background-color-light: hsl(0, 0%, 75%);
+  --theme-toggle-button-background-color-active-light: hsl(0, 0%, 65%);
   --theme-toggle-button-color-light: var(--text-color);
 
 
@@ -76,6 +78,8 @@
 
     --text-color: var(--text-color-dark);
     --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-dark);
+    --theme-toggle-button-background-color-active: var(--theme-toggle-button-background-color-active-dark);
+
     --theme-toggle-button-color: var(--text-color);
 
     --body-background-color: var(--body-background-color-dark);
@@ -106,6 +110,7 @@
 
   --text-color: var(--text-color-dark);
   --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-dark);
+  --theme-toggle-button-background-color-active: var(--theme-toggle-button-background-color-active-dark);
   --theme-toggle-button-color: var(--text-color);
 
 
@@ -139,6 +144,8 @@
     --text-color: var(--text-color-light);
 
     --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-light);
+    --theme-toggle-button-background-color-active: var(--theme-toggle-button-background-color-active-light);
+
     --theme-toggle-button-color: var(--text-color);
 
 
@@ -170,6 +177,7 @@
   --text-color: var(--text-color-light);
 
   --theme-toggle-button-background-color: var(--theme-toggle-button-background-color-light);
+  --theme-toggle-button-background-color-active: var(--theme-toggle-button-background-color-active-light);
   --theme-toggle-button-color: var(--text-color);
 
   --body-background-color: var(--body-background-color-light);
