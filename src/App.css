@@ -460,43 +460,6 @@ circle {
 }
 
 
- .footer {
-  margin-top:auto;
-  background-color: var(--header-footer-background-color);
-  height:100%; 
-  border-top: 1px solid var(--border-color);
-}
-
-.footer-text{
-  background-color: inherit;
-  margin:0;
-  padding:0;
-}
-
-.copyright {
-  background-color: var(--header-footer-background-color);
-  width: 100%;
-  text-align: center;
-  padding: 28px 0;
-  font-weight: 400;
-  font-size: 0.9rem;
-  /* letter-spacing: 1.1px; */
-}
-
-.heart {
-  color: #FF004f;
-  background-color: var(--header-footer-background-color);
-}
-
-.footer-text{
-  /* max-width: 33ch; */
-  background-color: inherit;
-  color: var(--text-color);
-  padding:0 20px;
-  text-wrap:balance;
-}
-
-
 
 
         /* Dark mode theme */
