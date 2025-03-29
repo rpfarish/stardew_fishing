@@ -12,7 +12,7 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
         {/* Updated Sun icon with better centering */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
+          viewBox="1 0 512 512"
           className={`toggle-icon sun-icon ${isDark ? "" : "hidden"}`}
         >
           {/* Center circle (sun body) */}
@@ -26,48 +26,48 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
           />
 
           {/* Vertical rays */}
-          <rect x="236" y="40" width="40" height="80" rx="20" ry="20" />
-          <rect x="236" y="392" width="40" height="80" rx="20" ry="20" />
+          <rect x="236" y="30" width="40" height="90" rx="15" ry="15" />
+          <rect x="236" y="392" width="40" height="90" rx="15" ry="15" />
 
           {/* Horizontal rays */}
-          <rect x="40" y="236" width="80" height="40" rx="20" ry="20" />
-          <rect x="392" y="236" width="80" height="40" rx="20" ry="20" />
+          <rect x="20" y="236" width="100" height="40" rx="15" ry="15" />
+          <rect x="392" y="236" width="100" height="40" rx="15" ry="15" />
 
           {/* Diagonal rays */}
           <rect
             x="236"
-            y="26"
+            y="16"
             width="40"
-            height="80"
-            rx="20"
-            ry="20"
+            height="90"
+            rx="15"
+            ry="15"
             transform="rotate(45 256 256)"
           />
           <rect
             x="236"
-            y="26"
+            y="16"
             width="40"
-            height="80"
-            rx="20"
-            ry="20"
+            height="90"
+            rx="15"
+            ry="15"
             transform="rotate(135 256 256)"
           />
           <rect
             x="236"
-            y="26"
+            y="16"
             width="40"
-            height="80"
-            rx="20"
-            ry="20"
+            height="90"
+            rx="15"
+            ry="15"
             transform="rotate(225 256 256)"
           />
           <rect
             x="236"
-            y="26"
+            y="16"
             width="40"
-            height="80"
-            rx="20"
-            ry="20"
+            height="90"
+            rx="15"
+            ry="15"
             transform="rotate(315 256 256)"
           />
         </svg>
@@ -75,7 +75,7 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
         {/* Updated Moon icon with better centering */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
+          viewBox="-0.5 0.5 24 24"
           className={`toggle-icon moon-icon ${isDark ? "hidden" : ""}`}
           fill="none"
           stroke="currentColor"
