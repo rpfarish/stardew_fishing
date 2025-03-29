@@ -39,7 +39,13 @@ function App() {
 
   // Toggle function to pass to Header
   const toggleTheme = () => {
+    document.documentElement.classList.add("theme-changing"); // Disable transitions
+
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-changing"); // Restore transitions
+    }, 100); // Adjust delay if needed
   };
 
   return (

@@ -1,7 +1,8 @@
 :root {
 
   color-scheme: light dark;
-  transition: all 0.3s ease;
+  /* transition: none;
+  animation: none; */
 
   /* Dark Mode */
    
@@ -827,4 +828,8 @@ circle {
     font-size: 0.75rem;
   }
   
+}
+
+:root.theme-changing * {
+  transition: none !important;
 }
