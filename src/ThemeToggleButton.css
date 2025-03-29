@@ -45,10 +45,18 @@
   
   .sun-icon {
     filter: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%);
+    margin-bottom: 1.5%;
+    margin-left: 1.5%;
+    width: 30px;
+    height: 30px;
   }
   
   .moon-icon {
     color: #4b5563;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 1.5%;
+    margin-left: 1.5%;
   }
   
   [color-scheme="dark"] .moon-icon {
