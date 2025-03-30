@@ -401,6 +401,13 @@ circle {
 }
 
 
+.grid-item-button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .fish-sub-info {
   font-size: 0.8rem;
   display: inline;
@@ -422,6 +429,8 @@ circle {
 
 .fish-name {
   margin: 0;
+  margin-top: 6px;
+  font-family: 'Roboto Mono';
   /* max-width: 150px; */
   cursor: default;
   /* font-size: 0.8rem; */
