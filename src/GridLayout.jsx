@@ -195,13 +195,13 @@ const GridLayout = ({ selectedState }) => {
                     src={fishImages[fish.replace(" ", "")]}
                     alt={`${fish} illustration`}
                   />
-                  <p
+                  <span
                     className={`fish-name ${
                       isSelectedMapState.get(fish) ? "unselected" : "selected"
                     }`}
                   >
                     {fish}
-                  </p>
+                  </span>
                 </div>
               </div>
             </button>

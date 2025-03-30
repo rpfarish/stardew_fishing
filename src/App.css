@@ -408,6 +408,13 @@ circle {
   padding: 0;
 }
 
+.inner-grid {
+  /* border: 1px red solid; */
+  height: 100%;
+  display: grid;
+  padding-top: 0.8rem;
+}
+
 .fish-sub-info {
   font-size: 0.8rem;
   display: inline;
@@ -451,6 +458,7 @@ circle {
 }
 
 .fish-img {
+  margin: 0 auto;
   user-select: none;
   -webkit-user-drag: none;
   user-select: none;
