@@ -10,7 +10,7 @@
 
   --grid-item-background-color-dark: #1A5D8A; 
   --grid-item-hover-background-color-dark: hsl(204, 68%, 42%);
-  --grid-item-greyed-out-background-color-dark: lightslategray; 
+  --grid-item-greyed-out-background-color-dark: #5f5f5f; 
   
   --toggle-button-background-color-dark: var(--grid-item-background-color-dark);
   --toggle-button-hover-background-color-dark: var(--grid-item-hover-background-color-dark); 

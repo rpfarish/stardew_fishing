@@ -154,48 +154,59 @@ const GridLayout = ({ selectedState }) => {
   return (
     <div className="wrapper" role="region" aria-label="Fish Collection Grid">
       <div className="grid-info">
-        <h2>Remaining Fish</h2>
+        <h2 id="grid-heading">Remaining Fish</h2>
       </div>
-      <div className="grid-container">
-        {stardewFish.map((fish, index) => (
-          <button
-            className="grid-item-button"
-            onClick={() => {
-              // console.log({ index });
-              // console.log({ isSelectedMapState });
-              setIsSelectedMapState((oldMap) =>
-                new Map(oldMap).set(fish, !oldMap.get(fish))
-              );
-            }}
-          >
-            <div
+      <div
+        className="grid-container"
+        role="grid"
+        aria-labelledby="grid-heading"
+      >
+        {stardewFish.map((fish, index) => {
+          const isSelected = !isSelectedMapState.get(fish);
+          const selectedText = isSelected ? "selected" : "not selected";
+
+          return (
+            <button
+              className="grid-item-button"
+              onClick={() => {
+                setIsSelectedMapState((oldMap) =>
+                  new Map(oldMap).set(fish, !oldMap.get(fish))
+                );
+              }}
               key={index}
-              className={
-                !isSelectedMapState.get(fish)
-                  ? "grid-item-selected"
-                  : "grid-item"
-              }
+              tabIndex={index}
+              role="gridcell"
+              aria-pressed={!isSelected}
+              aria-label={`${fish}, ${selectedText}`}
             >
-              <div className="inner-grid">
-                <img
-                  className={`fish-img ${
-                    isSelectedMapState.get(fish) ? "unselected" : "selected"
-                  }`}
-                  // fish images just takes a string of the image
-                  src={fishImages[fish.replace(" ", "")]}
-                  alt={{ fish }}
-                />
-                <p
-                  className={`fish-name ${
-                    isSelectedMapState.get(fish) ? "unselected" : "selected"
-                  }`}
-                >
-                  {fish}
-                </p>
+              <div
+                className={
+                  !isSelectedMapState.get(fish)
+                    ? "grid-item-selected"
+                    : "grid-item"
+                }
+              >
+                <div className="inner-grid">
+                  <img
+                    className={`fish-img ${
+                      isSelectedMapState.get(fish) ? "unselected" : "selected"
+                    }`}
+                    // fish images just takes a string of the image
+                    src={fishImages[fish.replace(" ", "")]}
+                    alt={`${fish} illustration`}
+                  />
+                  <p
+                    className={`fish-name ${
+                      isSelectedMapState.get(fish) ? "unselected" : "selected"
+                    }`}
+                  >
+                    {fish}
+                  </p>
+                </div>
               </div>
-            </div>
-          </button>
-        ))}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
