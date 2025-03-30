@@ -12,6 +12,7 @@
     position: relative;
     width: 52px;
     height: 52px;
+    min-width: 52px;
     transition: background-color 0.3s;
     margin: auto 0;
     overflow: hidden;
@@ -137,7 +138,7 @@
   
   /* Focus styles for accessibility */
   .theme-toggle-button:focus {
-    outline: 2px solid #3b82f6;
+    outline: 2px solid white;
     outline-offset: 2px;
   }
   
