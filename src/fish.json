@@ -1,13 +1,4 @@
 {
-    "Name": {
-        "Name": "Name",
-        "Location": "Location",
-        "Time": "Time",
-        "Season": [],
-        "Weather": "Weather",
-        "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
-    },
     "Pufferfish": {
         "Name": "Pufferfish",
         "Location": "Ocean, Ginger Island oceans",
@@ -529,7 +520,7 @@
     },
     "Lionfish": {
         "Name": "Lionfish",
-        "Location": "Ginger Island Ocean",
+        "Location": "Ginger Island oceans",
         "Time": "Anytime",
         "Season": [
             "All Seasons"
@@ -551,7 +542,7 @@
     },
     "Goby": {
         "Name": "Goby",
-        "Location": "Forest Waterfalls",
+        "Location": "Waterfall",
         "Time": "Anytime",
         "Season": [
             "All Seasons"
