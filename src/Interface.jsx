@@ -79,9 +79,50 @@ const Interface = ({ selectedState }) => {
 
   console.log("Filtered fish", filteredFish);
 
-  const displayableFish = filteredFish.filter((fish) =>
+  let displayableFish = filteredFish.filter((fish) =>
     isSelectedMapState.get(fish.Name)
   );
+
+  function sortFishByLocation(fishArray, sortedFishMetric) {
+    // Create a lookup map for fast index lookup
+    const locationRank = new Map(
+      sortedFishMetric.map((loc, index) => [loc, index])
+    );
+
+    // Filter out fish whose locations are not in the metric list
+    const filteredFish = fishArray.filter((fish) =>
+      sortedFishMetric.some((loc) => fish.Location.includes(loc))
+    );
+
+    // Sort by the first matching location in sortedFishMetric
+    return filteredFish.sort((a, b) => {
+      const aRank = sortedFishMetric.find((loc) => a.Location.includes(loc));
+      const bRank = sortedFishMetric.find((loc) => b.Location.includes(loc));
+      return (
+        (locationRank.get(aRank) || Infinity) -
+        (locationRank.get(bRank) || Infinity)
+      );
+    });
+  }
+
+  const sortedFishMetric = [
+    "Ocean",
+    "Forest",
+    "Mines",
+    "Town",
+    "Mountain",
+    "Ginger Island",
+    "Secret Woods",
+    "Witch's Swamp",
+    "Mutant Bug Lair",
+    "Forest Pond",
+    "Waterfall",
+  ];
+
+  displayableFish = sortFishByLocation(
+    displayableFish,
+    sortedFishMetric
+  ).reverse();
 
   return (
     <>
