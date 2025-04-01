@@ -80,7 +80,6 @@ const Interface = ({ selectedState }) => {
   console.log("Filtered fish", filteredFish);
 
   let displayableFish = filteredFish.filter((fish) =>
-  let displayableFish = filteredFish.filter((fish) =>
     isSelectedMapState.get(fish.Name)
   );
 
