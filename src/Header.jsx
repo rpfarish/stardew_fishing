@@ -13,7 +13,6 @@ const Header = ({ currentTheme, toggleTheme }) => {
           </a>
         </h1>
       </div>
-      <div className="topnav"></div>
 
       {/* Use the new custom toggle button */}
       <ThemeToggleButton isDark={isDark} toggleTheme={toggleTheme} />

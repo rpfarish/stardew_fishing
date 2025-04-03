@@ -219,7 +219,7 @@
   position: relative;
   display: inline-block;
   overflow: visible; /* Ensures the tooltip can extend beyond without causing scroll */
-  margin: auto 0;
+  /* margin: auto 0; */
 }
 
 
