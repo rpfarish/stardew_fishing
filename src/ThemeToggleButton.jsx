@@ -99,11 +99,10 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
         </div>
       </button>
 
-      {showTooltip && (
-        <div className="google-tooltip">
-          <p className="google-tooltip-p">{tooltipText}</p>
-        </div>
-      )}
+      {/* Using the show class instead of conditional rendering */}
+      <div className={`google-tooltip ${showTooltip ? "show" : ""}`}>
+        <p className="google-tooltip-p">{tooltipText}</p>
+      </div>
     </div>
   );
 };
