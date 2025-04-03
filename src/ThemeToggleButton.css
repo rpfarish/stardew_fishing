@@ -267,6 +267,7 @@
 
 /* Google-style Tooltip - using unique class name to avoid conflicts */
 .google-tooltip {
+  opacity: 0;
   position: absolute;
   bottom: -45px;
   left: 50%;
@@ -311,4 +312,5 @@
 /* Add this class when you want to show the tooltip */
 .google-tooltip.show {
   visibility: visible;
+  opacity: 1;
 }
