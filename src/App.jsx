@@ -42,7 +42,8 @@ function App() {
     document.documentElement.classList.add("theme-changing"); // Disable transitions
 
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-
+    document.documentElement.style.backgroundColor =
+      prevTheme === "dark" ? "#101218" : "#ffffff";
     setTimeout(() => {
       document.documentElement.classList.remove("theme-changing"); // Restore transitions
     }, 100); // Adjust delay if needed
