@@ -244,7 +244,7 @@
 .google-tooltip.show {
   visibility: visible;
   opacity: 1;
-  transform: translateX(-87%) scale(1);
+  transform: translateX(-85%) scale(1);
   /* Override the visibility delay when showing */
   transition: 
     opacity 125ms ease-in-out,
