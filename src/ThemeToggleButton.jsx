@@ -10,7 +10,10 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
   return (
     <div className="theme-toggle-wrapper">
       <button
-        onClick={toggleTheme}
+        onClick={() => {
+          toggleTheme();
+          setShowTooltip(false);
+        }}
         className="theme-toggle-button"
         aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
         onMouseEnter={() => setShowTooltip(true)}

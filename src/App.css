@@ -18,7 +18,7 @@
   --text-color-dark: #e7e9e7;
 
   --theme-toggle-button-background-color-dark: rgb(55, 56, 59);
-  --theme-toggle-button-background-color-active-dark: hsl(225, 4%, 30%);
+  --theme-toggle-button-background-color-active-dark: hsl(225, 4%, 40%);
   --theme-toggle-button-color-dark: var(--text-color);
 
   --body-background-color-dark: #242424;
@@ -28,7 +28,7 @@
   --greyed-out-text-color-dark: white;
     
   --nav-button-background-color-dark: #454545;
-  --nav-button-hover-background-color-dark: #545454;
+  --nav-button-hover-background-color-dark: hsl(0, 0%, 33%);
   
   --result-fish-background-dark: #2e2e2e;
   --result-fish-hover-background-dark: #3d3d3d;
@@ -43,13 +43,14 @@
 
   --text-color-light: #000000;
 
-  --theme-toggle-button-background-color-light: hsl(0, 0%, 75%);
-  --theme-toggle-button-background-color-active-light: hsl(0, 0%, 65%);
+  --theme-toggle-button-background-color-light: hsl(0, 0%, 55%);
+  --theme-toggle-button-background-color-active-light: hsl(225, 4%, 45%);
+  /* hsl(0, 0%, 70%); */
   --theme-toggle-button-color-light: var(--text-color);
 
 
   --body-background-color-light: hsl(0, 0%, 92%);
-  --header-footer-background-color-light: hsl(0, 0%, 84%);
+  --header-footer-background-color-light: hsl(0, 0%, 80%);
   --background-color-light: #f5f5f5;
   --border-color-light: #e0e0e0;
   --greyed-out-text-color-light: #2b2b2b;
