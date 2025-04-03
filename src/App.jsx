@@ -32,8 +32,7 @@ function App() {
 
     // Apply theme to root element
     document.documentElement.setAttribute("color-scheme", theme);
-    document.documentElement.style.backgroundColor =
-      theme === "dark" ? "#101218" : "#ffffff";
+
     // Save to localStorage
     localStorage.setItem(THEME_STORAGE_KEY, theme);
   }, [theme]);
@@ -43,7 +42,8 @@ function App() {
     document.documentElement.classList.add("theme-changing"); // Disable transitions
 
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-
+    document.documentElement.style.backgroundColor =
+      prevTheme === "dark" ? "#101218" : "#ffffff";
     setTimeout(() => {
       document.documentElement.classList.remove("theme-changing"); // Restore transitions
     }, 100); // Adjust delay if needed
