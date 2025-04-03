@@ -99,7 +99,11 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
         </div>
       </button>
 
-      {showTooltip && <div className="google-tooltip">{tooltipText}</div>}
+      {showTooltip && (
+        <div className="google-tooltip">
+          <p className="google-tooltip-p">{tooltipText}</p>
+        </div>
+      )}
     </div>
   );
 };
