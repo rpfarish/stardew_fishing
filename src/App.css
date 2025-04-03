@@ -48,8 +48,8 @@
   --theme-toggle-button-color-light: var(--text-color);
 
 
-  --body-background-color-light: hsl(0, 0%, 94%);
-  --header-footer-background-color-light: #dbdbdb;
+  --body-background-color-light: hsl(0, 0%, 92%);
+  --header-footer-background-color-light: hsl(0, 0%, 84%);
   --background-color-light: #f5f5f5;
   --border-color-light: #e0e0e0;
   --greyed-out-text-color-light: #2b2b2b;
@@ -59,6 +59,16 @@
 
   --result-fish-background-light: hsl(0, 0%, 85%);
   --result-fish-hover-background-light: hsl(0, 0%, 90%);
+
+
+  /* Tooltip */
+  --google-tooltip-background-dark: #3c4043;
+  --google-tooltip-background-light: hsl(0, 0%, 88%);
+  --google-tooltip-text-color-dark: var(--text-color-dark);
+  --google-tooltip-text-color-light: var(--text-color-light);
+
+
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -94,6 +104,8 @@
     --result-fish-background: var(--result-fish-background-dark);
     --result-fish-hover-background: var(--result-fish-hover-background-dark);
 
+    --google-tooltip-background: var(--google-tooltip-background-light);
+    --google-tooltip-text-color: var(--google-tooltip-text-color-light);
   }
 }
 
@@ -126,6 +138,10 @@
   --result-fish-background: var(--result-fish-background-dark);
   --result-fish-hover-background: var(--result-fish-hover-background-dark);
 
+  --google-tooltip-background: var(--google-tooltip-background-light);
+  --google-tooltip-text-color: var(--google-tooltip-text-color-light);
+
+  
 }
 
 @media (prefers-color-scheme: light) {
@@ -160,6 +176,11 @@
     
     --result-fish-background: var(--result-fish-background-light);
     --result-fish-hover-background: var(--result-fish-hover-background-light);
+
+    --google-tooltip-background: var(--google-tooltip-background-dark);
+    --google-tooltip-text-color: var(--google-tooltip-text-color-dark);
+
+
   }
 }
 
@@ -191,6 +212,10 @@
   
   --result-fish-background: var(--result-fish-background-light);
   --result-fish-hover-background: var(--result-fish-hover-background-light);
+
+  --google-tooltip-background: var(--google-tooltip-background-dark);
+  --google-tooltip-text-color: var(--google-tooltip-text-color-dark);
+
 }
 
 
