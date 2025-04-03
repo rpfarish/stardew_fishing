@@ -30,7 +30,7 @@
     height: 0;
     background: var(--theme-toggle-button-background-color-active); /* Light glowing effect */
     border-radius: 50%;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
     transform: scale(0);
     opacity: 0;
     z-index: 0;
@@ -149,10 +149,13 @@
 
   /* Tooltip */
 
+/* Add these styles to your existing ThemeToggleButton.css file */
+
 /* Wrapper to contain both button and tooltip */
 .theme-toggle-wrapper {
   position: relative;
   display: inline-block;
+  overflow: visible; /* Ensures the tooltip can extend beyond without causing scroll */
   margin: auto 0;
 }
 
@@ -161,7 +164,7 @@
   position: absolute;
   bottom: -45px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-80%);
   background-color: #3c4043;
   color: #e8eaed;
   padding: 8px 12px;
@@ -170,7 +173,8 @@
   white-space: nowrap;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  animation: tooltipFadeIn 150ms cubic-bezier(0, 0, 0.2, 1);
+  animation: tooltipFadeIn 200ms cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none; /* Prevents the tooltip from capturing mouse events */
 }
 
 .google-tooltip::after {
@@ -197,4 +201,15 @@
 :root[data-theme="light"] .google-tooltip {
   background-color: #3c4043;
   color: #e8eaed;
+}
+
+/* Prevent body scrollbar changes */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  margin-right: 0 !important; /* Prevent content shifting when scrollbar appears/disappears */
+}
+
+/* For containers that might be affected */
+.header-div {
+  overflow: visible;
 }

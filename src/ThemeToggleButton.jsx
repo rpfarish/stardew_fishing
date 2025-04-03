@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ThemeToggleButton.css";
 
 const ThemeToggleButton = ({ isDark, toggleTheme }) => {
@@ -99,7 +99,6 @@ const ThemeToggleButton = ({ isDark, toggleTheme }) => {
         </div>
       </button>
 
-      {/* Google-style tooltip */}
       {showTooltip && <div className="google-tooltip">{tooltipText}</div>}
     </div>
   );
