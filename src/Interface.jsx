@@ -2,7 +2,7 @@ import { useState } from "react";
 import fishData from "./fish.json";
 import filterFishBySeasons from "./filterFish";
 import stardewFish from "./stardewFish";
-// console.log(fishData["Name"]);
+import "./FishLocations.css";
 
 const allCCFish = new Set([
   "Sunfish",
@@ -25,8 +25,7 @@ const allCCFish = new Set([
   "Pufferfish",
   "Ghostfish",
 ]);
-// todo add back in secret woods
-// and rain totem
+
 const Interface = ({ selectedState }) => {
   const { isSelectedMapState, setIsSelectedMapState } = selectedState;
   const [count, setCount] = useState(0);
@@ -37,13 +36,6 @@ const Interface = ({ selectedState }) => {
   const [showResults, setShowResults] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
-  // function filterFishBySeasons(fishData, allSeasons, startSeason) {
-
-  // todo add set current season
-  // have next/prev seasons cycle through filtered fish
-
-  // need just all filtered fish
-  // and this current seasons fish based on starting season
 
   const [allFilteredFishArr, setAllFilteredFishArr] = useState(
     filterFishBySeasons(fishData, allSeasons, curStartSeason)
@@ -53,29 +45,10 @@ const Interface = ({ selectedState }) => {
     allFilteredFishArr[startCount]
   );
 
-  // console.log(filterFishBySeasons(fishData, allSeasons, curStartSeason));
   const toggleResults = () => {
     setShowResults(!showResults);
     setIsExpanded(!isExpanded);
   };
-  // what shape should the filtered sorted fish be
-  // how can I get it to sort cleanly
-
-  // the uncleaned data is really the problem
-  // how should a {
-  // 1: locations : [ocean, river],
-  // 2: locations : [river, lake],
-  // 3: locations : [ocean]
-  // }
-  // be sorted?
-
-  // observation
-  // all ocean fish are exclusive to ocean or ginger island
-  // => no ocean fish can be caught anywhere else in the valley
-
-  // that doesn't help with lake and river fish
-  // what if the ordering of the fish was ranked by the count of fish possible in one location
-  // for each season and location count the total number of fish that you can catch
 
   console.log("Filtered fish", filteredFish);
 
@@ -119,7 +92,67 @@ const Interface = ({ selectedState }) => {
     "Waterfall",
   ];
 
+  function sortFishAndCreateLocationMap(filteredFish) {
+    const locationRank = new Map();
+    const fishByLocation = new Map();
+
+    // Populate location ranks
+    sortedFishMetric.forEach((loc, index) => {
+      locationRank.set(loc, index);
+    });
+
+    // Create the location map while sorting
+    // First, find the primary location for each fish
+    filteredFish.forEach((fish) => {
+      const primaryLocation = sortedFishMetric.find((loc) =>
+        fish.Location.includes(loc)
+      );
+
+      if (primaryLocation) {
+        // Initialize array if this is the first fish for this location
+        if (!fishByLocation.has(primaryLocation)) {
+          fishByLocation.set(primaryLocation, []);
+        }
+
+        // Add the fish to the corresponding location array
+        fishByLocation.get(primaryLocation).push(fish);
+      }
+    });
+
+    // Sort the fish as in your original function
+    const sortedFish = filteredFish.sort((a, b) => {
+      const aRank = sortedFishMetric.find((loc) => a.Location.includes(loc));
+      const bRank = sortedFishMetric.find((loc) => b.Location.includes(loc));
+      return (
+        (locationRank.get(aRank) || Infinity) -
+        (locationRank.get(bRank) || Infinity)
+      );
+    });
+
+    return {
+      sortedFish,
+      fishByLocation,
+    };
+  }
+
+  const { sortedFish, fishByLocation } =
+    sortFishAndCreateLocationMap(filteredFish);
+
+  // Now you can access all fish from a specific location
+  const tableData = Array.from(fishByLocation, ([key, value]) => ({
+    Key: key,
+    Values: value.map((obj) => obj.Name).join(", "),
+  }));
+
+  console.table(tableData);
+  const tableData2 = Array.from(fishByLocation, ([key, value]) => ({
+    Key: key,
+    Values: value.map((obj) => obj.Name),
+  }));
+
+  console.table(tableData);
   displayableFish = sortFishByLocation(displayableFish, sortedFishMetric);
+  console.log("fish location", fishByLocation.get("Ocean"));
 
   return (
     <>
@@ -147,19 +180,14 @@ const Interface = ({ selectedState }) => {
             <button
               className="season-button"
               onClick={() => {
-                // console.log(isSelectedMapState);
                 let selectedMap = new Map(
                   stardewFish.map((fish) => [fish, false])
                 );
 
-                // console.log("Before update:", selectedMap);
                 stardewFish.forEach((fish) => {
                   selectedMap.set(fish, allCCFish.has(fish));
-                  // console.log(fish, allCCFish.has(fish), selectedMap[fish]);
                 });
-                // console.log("After update:", selectedMap);
 
-                // console.log(selectedMap);
                 setIsSelectedMapState(selectedMap);
               }}
             >
@@ -193,7 +221,6 @@ const Interface = ({ selectedState }) => {
             >
               Set Starting Season
             </button>
-            {/* todo set gap for prev next season */}
             <div className="season-selector">
               <button
                 className="season-button"
@@ -257,25 +284,33 @@ const Interface = ({ selectedState }) => {
             {displayableFish.length === 0 ? (
               <p className="no-fish">No Fish</p>
             ) : (
-              <div className="fish-names">
-                {displayableFish.map((fish) => (
-                  <div key={fish.Name} className="fish-item">
-                    {fish.Name}{" "}
-                    {fish.Weather !== "Any" &&
-                      (fish.Weather === "Sun"
-                        ? "☀️"
-                        : fish.Weather === "Rain"
-                        ? "🌧"
-                        : "")}
-                    <br />
-                    <div
-                      className={`fish-sub-info ${showInfo ? "show" : "hide"}`}
-                    >
-                      {fish.Location} <br /> {fish.Time}
-                    </div>
+              // Fixed syntax here - converted Map to array to iterate over
+              Array.from(fishByLocation).map(([key, values]) => (
+                <div className="location-wrapper" key={key}>
+                  <div className="location-title">{key}</div>
+                  <div className="fish-names">
+                    {values.map((fish, index) => (
+                      <div key={index} className="fish-item">
+                        {fish.Name}{" "}
+                        {fish.Weather !== "Any" &&
+                          (fish.Weather === "Sun"
+                            ? "☀️"
+                            : fish.Weather === "Rain"
+                            ? "🌧"
+                            : "")}
+                        <br />
+                        <div
+                          className={`fish-sub-info ${
+                            showInfo ? "show" : "hide"
+                          }`}
+                        >
+                          {fish.Location} <br /> {fish.Time}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))
             )}
           </div>
         </div>

@@ -1,0 +1,97 @@
+/* FishLocations.css */
+.fish-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .toggle-button {
+    background-color: var(--toggle-button-background-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toggle-button:hover {
+    background-color: var(--toggle-button-hover-background-color);
+  }
+  
+  .location-wrapper {
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--background-color);
+  }
+  
+  .location-title {
+    background-color: var(--header-footer-background-color);
+    padding: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+  }
+/*   
+  .fish-names {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+   */
+  /* .fish-item {
+    background-color: var(--result-fish-background);
+    margin: 6px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    width: calc(33.33% - 12px);
+    box-sizing: border-box;
+    color: var(--text-color);
+  } */
+  
+  /* .fish-item:hover {
+    background-color: var(--result-fish-hover-background);
+  }
+   */
+  @media (max-width: 768px) {
+    .fish-item {
+      width: calc(50% - 12px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fish-item {
+      width: 100%;
+    }
+  }
+/*   
+  .fish-sub-info {
+    font-size: 0.85em;
+    color: var(--greyed-out-text-color);
+    margin-top: 5px;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .fish-sub-info.hide {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .fish-sub-info.show {
+    max-height: 100px;
+    opacity: 1;
+  } */
+  
+  /* No fish message */
+  .no-fish {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+    font-style: italic;
+  }
