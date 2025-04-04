@@ -69,6 +69,11 @@
     background-color: var(--result-fish-hover-background);
   }
    */
+
+   .fish-item.align-top {
+    justify-content: flex-start; /* Override to align to top */
+  }
+
   @media (max-width: 768px) {
     .fish-item {
       width: calc(50% - 12px);

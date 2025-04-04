@@ -36,6 +36,8 @@ const Interface = ({ selectedState }) => {
   const [showResults, setShowResults] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const allFishIds = stardewFish;
+  const [fishInfoShown, setFishInfoShown] = useState(new Set());
 
   const [allFilteredFishArr, setAllFilteredFishArr] = useState(
     filterFishBySeasons(fishData, allSeasons, curStartSeason)
@@ -266,6 +268,11 @@ const Interface = ({ selectedState }) => {
               className="toggle-info-button"
               onClick={() => {
                 setShowInfo(!showInfo);
+                if (showInfo) {
+                  setFishInfoShown(new Set()); // Hide all
+                } else {
+                  setFishInfoShown(new Set(allFishIds)); // Show all
+                }
               }}
             >
               <span className="button-text">
@@ -305,7 +312,20 @@ const Interface = ({ selectedState }) => {
                     <div className="location-title">{key}</div>
                     <div className="fish-names">
                       {values.map((fish, index) => (
-                        <div key={index} className="fish-item">
+                        <div
+                          key={index}
+                          className="fish-item"
+                          onClick={() => {
+                            const newSet = new Set(fishInfoShown);
+                            const fishId = fish.Name; // You can also use index if names aren't unique
+                            if (newSet.has(fishId)) {
+                              newSet.delete(fishId);
+                            } else {
+                              newSet.add(fishId);
+                            }
+                            setFishInfoShown(newSet);
+                          }}
+                        >
                           {fish.Name}{" "}
                           {fish.Weather !== "Any" &&
                             (fish.Weather === "Sun"
@@ -316,7 +336,7 @@ const Interface = ({ selectedState }) => {
                           <br />
                           <div
                             className={`fish-sub-info ${
-                              showInfo ? "show" : "hide"
+                              fishInfoShown.has(fish.Name) ? "show" : "hide"
                             }`}
                           >
                             {fish.Location} <br /> {fish.Time}
