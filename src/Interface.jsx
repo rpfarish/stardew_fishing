@@ -56,27 +56,27 @@ const Interface = ({ selectedState }) => {
     isSelectedMapState.get(fish.Name)
   );
 
-  function sortFishByLocation(fishArray, sortedFishMetric) {
-    // Create a lookup map for fast index lookup
-    const locationRank = new Map(
-      sortedFishMetric.map((loc, index) => [loc, index])
-    );
+  // function sortFishByLocation(fishArray, sortedFishMetric) {
+  //   // Create a lookup map for fast index lookup
+  //   const locationRank = new Map(
+  //     sortedFishMetric.map((loc, index) => [loc, index])
+  //   );
 
-    // Filter out fish whose locations are not in the metric list
-    const filteredFish = fishArray.filter((fish) =>
-      sortedFishMetric.some((loc) => fish.Location.includes(loc))
-    );
+  //   // Filter out fish whose locations are not in the metric list
+  //   const filteredFish = fishArray.filter((fish) =>
+  //     sortedFishMetric.some((loc) => fish.Location.includes(loc))
+  //   );
 
-    // Sort by the first matching location in sortedFishMetric
-    return filteredFish.sort((a, b) => {
-      const aRank = sortedFishMetric.find((loc) => a.Location.includes(loc));
-      const bRank = sortedFishMetric.find((loc) => b.Location.includes(loc));
-      return (
-        (locationRank.get(aRank) || Infinity) -
-        (locationRank.get(bRank) || Infinity)
-      );
-    });
-  }
+  //   // Sort by the first matching location in sortedFishMetric
+  //   return filteredFish.sort((a, b) => {
+  //     const aRank = sortedFishMetric.find((loc) => a.Location.includes(loc));
+  //     const bRank = sortedFishMetric.find((loc) => b.Location.includes(loc));
+  //     return (
+  //       (locationRank.get(aRank) || Infinity) -
+  //       (locationRank.get(bRank) || Infinity)
+  //     );
+  //   });
+  // }
 
   const sortedFishMetric = [
     "Ocean",
@@ -92,7 +92,7 @@ const Interface = ({ selectedState }) => {
     "Waterfall",
   ];
 
-  function sortFishAndCreateLocationMap(filteredFish) {
+  function createLocationMap(filteredFish, sortedFishMetric) {
     const locationRank = new Map();
     const fishByLocation = new Map();
 
@@ -102,25 +102,24 @@ const Interface = ({ selectedState }) => {
     });
 
     // Create the location map while sorting
-    // First, find the primary location for each fish
     filteredFish.forEach((fish) => {
       const primaryLocation = sortedFishMetric.find((loc) =>
         fish.Location.includes(loc)
       );
 
       if (primaryLocation) {
-        // Initialize array if this is the first fish for this location
         if (!fishByLocation.has(primaryLocation)) {
           fishByLocation.set(primaryLocation, []);
         }
-
-        // Add the fish to the corresponding location array
         fishByLocation.get(primaryLocation).push(fish);
       }
     });
 
-    // Sort the fish as in your original function
-    const sortedFish = filteredFish.sort((a, b) => {
+    return { locationRank, fishByLocation };
+  }
+
+  function sortFish(filteredFish, sortedFishMetric, locationRank) {
+    return filteredFish.sort((a, b) => {
       const aRank = sortedFishMetric.find((loc) => a.Location.includes(loc));
       const bRank = sortedFishMetric.find((loc) => b.Location.includes(loc));
       return (
@@ -128,15 +127,25 @@ const Interface = ({ selectedState }) => {
         (locationRank.get(bRank) || Infinity)
       );
     });
-
-    return {
-      sortedFish,
-      fishByLocation,
-    };
   }
 
-  const { sortedFish, fishByLocation } =
-    sortFishAndCreateLocationMap(filteredFish);
+  // Usage:
+  function sortFishAndCreateLocationMap(filteredFish, sortedFishMetric) {
+    console.log("inside double function", sortedFishMetric); // Works fine
+    const { locationRank, fishByLocation } = createLocationMap(
+      filteredFish,
+      sortedFishMetric
+    );
+    const sortedFish = sortFish(filteredFish, sortedFishMetric, locationRank);
+
+    return { sortedFish, fishByLocation };
+  }
+
+  console.log("sortedFishMetric before function call:", displayableFish);
+  const { sortedFish, fishByLocation } = sortFishAndCreateLocationMap(
+    displayableFish,
+    sortedFishMetric
+  );
 
   // Now you can access all fish from a specific location
   const tableData = Array.from(fishByLocation, ([key, value]) => ({
@@ -145,14 +154,20 @@ const Interface = ({ selectedState }) => {
   }));
 
   console.table(tableData);
+
   const tableData2 = Array.from(fishByLocation, ([key, value]) => ({
     Key: key,
     Values: value.map((obj) => obj.Name),
   }));
 
-  console.table(tableData);
-  displayableFish = sortFishByLocation(displayableFish, sortedFishMetric);
-  console.log("fish location", fishByLocation.get("Ocean"));
+  console.table(tableData2); // Fixed: Now displays tableData2 instead of tableData again
+
+  // Check if "Ocean" exists in fishByLocation before logging
+  if (fishByLocation.has("Ocean")) {
+    console.log("fish location", fishByLocation.get("Ocean"));
+  } else {
+    console.log("No fish found in Ocean.");
+  }
 
   return (
     <>
