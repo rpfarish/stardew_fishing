@@ -299,33 +299,34 @@ const Interface = ({ selectedState }) => {
             {displayableFish.length === 0 ? (
               <p className="no-fish">No Fish</p>
             ) : (
-              // Fixed syntax here - converted Map to array to iterate over
-              Array.from(fishByLocation).map(([key, values]) => (
-                <div className="location-wrapper" key={key}>
-                  <div className="location-title">{key}</div>
-                  <div className="fish-names">
-                    {values.map((fish, index) => (
-                      <div key={index} className="fish-item">
-                        {fish.Name}{" "}
-                        {fish.Weather !== "Any" &&
-                          (fish.Weather === "Sun"
-                            ? "☀️"
-                            : fish.Weather === "Rain"
-                            ? "🌧"
-                            : "")}
-                        <br />
-                        <div
-                          className={`fish-sub-info ${
-                            showInfo ? "show" : "hide"
-                          }`}
-                        >
-                          {fish.Location} <br /> {fish.Time}
+              <div className="location-wrapper-wrapper">
+                {Array.from(fishByLocation).map(([key, values]) => (
+                  <div className="location-wrapper" key={key}>
+                    <div className="location-title">{key}</div>
+                    <div className="fish-names">
+                      {values.map((fish, index) => (
+                        <div key={index} className="fish-item">
+                          {fish.Name}{" "}
+                          {fish.Weather !== "Any" &&
+                            (fish.Weather === "Sun"
+                              ? "☀️"
+                              : fish.Weather === "Rain"
+                              ? "🌧"
+                              : "")}
+                          <br />
+                          <div
+                            className={`fish-sub-info ${
+                              showInfo ? "show" : "hide"
+                            }`}
+                          >
+                            {fish.Location} <br /> {fish.Time}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))
+                ))}
+              </div>
             )}
           </div>
         </div>

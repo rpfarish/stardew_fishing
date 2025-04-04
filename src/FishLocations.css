@@ -20,15 +20,23 @@
     background-color: var(--toggle-button-hover-background-color);
   }
   
-  .location-wrapper {
+
+  .location-wrapper-wrapper {
     margin-bottom: 30px;
-    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--background-color);
     display: grid;
-    grid-template-columns: repeat(minmax(100px, 1fr), 1fr);
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 3fr));
+  }
 
+  .location-wrapper {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--background-color);
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
   }
   
   .location-title {
@@ -106,7 +114,7 @@
   @supports (display: grid) {
     .fish-names {
       display: grid;
-      grid-template-columns: repeat(minmax(100px, 1fr), 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
       grid-auto-rows: 1fr;
       grid-gap: 12px;
       padding: 10px;

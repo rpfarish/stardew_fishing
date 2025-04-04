@@ -325,6 +325,7 @@ circle {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
   padding: 0 4em;
+  padding-bottom: 20px;
   flex-wrap: wrap;
 }
 
@@ -808,6 +809,8 @@ circle {
 @media only screen and (max-width: 600px) {
   .season-info{
     padding: 0;
+    padding-bottom: 20px;
+
   }
 }
 
