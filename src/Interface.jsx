@@ -111,16 +111,14 @@ const Interface = ({ selectedState }) => {
     "Waterfall",
   ];
 
-  function createLocationMap(filteredFish, sortedFishMetric) {
+  function createLocationMap(filteredFish) {
     const locationRank = new Map();
     const fishByLocation = new Map();
 
-    // Populate location ranks
     sortedFishMetric.forEach((loc, index) => {
       locationRank.set(loc, index);
     });
 
-    // Create the location map while sorting
     filteredFish.forEach((fish) => {
       const primaryLocation = sortedFishMetric.find((loc) =>
         fish.Location.includes(loc)
@@ -134,34 +132,10 @@ const Interface = ({ selectedState }) => {
       }
     });
 
-    return { locationRank, fishByLocation };
+    return fishByLocation;
   }
 
-  function sortFish(filteredFish, sortedFishMetric, locationRank) {
-    return filteredFish.sort((a, b) => {
-      const aRank = sortedFishMetric.find((loc) => a.Location.includes(loc));
-      const bRank = sortedFishMetric.find((loc) => b.Location.includes(loc));
-      return (
-        (locationRank.get(aRank) || Infinity) -
-        (locationRank.get(bRank) || Infinity)
-      );
-    });
-  }
-
-  function sortFishAndCreateLocationMap(filteredFish, sortedFishMetric) {
-    const { locationRank, fishByLocation } = createLocationMap(
-      filteredFish,
-      sortedFishMetric
-    );
-    const sortedFish = sortFish(filteredFish, sortedFishMetric, locationRank);
-
-    return { sortedFish, fishByLocation };
-  }
-
-  const { sortedFish, fishByLocation } = sortFishAndCreateLocationMap(
-    displayableFish,
-    sortedFishMetric
-  );
+  const fishByLocation = createLocationMap(displayableFish);
 
   return (
     <>
