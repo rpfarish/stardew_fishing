@@ -1,0 +1,22 @@
+const allCCFish = new Set([
+  "Sunfish",
+  "Catfish",
+  "Shad",
+  "Tiger Trout",
+  "Largemouth Bass",
+  "Bullhead",
+  "Carp",
+  "Sturgeon",
+  "Sardine",
+  "Tuna",
+  "Red Snapper",
+  "Tilapia",
+  "Walleye",
+  "Bream",
+  "Eel",
+  "Woodskip",
+  "Sandfish",
+  "Pufferfish",
+  "Ghostfish",
+]);
+export default allCCFish;
