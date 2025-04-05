@@ -47,43 +47,10 @@
     border-bottom: 1px solid var(--border-color);
     color: var(--text-color);
   }
-/*   
-  .fish-names {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
-   */
-  /* .fish-item {
-    background-color: var(--result-fish-background);
-    margin: 6px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    width: calc(33.33% - 12px);
-    box-sizing: border-box;
-    color: var(--text-color);
-  } */
-  
-  /* .fish-item:hover {
-    background-color: var(--result-fish-hover-background);
-  }
-   */
 
    .fish-item.align-top {
     justify-content: flex-start; /* Override to align to top */
-  }
 
-  @media (max-width: 768px) {
-    .fish-item {
-      width: calc(50% - 12px);
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .fish-item {
-      width: 100%;
-    }
   }
 
   /* No fish message */
@@ -98,6 +65,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+    
   }
   
   .fish-item {
@@ -116,18 +84,15 @@
   }
   
   /* Create equal height rows */
-  @supports (display: grid) {
-    .fish-names {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
-      grid-auto-rows: 1fr;
-      grid-gap: 12px;
-      padding: 10px;
-    }
-    
-    .fish-item {
-      width: 100%;
-      margin: 0;
-    }
-  }
-  
+.fish-names {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
+  grid-auto-rows: 1fr;
+  grid-gap: 12px;
+  padding: 10px;
+}
+
+.fish-item {
+  width: 100%;
+  margin: 0;
+}

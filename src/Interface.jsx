@@ -314,7 +314,9 @@ const Interface = ({ selectedState }) => {
                       {values.map((fish, index) => (
                         <div
                           key={index}
-                          className="fish-item"
+                          className={`fish-item ${
+                            fishInfoShown.has(fish.Name) ? "align-top" : ""
+                          }`}
                           onClick={() => {
                             const newSet = new Set(fishInfoShown);
                             const fishId = fish.Name; // You can also use index if names aren't unique

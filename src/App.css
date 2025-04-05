@@ -451,11 +451,14 @@ circle {
 .fish-sub-info.show {
   font-size: 0.8rem;
   display: inline;
+  justify-content: flex-start; /* Override to align to top */
 }
 
 .fish-sub-info.hide {
   font-size: 0.8rem;
   display: none;
+  justify-content: center; /* Override to align to top */
+  
 }
 
 
