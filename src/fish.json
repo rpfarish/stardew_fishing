@@ -8,7 +8,8 @@
         ],
         "Weather": "Sun",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Pufferfish"
     },
     "Anchovy": {
         "Name": "Anchovy",
@@ -20,7 +21,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Anchovy"
     },
     "Tuna": {
         "Name": "Tuna",
@@ -32,7 +34,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Tuna"
     },
     "Sardine": {
         "Name": "Sardine",
@@ -45,7 +48,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Sardine"
     },
     "Bream": {
         "Name": "Bream",
@@ -56,7 +60,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Bream"
     },
     "Largemouth Bass": {
         "Name": "Largemouth Bass",
@@ -67,7 +72,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "LargemouthBass"
     },
     "Smallmouth Bass": {
         "Name": "Smallmouth Bass",
@@ -79,7 +85,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "SmallmouthBass"
     },
     "Rainbow Trout": {
         "Name": "Rainbow Trout",
@@ -90,7 +97,8 @@
         ],
         "Weather": "Sun",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "RainbowTrout"
     },
     "Salmon": {
         "Name": "Salmon",
@@ -101,7 +109,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Salmon"
     },
     "Walleye": {
         "Name": "Walleye",
@@ -112,7 +121,8 @@
         ],
         "Weather": "Rain",
         "WinterWithTotem": true,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Walleye"
     },
     "Perch": {
         "Name": "Perch",
@@ -123,7 +133,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Perch"
     },
     "Carp": {
         "Name": "Carp",
@@ -134,7 +145,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Carp"
     },
     "Catfish": {
         "Name": "Catfish",
@@ -146,7 +158,8 @@
         ],
         "Weather": "Rain",
         "WinterWithTotem": true,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Catfish"
     },
     "Pike": {
         "Name": "Pike",
@@ -158,7 +171,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Pike"
     },
     "Sunfish": {
         "Name": "Sunfish",
@@ -170,7 +184,8 @@
         ],
         "Weather": "Sun",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Sunfish"
     },
     "Red Mullet": {
         "Name": "Red Mullet",
@@ -182,7 +197,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "RedMullet"
     },
     "Herring": {
         "Name": "Herring",
@@ -194,7 +210,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Herring"
     },
     "Eel": {
         "Name": "Eel",
@@ -206,7 +223,8 @@
         ],
         "Weather": "Rain",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Eel"
     },
     "Octopus": {
         "Name": "Octopus",
@@ -217,7 +235,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Octopus"
     },
     "Red Snapper": {
         "Name": "Red Snapper",
@@ -229,7 +248,8 @@
         ],
         "Weather": "Rain",
         "WinterWithTotem": true,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "RedSnapper"
     },
     "Squid": {
         "Name": "Squid",
@@ -240,7 +260,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Squid"
     },
     "Sea Cucumber": {
         "Name": "Sea Cucumber",
@@ -252,7 +273,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "SeaCucumber"
     },
     "Super Cucumber": {
         "Name": "Super Cucumber",
@@ -264,7 +286,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "SuperCucumber"
     },
     "Ghostfish": {
         "Name": "Ghostfish",
@@ -275,7 +298,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Ghostfish"
     },
     "Stonefish": {
         "Name": "Stonefish",
@@ -286,7 +310,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Stonefish"
     },
     "Ice Pip": {
         "Name": "Ice Pip",
@@ -297,7 +322,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "IcePip"
     },
     "Lava Eel": {
         "Name": "Lava Eel",
@@ -308,7 +334,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "LavaEel"
     },
     "Sandfish": {
         "Name": "Sandfish",
@@ -319,7 +346,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Sandfish"
     },
     "Scorpion Carp": {
         "Name": "Scorpion Carp",
@@ -330,7 +358,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "ScorpionCarp"
     },
     "Flounder": {
         "Name": "Flounder",
@@ -342,7 +371,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Flounder"
     },
     "Midnight Carp": {
         "Name": "Midnight Carp",
@@ -354,7 +384,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "MidnightCarp"
     },
     "Sturgeon": {
         "Name": "Sturgeon",
@@ -366,7 +397,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Sturgeon"
     },
     "Tiger Trout": {
         "Name": "Tiger Trout",
@@ -378,7 +410,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "TigerTrout"
     },
     "Bullhead": {
         "Name": "Bullhead",
@@ -389,7 +422,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Bullhead"
     },
     "Tilapia": {
         "Name": "Tilapia",
@@ -401,7 +435,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Tilapia"
     },
     "Chub": {
         "Name": "Chub",
@@ -412,7 +447,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Chub"
     },
     "Dorado": {
         "Name": "Dorado",
@@ -423,7 +459,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Dorado"
     },
     "Albacore": {
         "Name": "Albacore",
@@ -435,7 +472,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Albacore"
     },
     "Shad": {
         "Name": "Shad",
@@ -448,7 +486,8 @@
         ],
         "Weather": "Rain",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Shad"
     },
     "Lingcod": {
         "Name": "Lingcod",
@@ -459,7 +498,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Lingcod"
     },
     "Halibut": {
         "Name": "Halibut",
@@ -472,7 +512,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Halibut"
     },
     "Woodskip": {
         "Name": "Woodskip",
@@ -483,7 +524,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Woodskip"
     },
     "Void Salmon": {
         "Name": "Void Salmon",
@@ -494,7 +536,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "VoidSalmon"
     },
     "Slimejack": {
         "Name": "Slimejack",
@@ -505,7 +548,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Slimejack"
     },
     "Stingray": {
         "Name": "Stingray",
@@ -516,7 +560,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": true
+        "ExclusiveToGingerIsland": true,
+        "Image": "Stingray"
     },
     "Lionfish": {
         "Name": "Lionfish",
@@ -527,7 +572,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": true
+        "ExclusiveToGingerIsland": true,
+        "Image": "Lionfish"
     },
     "Blue Discus": {
         "Name": "Blue Discus",
@@ -538,7 +584,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": true
+        "ExclusiveToGingerIsland": true,
+        "Image": "BlueDiscus"
     },
     "Goby": {
         "Name": "Goby",
@@ -549,7 +596,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Goby"
     },
     "Midnight Squid": {
         "Name": "Midnight Squid",
@@ -560,7 +608,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "MidnightSquid"
     },
     "Spook Fish": {
         "Name": "Spook Fish",
@@ -571,7 +620,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "SpookFish"
     },
     "Blobfish": {
         "Name": "Blobfish",
@@ -582,7 +632,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Blobfish"
     },
     "Crimsonfish": {
         "Name": "Crimsonfish",
@@ -593,7 +644,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Crimsonfish"
     },
     "Angler": {
         "Name": "Angler",
@@ -604,7 +656,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Angler"
     },
     "Legend": {
         "Name": "Legend",
@@ -615,7 +668,8 @@
         ],
         "Weather": "Rain",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Legend"
     },
     "Glacierfish": {
         "Name": "Glacierfish",
@@ -626,7 +680,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Glacierfish"
     },
     "Mutant Carp": {
         "Name": "Mutant Carp",
@@ -637,7 +692,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "MutantCarp"
     },
     "Lobster": {
         "Name": "Lobster",
@@ -648,7 +704,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Lobster"
     },
     "Clam": {
         "Name": "Clam",
@@ -659,7 +716,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Clam"
     },
     "Crayfish": {
         "Name": "Crayfish",
@@ -670,7 +728,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Crayfish"
     },
     "Crab": {
         "Name": "Crab",
@@ -681,7 +740,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Crab"
     },
     "Cockle": {
         "Name": "Cockle",
@@ -692,7 +752,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Cockle"
     },
     "Mussel": {
         "Name": "Mussel",
@@ -703,7 +764,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Mussel"
     },
     "Shrimp": {
         "Name": "Shrimp",
@@ -714,7 +776,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Shrimp"
     },
     "Snail": {
         "Name": "Snail",
@@ -725,7 +788,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Snail"
     },
     "Periwinkle": {
         "Name": "Periwinkle",
@@ -736,7 +800,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Periwinkle"
     },
     "Oyster": {
         "Name": "Oyster",
@@ -747,7 +812,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Oyster"
     },
     "Seaweed": {
         "Name": "Seaweed",
@@ -758,7 +824,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "Seaweed"
     },
     "Green Algae": {
         "Name": "Green Algae",
@@ -769,7 +836,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "GreenAlgae"
     },
     "White Algae": {
         "Name": "White Algae",
@@ -780,7 +848,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "WhiteAlgae"
     },
     "Sea Jelly": {
         "Name": "Sea Jelly",
@@ -791,7 +860,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "SeaJelly"
     },
     "River Jelly": {
         "Name": "River Jelly",
@@ -802,7 +872,8 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "RiverJelly"
     },
     "Cave Jelly": {
         "Name": "Cave Jelly",
@@ -813,6 +884,7 @@
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
-        "ExclusiveToGingerIsland": false
+        "ExclusiveToGingerIsland": false,
+        "Image": "CaveJelly"
     }
 }

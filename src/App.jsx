@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./Header";
 import { useState, useEffect } from "react";
-import GridLayout from "./GridLayout";
+import RemainingFish from "./RemainingFish";
 import Footer from "./Footer";
 import Interface from "./Interface";
 import stardewFish from "./stardewFish";
@@ -55,7 +55,7 @@ function App() {
       <Interface
         selectedState={{ isSelectedMapState, setIsSelectedMapState }}
       />
-      <GridLayout
+      <RemainingFish
         selectedState={{ isSelectedMapState, setIsSelectedMapState }}
       />
       <Footer />
