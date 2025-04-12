@@ -423,6 +423,7 @@ circle {
   border-radius: 24px;
 
   padding: 20px;
+  padding-top: 0;
   background-color: var(--background-color);
   color: var(--text-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);

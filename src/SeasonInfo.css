@@ -2,7 +2,7 @@
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
   padding: 0 4em;
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -15,17 +15,16 @@
   flex: 1;
   max-width: fit-content;
   min-width: 16.6rem;
+  padding-top: 2rem;
 }
 
 .starting-season {
-  padding-top: 1em;
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
   border-bottom: 1px solid var(--border-color);
 }
 .current-season {
-  padding-top: 1em;
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
@@ -34,11 +33,4 @@
 
 .season-value {
   font-weight: 400;
-}
-
-@media only screen and (max-width: 600px) {
-  .season-info {
-    padding: 0;
-    padding-bottom: 20px;
-  }
 }
