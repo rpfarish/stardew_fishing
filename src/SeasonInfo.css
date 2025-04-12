@@ -8,13 +8,11 @@
 }
 
 .season-info p {
-  min-width: max-content;
+  max-width: fit-content;
   margin: 0;
   text-align: center;
   padding: 12px;
   flex: 1;
-  max-width: fit-content;
-  min-width: 16.6rem;
   padding-top: 2rem;
 }
 
