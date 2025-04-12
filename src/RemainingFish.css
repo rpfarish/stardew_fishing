@@ -1,3 +1,7 @@
+/* * {
+  box-shadow: none !important;
+} */
+
 .remaining-fish-header {
   color: var(--text-color);
 }
@@ -23,7 +27,6 @@
 .remaining-fish-item {
   background-color: var(--remaining-fish-item-background-color);
   color: var(--text-color);
-  /* rgb(248, 247, 247); */
   font-size: 0.9rem;
   font-weight: 500;
   display: flex;
@@ -35,9 +38,10 @@
   height: 100%;
   box-sizing: border-box;
 
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* text-align: center; */
   user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -46,37 +50,19 @@
   -ms-user-select: none;
 }
 
-.remaining-fish-item:hover {
+.remaining-fish-item.uncaught:hover {
   background-color: var(--remaining-fish-item-hover-background-color);
-}
-
-.remaining-fish-item-selected {
-  background-color: var(--remaining-fish-item-greyed-out-background-color);
-  color: var(--text-color);
-  font-size: 0.9rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.remaining-fish-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.remaining-fish-item-selected:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.remaining-fish-item.caught {
+  background-color: var(--remaining-fish-item-greyed-out-background-color);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); */
 }
 
 .remaining-fish-item-button {
+  min-height: 7.8rem;
   background: none;
   border: none;
   margin: 0;
@@ -91,26 +77,17 @@
 }
 
 .remaining-fish-name {
+  color: var(--text-color);
   margin: 0;
   margin-top: 6px;
   font-family: "Roboto Mono";
-  /* max-width: 150px; */
   cursor: default;
-  /* font-size: 0.8rem; */
   user-select: none;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-
-.remaining-fish-name.unselected {
-  color: var(--text-color);
-}
-
-.remaining-fish-name.selected {
-  color: var(--text-color);
 }
 
 .remaining-fish-image {
@@ -123,11 +100,11 @@
   -ms-user-select: none;
 }
 
-.remaining-fish-image.unselected {
+.remaining-fish-image.uncaught {
   opacity: 1;
 }
 
-.remaining-fish-image.selected {
+.remaining-fish-image.caught {
   opacity: 0.5;
   filter: brightness(0.3);
 }
@@ -156,11 +133,11 @@
     font-size: 0.9rem;
   }
 
-  .remaining-fish-item-selected {
+  .remaining-fish-item.caught {
     font-size: 0.9rem;
   }
 
-  .remaining-fish-item-selected:hover {
+  .remaining-fish-item.caught:hover {
     font-size: 0.9rem;
   }
 }
@@ -174,11 +151,15 @@
     font-size: 0.75rem;
   }
 
-  .remaining-fish-item-selected {
+  .remaining-fish-item.caught {
     font-size: 0.75rem;
   }
 
-  .remaining-fish-item-selected:hover {
+  .remaining-fish-item.caught:hover {
     font-size: 0.75rem;
+  }
+
+  .remaining-fish-item-button {
+    min-height: 7.4rem;
   }
 }

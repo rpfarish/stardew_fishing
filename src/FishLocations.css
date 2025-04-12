@@ -1,89 +1,86 @@
 /* FishLocations.css */
 .fish-container {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .toggle-button {
-    background-color: var(--toggle-button-background-color);
-    color: var(--text-color);
-    border: none;
-    padding: 8px 16px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .toggle-button:hover {
-    background-color: var(--toggle-button-hover-background-color);
-  }
-  
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .location-wrapper-wrapper {
-    margin-bottom: 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: var(--background-color);
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 3fr));
-  }
+.toggle-button {
+  background-color: var(--toggle-button-background-color);
+  color: var(--text-color);
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .location-wrapper {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: var(--background-color);
-    /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
-  }
-  
-  .location-title {
-    background-color: var(--header-footer-background-color);
-    padding: 12px;
-    font-weight: bold;
-    font-size: 18px;
-    border-bottom: 1px solid var(--border-color);
-    color: var(--text-color);
-  }
+.toggle-button:hover {
+  background-color: var(--toggle-button-hover-background-color);
+}
 
-   .fish-item.align-top {
-    justify-content: flex-start; /* Override to align to top */
+.location-wrapper-wrapper {
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 3fr));
+}
 
-  }
+.location-wrapper {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+}
 
-  /* No fish message */
-  .no-fish {
-    text-align: center;
-    padding: 20px;
-    color: var(--text-color);
-    font-style: italic;
-  }
+.location-title {
+  background-color: var(--header-footer-background-color);
+  padding: 12px;
+  font-weight: 500;
+  font-size: 18px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+}
 
-  .fish-names {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    
-  }
-  
-  .fish-item {
-    background-color: var(--result-fish-background);
-    margin: 6px;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
-    width: calc(33.33% - 12px);
-    box-sizing: border-box;
-    color: var(--text-color);
-    /* These ensure equal height for items in the same row */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* Create equal height rows */
+.fish-item.align-top {
+  justify-content: flex-start; /* Override to align to top */
+}
+
+/* No fish message */
+.no-fish {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.fish-names {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.fish-item {
+  background-color: var(--result-fish-background);
+  margin: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  width: calc(33.33% - 12px);
+  box-sizing: border-box;
+  color: var(--text-color);
+  /* These ensure equal height for items in the same row */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Create equal height rows */
 .fish-names {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));

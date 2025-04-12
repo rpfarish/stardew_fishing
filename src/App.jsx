@@ -10,8 +10,8 @@ import stardewFish from "./stardewFish";
 const THEME_STORAGE_KEY = "stardew-fish-route-planner-theme";
 
 function App() {
-  const selectedMap = new Map(stardewFish.map((fish) => [fish, true]));
-  const [isSelectedMapState, setIsSelectedMapState] = useState(selectedMap);
+  const isCaughtMap = new Map(stardewFish.map((fish) => [fish, true]));
+  const [isCaughtMapState, setIsCaughtMapState] = useState(isCaughtMap);
 
   // Initialize theme state from localStorage or system preference
   const [theme, setTheme] = useState(() => {
@@ -53,10 +53,12 @@ function App() {
     <>
       <Header currentTheme={theme} toggleTheme={toggleTheme} />
       <Interface
-        selectedState={{ isSelectedMapState, setIsSelectedMapState }}
+        isCaughtMapState={isCaughtMapState}
+        setIsCaughtMapState={setIsCaughtMapState}
       />
       <RemainingFish
-        selectedState={{ isSelectedMapState, setIsSelectedMapState }}
+        isCaughtMapState={isCaughtMapState}
+        setIsCaughtMapState={setIsCaughtMapState}
       />
       <Footer />
     </>

@@ -8,8 +8,7 @@ import "./FishLocations.css";
 import FishLocations from "./FishLocations";
 import SeasonInfo from "./SeasonInfo";
 
-const Interface = ({ selectedState }) => {
-  const { isSelectedMapState, setIsSelectedMapState } = selectedState;
+const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
   const [count, setCount] = useState(0);
   const [startCount, setStartCount] = useState(0);
   const [curStartSeason, setCurStartSeason] = useState("Spring");
@@ -29,31 +28,31 @@ const Interface = ({ selectedState }) => {
   );
 
   let displayableFish = filteredFish.filter((fish) =>
-    isSelectedMapState.get(fish.Name)
+    isCaughtMapState.get(fish.Name)
   );
 
   const allFishIds = stardewFish;
 
   const selectAll = () => {
-    const selectedMap = new Map();
+    const caughtMap = new Map();
     for (let i = 0; i < stardewFish.length; i++)
-      selectedMap.set(stardewFish[i], true);
+      caughtMap.set(stardewFish[i], true);
 
-    setIsSelectedMapState(selectedMap);
+    setIsCaughtMapState(caughtMap);
   };
 
   const selectAllCC = () => {
-    let selectedMap = new Map(stardewFish.map((fish) => [fish, false]));
+    let caughtMap = new Map(stardewFish.map((fish) => [fish, false]));
     stardewFish.forEach((fish) => {
-      selectedMap.set(fish, allCCFish.has(fish));
+      caughtMap.set(fish, allCCFish.has(fish));
     });
 
-    setIsSelectedMapState(selectedMap);
+    setIsCaughtMapState(caughtMap);
   };
 
   const clearAll = () => {
-    const selectedMap = new Map(stardewFish.map((fish) => [fish, false]));
-    setIsSelectedMapState(selectedMap);
+    const caughtMap = new Map(stardewFish.map((fish) => [fish, false]));
+    setIsCaughtMapState(caughtMap);
   };
 
   const setStartingSeason = () => {

@@ -4,12 +4,8 @@
 
 :root {
   color-scheme: light dark;
-  /* transition: none;
-  animation: none; */
 
-  /* Dark Mode */
-
-  /* --light-theme-toggle: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%); */
+  /* ---------- Dark Mode ---------- */
 
   --remaining-fish-item-background-color-dark: #1a5d8a;
   --remaining-fish-item-hover-background-color-dark: hsl(204, 68%, 42%);
@@ -40,7 +36,7 @@
   --result-fish-background-dark: #2e2e2e;
   --result-fish-hover-background-dark: #3d3d3d;
 
-  /* Light Mode */
+  /* ---------- Light Mode ---------- */
   --remaining-fish-item-background-color-light: hsl(203, 76%, 85%);
   --remaining-fish-item-hover-background-color-light: hsl(203, 76%, 90%);
   --remaining-fish-item-greyed-out-background-color-light: hsl(208, 21%, 86%);
@@ -56,7 +52,6 @@
 
   --theme-toggle-button-background-color-light: hsl(0, 0%, 55%);
   --theme-toggle-button-background-color-active-light: hsl(225, 4%, 45%);
-  /* hsl(0, 0%, 70%); */
   --theme-toggle-button-color-light: var(--text-color);
 
   --body-background-color-light: hsl(0, 0%, 92%);
@@ -71,67 +66,11 @@
   --result-fish-background-light: hsl(0, 0%, 85%);
   --result-fish-hover-background-light: hsl(0, 0%, 90%);
 
-  /* Tooltip */
+  /* ---------- Tooltip ---------- */
   --google-tooltip-background-dark: #3c4043;
   --google-tooltip-background-light: hsl(0, 0%, 88%);
   --google-tooltip-text-color-dark: var(--text-color-dark);
   --google-tooltip-text-color-light: var(--text-color-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    /* --light-theme-toggle: filter: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg) brightness(93%) contrast(101%); */
-    --light-theme-toggle: invert(97%) sepia(5%) saturate(57%) hue-rotate(71deg)
-      brightness(93%) contrast(101%);
-
-    --remaining-fish-item-background-color: var(
-      --remaining-fish-item-background-color-dark
-    );
-    --remaining-fish-item-hover-background-color: var(
-      --remaining-fish-item-hover-background-color-dark
-    );
-    --remaining-fish-item-greyed-out-background-color: var(
-      --remaining-fish-item-greyed-out-background-color-dark
-    );
-
-    --toggle-button-background-color: var(
-      --toggle-button-background-color-dark
-    );
-    --toggle-button-hover-background-color: var(
-      --toggle-button-hover-background-color-dark
-    );
-
-    --text-color: var(--text-color-dark);
-    --theme-toggle-button-background-color: var(
-      --theme-toggle-button-background-color-dark
-    );
-    --theme-toggle-button-background-color-active: var(
-      --theme-toggle-button-background-color-active-dark
-    );
-
-    --theme-toggle-button-color: var(--text-color);
-
-    --body-background-color: var(--body-background-color-dark);
-    --header-footer-background-color: var(
-      --header-footer-background-color-dark
-    );
-    --background-color: var(--background-color-dark);
-    --border-color: var(--border-color-dark);
-    --greyed-out-text-color: var(--greyed-out-text-color-dark);
-
-    --nav-button-background-color: var(--nav-button-background-color-dark);
-    --nav-button-hover-background-color: var(
-      --nav-button-hover-background-color-dark
-    );
-
-    --result-fish-background: var(--result-fish-background-dark);
-    --result-fish-hover-background: var(--result-fish-hover-background-dark);
-
-    --google-tooltip-background: var(--google-tooltip-background-light);
-    --google-tooltip-text-color: var(--google-tooltip-text-color-light);
-  }
 }
 
 :root[color-scheme="dark"] {
@@ -179,62 +118,6 @@
 
   --google-tooltip-background: var(--google-tooltip-background-light);
   --google-tooltip-text-color: var(--google-tooltip-text-color-light);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-
-    --light-theme-toggle: invert(0%) sepia(2%) saturate(0%) hue-rotate(137deg)
-      brightness(101%) contrast(100%);
-
-    --remaining-fish-item-background-color: var(
-      --remaining-fish-item-background-color-light
-    );
-    --remaining-fish-item-hover-background-color: var(
-      --remaining-fish-item-hover-background-color-light
-    );
-    --remaining-fish-item-greyed-out-background-color: var(
-      --remaining-fish-item-greyed-out-background-color-light
-    );
-
-    --toggle-button-background-color: var(
-      --toggle-button-background-color-light
-    );
-    --toggle-button-hover-background-color: var(
-      --toggle-button-hover-background-color-light
-    );
-
-    --text-color: var(--text-color-light);
-
-    --theme-toggle-button-background-color: var(
-      --theme-toggle-button-background-color-light
-    );
-    --theme-toggle-button-background-color-active: var(
-      --theme-toggle-button-background-color-active-light
-    );
-
-    --theme-toggle-button-color: var(--text-color);
-
-    --body-background-color: var(--body-background-color-light);
-    --header-footer-background-color: var(
-      --header-footer-background-color-light
-    );
-    --background-color: var(--background-color-light);
-    --border-color: var(--border-color-light);
-    --greyed-out-text-color: var(--greyed-out-text-color-light);
-
-    --nav-button-background-color: var(--nav-button-background-color-light);
-    --nav-button-hover-background-color: var(
-      --nav-button-hover-background-color-light
-    );
-
-    --result-fish-background: var(--result-fish-background-light);
-    --result-fish-hover-background: var(--result-fish-hover-background-light);
-
-    --google-tooltip-background: var(--google-tooltip-background-dark);
-    --google-tooltip-text-color: var(--google-tooltip-text-color-dark);
-  }
 }
 
 :root[color-scheme="light"] {
@@ -286,14 +169,11 @@
 }
 
 #root {
-  /* max-width: 1280px; */
-  /* margin: 0 auto; */
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* padding: 2rem; */
   text-align: center;
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
@@ -308,10 +188,11 @@ body {
   padding: 0;
   background-size: cover;
   bottom: 0;
-  /* display: flex; */
-  /* place-items: center;
-  min-width: 320px; */
-  /* height: 100%;  */
+}
+
+button {
+  font-family: "roboto mono";
+  font-weight: 500;
 }
 
 .header-div {
@@ -360,8 +241,6 @@ circle {
   background-color: var(--theme-toggle-button-background-color);
   border-radius: 100%;
   transition: background-color 150ms ease-in-out;
-  /* transform: translateY(-2px); */
-  /* transition: all 150ms ease-in-out; */
 }
 
 .nav-bar {
@@ -390,7 +269,6 @@ circle {
 }
 
 .season-info p {
-  /* border: 1px solid red; */
   min-width: max-content;
   margin: 0;
   text-align: center;
@@ -402,7 +280,6 @@ circle {
 
 .no-fish {
   text-align: center;
-  /* padding-top: .8rem; */
   font-size: 1.4rem;
   font-weight: 400;
 }
@@ -415,13 +292,13 @@ circle {
 .fish-sub-info.show {
   font-size: 0.8rem;
   display: inline;
-  justify-content: flex-start; /* Override to align to top */
+  justify-content: flex-start;
 }
 
 .fish-sub-info.hide {
   font-size: 0.8rem;
   display: none;
-  justify-content: center; /* Override to align to top */
+  justify-content: center;
 }
 
 .toggle-info-buttons {
@@ -465,10 +342,7 @@ circle {
 
 .season-buttons {
   padding: 1em;
-  /* gap: 12px; */
-  /* justify-content: center; */
   display: flex;
-  /* flex:1; */
   gap: 10px;
   justify-content: left;
   flex-wrap: wrap;
@@ -481,7 +355,7 @@ circle {
   cursor: pointer;
   background-color: var(--nav-button-background-color);
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -499,9 +373,9 @@ circle {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--toggle-button-background-color); /* #6200ea; */
+  background-color: var(--toggle-button-background-color);
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: 500;
   min-width: 141px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   flex-wrap: wrap;
@@ -509,7 +383,7 @@ circle {
 }
 
 .toggle-info-button:hover {
-  background-color: var(--toggle-button-hover-background-color); /* #7c4dff; */
+  background-color: var(--toggle-button-hover-background-color);
   transform: translateY(-2px);
 }
 
@@ -522,9 +396,9 @@ circle {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  background-color: var(--toggle-button-background-color); /* #6200ea; */
+  background-color: var(--toggle-button-background-color);
   color: var(--text-color);
-  font-weight: bold;
+  font-weight: 500;
   min-width: 96px;
   transition: background-color 0.3s ease, transform 0.2s ease;
   flex-wrap: wrap;
@@ -532,7 +406,7 @@ circle {
 }
 
 .toggle-info-button:hover {
-  background-color: var(--toggle-button-hover-background-color); /* #7c4dff; */
+  background-color: var(--toggle-button-hover-background-color);
   transform: translateY(-2px);
 }
 
@@ -545,7 +419,6 @@ circle {
   transform: rotate(180deg);
 }
 
-/* Symmetrical open/close animations */
 .outer-interface {
   padding: 30px 4em;
   padding-top: 0;
@@ -561,7 +434,6 @@ circle {
 }
 
 .interface-content {
-  /* padding: 30px 2em;   */
   transform: translateY(-20px);
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -597,16 +469,13 @@ circle {
 .starting-season {
   padding-top: 1em;
   margin: 0;
-  font-weight: bold;
-  /* margin-bottom: 15px; */
-  /* color: #2371a5;  #bb86fc; */
+  font-weight: 500;
   font-size: 1.2rem;
 }
 .current-season {
   padding-top: 1em;
   margin: 0;
-  font-weight: bold;
-  /* color: #2371a5;  #bb86fc; */
+  font-weight: 500;
   font-size: 1.2rem;
 }
 

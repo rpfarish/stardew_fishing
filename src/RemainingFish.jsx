@@ -4,8 +4,7 @@ import fishData from "./fish.json";
 import fishImages from "./ImportFishImages";
 import "./RemainingFish.css";
 
-const RemainingFish = ({ selectedState }) => {
-  const { isSelectedMapState, setIsSelectedMapState } = selectedState;
+const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
   return (
     <div
       className="remaining-fish-wrapper"
@@ -22,45 +21,39 @@ const RemainingFish = ({ selectedState }) => {
       >
         {stardewFish.map((fishName, index) => {
           const fishImageName = fishData[fishName].Image;
-          const isSelected = isSelectedMapState.get(fishName);
-          const selectedText = isSelected ? "not caught" : "caught";
+          const isCaught = !isCaughtMapState.get(fishName);
+          const CaughtText = !isCaught ? "not caught" : "caught";
 
           return (
             <button
               className="remaining-fish-item-button"
               onClick={() => {
-                setIsSelectedMapState((oldMap) =>
+                setIsCaughtMapState((oldMap) =>
                   new Map(oldMap).set(fishName, !oldMap.get(fishName))
                 );
               }}
               key={index}
               tabIndex={0}
               role="gridcell"
-              aria-pressed={isSelected}
-              aria-label={`${fishName}, ${selectedText}`}
+              aria-pressed={isCaught}
+              aria-label={`${fishName}, ${CaughtText}`}
             >
               <div
-                className={
-                  isSelectedMapState.get(fishName)
-                    ? "remaining-fish-item"
-                    : "remaining-fish-item-selected"
-                }
+                className={`remaining-fish-item ${
+                  isCaughtMapState.get(fishName) ? "uncaught" : "caught"
+                }`}
               >
                 <div className="remaining-fish-content">
                   <img
                     className={`remaining-fish-image ${
-                      isSelectedMapState.get(fishName)
-                        ? "unselected"
-                        : "selected"
+                      isCaughtMapState.get(fishName) ? "uncaught" : "caught"
                     }`}
                     src={fishImages[fishImageName]}
                     alt={`${fishName} illustration`}
                   />
                   <span
                     className={`remaining-fish-name ${
-                      isSelectedMapState.get(fishName)
-                        ? "unselected"
-                        : "selected"
+                      isCaughtMapState.get(fishName) ? "uncaught" : "caught"
                     }`}
                   >
                     {fishName}
