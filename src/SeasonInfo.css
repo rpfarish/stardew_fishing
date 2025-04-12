@@ -9,11 +9,14 @@
 
 .season-info p {
   max-width: fit-content;
+  min-width: fit-content;
   margin: 0;
   text-align: center;
-  padding: 12px;
+  padding-left: 0;
+  padding-right: 0;
   flex: 1;
   padding-top: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .starting-season {
