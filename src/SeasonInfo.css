@@ -1,7 +1,6 @@
 .season-info {
   display: flex;
   grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-  padding: 0 4em;
   padding-bottom: 2rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -12,8 +11,7 @@
   min-width: fit-content;
   margin: 0;
   text-align: center;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0 1.5rem;
   flex: 1;
   padding-top: 2rem;
   padding-bottom: 0.5rem;
