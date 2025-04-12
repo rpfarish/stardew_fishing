@@ -3,8 +3,7 @@ import fishData from "./fish.json";
 import filterFishBySeasons from "./filterFish";
 import stardewFish from "./stardewFish";
 import allCCFish from "./AllCCFish";
-
-import "./FishLocations.css";
+import sortedFishMetric from "./SortedFishMetric";
 import FishLocations from "./FishLocations";
 import SeasonInfo from "./SeasonInfo";
 
@@ -96,20 +95,6 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
     setIsExpanded(!isExpanded);
   };
 
-  const sortedFishMetric = [
-    "Ocean",
-    "Forest",
-    "Mines",
-    "Town",
-    "Mountain",
-    "Ginger Island",
-    "Secret Woods",
-    "Witch's Swamp",
-    "Mutant Bug Lair",
-    "Forest Pond",
-    "Waterfall",
-  ];
-
   function createLocationMap(filteredFish) {
     const locationRank = new Map();
     const fishByLocation = new Map();
@@ -138,7 +123,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
 
   return (
     <>
-      <div className="nav-bar">
+      <div className="tool-bar">
         <div
           className={`button-container ${
             isExpanded ? "expanded" : "collapsed"
@@ -166,13 +151,13 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
               </button>
             </div>
           </div>
-          <div className="toggle-info-buttons">
-            <button className="toggle-info-button" onClick={toggleSeasonInfo}>
+          <div className="view-info-toggles">
+            <button className="view-info-toggle" onClick={toggleSeasonInfo}>
               <span className="button-text">
                 {showInfo ? "Hide Info" : "Show Info"}
               </span>
             </button>
-            <button className="toggle-info-button" onClick={toggleResults}>
+            <button className="view-info-toggle" onClick={toggleResults}>
               <span className="button-text">
                 {showResults ? "Hide Results" : "Show Results"}
               </span>
@@ -185,6 +170,8 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
           </div>
         </div>
       </div>
+
+      {/* fishing-route-display */}
       <div
         className={`outer-interface ${showResults ? "expanded" : "collapsed"}`}
       >
