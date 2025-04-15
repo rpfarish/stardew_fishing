@@ -1,0 +1,47 @@
+.fishing-route-display-container {
+  padding: 30px 4em;
+  padding-top: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+}
+
+.fishing-route-display-container.expanded {
+  max-height: 10000px;
+  opacity: 1;
+}
+
+.fishing-route-display {
+  transform: translateY(-20px);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fishing-route-display-container.expanded .fishing-route-display {
+  transform: translateY(0);
+}
+
+.fishing-route-display-container.collapsed .fishing-route-display {
+  transform: translateY(-20px);
+}
+
+.fishing-route-display-container.collapsed {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.locations-container {
+  height: 100px;
+  height: fit-content;
+  min-height: 200px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  border-radius: 24px;
+
+  padding: 20px;
+  padding-top: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}

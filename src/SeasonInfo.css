@@ -21,13 +21,13 @@
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
 }
 .current-season {
   margin: 0;
   font-weight: 500;
   font-size: 1.2rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .season-value {

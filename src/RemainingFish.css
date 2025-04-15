@@ -4,6 +4,13 @@
 
 .remaining-fish-header {
   color: var(--text-color);
+  width: fit-content;
+  margin: 0 auto;
+}
+.remaining-fish-heading {
+  border-bottom: 2px var(--border-color) solid;
+  padding: 0 4rem;
+  padding-bottom: 0.5rem;
 }
 
 .remaining-fish {

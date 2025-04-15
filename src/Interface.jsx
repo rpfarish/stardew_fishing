@@ -1,11 +1,14 @@
 import { useState } from "react";
-import fishData from "./fish.json";
 import filterFishBySeasons from "./filterFish";
+
+import fishData from "./fish.json";
 import stardewFish from "./stardewFish";
 import allCCFish from "./AllCCFish";
 import sortedFishMetric from "./SortedFishMetric";
+
 import FishLocations from "./FishLocations";
 import SeasonInfo from "./SeasonInfo";
+import "./Interface.css";
 
 const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
   const [count, setCount] = useState(0);
@@ -29,8 +32,6 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
   let displayableFish = filteredFish.filter((fish) =>
     isCaughtMapState.get(fish.Name)
   );
-
-  const allFishIds = stardewFish;
 
   const selectAll = () => {
     const caughtMap = new Map();
@@ -86,7 +87,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
     if (showInfo) {
       setFishInfoShown(new Set()); // Hide all
     } else {
-      setFishInfoShown(new Set(allFishIds)); // Show all
+      setFishInfoShown(new Set(stardewFish)); // Show all
     }
   };
 
@@ -162,7 +163,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
                 {showResults ? "Hide Results" : "Show Results"}
               </span>
               <span
-                className={`toggle-info-icon ${isExpanded ? "rotate" : ""}`}
+                className={`toggle-info-icon ${isExpanded ? "" : "rotate"}`}
               >
                 ▼
               </span>
@@ -171,21 +172,18 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
         </div>
       </div>
 
-      {/* fishing-route-display */}
       <div
-        className={`outer-interface ${showResults ? "expanded" : "collapsed"}`}
+        className={`fishing-route-display-container ${
+          showResults ? "expanded" : "collapsed"
+        }`}
       >
-        <div className="interface-content">
-          <div className="interface">
+        <div className="fishing-route-display">
+          <div className="locations-container">
             <SeasonInfo curStartSeason={curStartSeason} curSeason={curSeason} />
-            {displayableFish.length === 0 ? (
-              <p className="no-fish">No Fish</p>
-            ) : (
-              <FishLocations
-                fishByLocation={fishByLocation}
-                fishInfoMap={{ fishInfoShown, setFishInfoShown }}
-              />
-            )}
+            <FishLocations
+              fishByLocation={fishByLocation}
+              fishInfoMap={{ fishInfoShown, setFishInfoShown }}
+            />
           </div>
         </div>
       </div>

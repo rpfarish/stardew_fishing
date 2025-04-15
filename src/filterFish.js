@@ -88,15 +88,9 @@ export default function filterFishByCircularSeasons(
   if (startIndex === -1) {
     throw new Error(`Start season "${startSeason}" not found in allSeasons.`);
   }
-  // console.log("Start index:");
-  // console.log(startIndex);
-  // console.log("start season");
-  // console.log(startSeason);
 
   for (let i = 0; i < allSeasons.length; i++) {
     let season = allSeasons[(startIndex + i) % allSeasons.length];
-    // console.log("season");
-    // console.log(season);
     let filteredFish = remainingFish.filter(
       (fish) =>
         fish.Season.includes(season) || fish.Season.includes("All Seasons")
@@ -105,16 +99,13 @@ export default function filterFishByCircularSeasons(
     results.push(filteredFish);
     remainingFish = remainingFish.filter(
       (fish) => !filteredFish.includes(fish)
-    ); // Remove included fish
+    );
   }
 
   let springIndex = allSeasons.indexOf("Spring");
   let shiftAmount =
     (springIndex - startIndex + allSeasons.length) % allSeasons.length;
   results = results.slice(shiftAmount).concat(results.slice(0, shiftAmount));
-
-  console.log("Current Fishies:");
-  console.log(results);
 
   return results;
 }

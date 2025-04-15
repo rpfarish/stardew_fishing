@@ -1,4 +1,3 @@
-/* FishLocations.css */
 .fish-container {
   font-family: Arial, sans-serif;
   max-width: 800px;
@@ -20,7 +19,7 @@
   background-color: var(--toggle-button-hover-background-color);
 }
 
-.location-wrapper-wrapper {
+.fish-locations-container {
   margin-bottom: 30px;
   border-radius: 8px;
   overflow: hidden;
@@ -30,12 +29,11 @@
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 3fr));
 }
 
-.location-wrapper {
+.fish-location {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
   background-color: var(--background-color);
-  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
 }
 
 .location-title {
@@ -48,48 +46,61 @@
 }
 
 .fish-item.align-top {
-  justify-content: flex-start; /* Override to align to top */
+  justify-content: flex-start;
 }
 
-/* No fish message */
 .no-fish {
   text-align: center;
   padding: 20px;
   color: var(--text-color);
   font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
 
-.fish-names {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-}
+.fish-item-button {
+  background: none;
+  border: none;
 
-.fish-item {
+  /* from fish-item */
   background-color: var(--result-fish-background);
-  margin: 6px;
+  margin: 0;
   padding: 10px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
-  width: calc(33.33% - 12px);
   box-sizing: border-box;
   color: var(--text-color);
-  /* These ensure equal height for items in the same row */
   display: flex;
+  grid-auto-rows: 1fr;
+
   flex-direction: column;
   justify-content: center;
+  min-width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Create equal height rows */
-.fish-names {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
-  grid-auto-rows: 1fr;
-  grid-gap: 12px;
-  padding: 10px;
+.fish-item-button:hover {
+  background-color: var(--result-fish-hover-background);
+  transform: translateY(-2px);
 }
 
 .fish-item {
-  width: 100%;
-  margin: 0;
+  /* padding: 8px 12px; */
+  /* border-radius: 6px; */
+}
+
+.fish-names {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
+  /* grid-auto-rows: 1fr; */
+  /* grid-gap: 12px; */
+  /* grid-auto-flow: row; */
+
+  padding: 10px;
+  /* margin: 0 auto; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-auto-rows: 1fr; */
+  /* grid-column-gap: 30px; */
+  /* grid-row-gap: 30px; */
 }

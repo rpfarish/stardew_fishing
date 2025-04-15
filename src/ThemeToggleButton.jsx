@@ -4,7 +4,6 @@ import "./ThemeToggleButton.css";
 const ThemeToggleButton = ({ isDark, toggleTheme }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
-  // Tooltip text based on current theme
   const tooltipText = `Switch to ${isDark ? "light" : "dark"} theme`;
 
   return (

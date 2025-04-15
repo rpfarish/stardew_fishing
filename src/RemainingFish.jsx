@@ -12,7 +12,9 @@ const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
       aria-label="Fish Collection Grid"
     >
       <div className="remaining-fish-header">
-        <h2 id="remaining-fish-heading">Remaining Fish</h2>
+        <h2 className="remaining-fish-heading" id="remaining-fish-heading">
+          Remaining Fish
+        </h2>
       </div>
       <div
         className="remaining-fish"

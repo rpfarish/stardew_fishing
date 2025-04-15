@@ -1,0 +1,30 @@
+.header-div {
+  background-color: var(--header-footer-background-color);
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  justify-content: space-between;
+  padding: 0 0.75rem;
+}
+
+.inner-header-div {
+  margin: 20px 0;
+  padding-left: 4rem;
+  font-size: 0.8rem;
+  text-align: left;
+  width: fit-content;
+}
+
+.title {
+  background-color: var(--header-footer-background-color);
+  border-radius: 8px;
+  margin: 0;
+  margin-top: 0;
+  cursor: auto;
+  padding-left: 8px;
+}
+
+.title-link {
+  text-decoration: none;
+  background-color: inherit;
+  color: var(--text-color);
+}

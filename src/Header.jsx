@@ -1,5 +1,6 @@
 import React from "react";
 import ThemeToggleButton from "./ThemeToggleButton";
+import "./Header.css";
 
 const Header = ({ currentTheme, toggleTheme }) => {
   const isDark = currentTheme === "dark";
