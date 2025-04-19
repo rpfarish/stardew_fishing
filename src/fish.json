@@ -577,7 +577,7 @@
     },
     "Blue Discus": {
         "Name": "Blue Discus",
-        "Location": "Ginger Island Pond and Rivers",
+        "Location": "Ginger Island",
         "Time": "Anytime",
         "Season": [
             "All Seasons"
@@ -793,7 +793,7 @@
     },
     "Periwinkle": {
         "Name": "Periwinkle",
-        "Location": "Freshwater",
+        "Location": "River (Town+Forest)",
         "Time": "Anytime",
         "Season": [
             "All Seasons"

@@ -1,6 +1,6 @@
 const sortedFishMetric = [
   "Ocean",
-  "Forest",
+  "River",
   "Mines",
   "Town",
   "Mountain",
