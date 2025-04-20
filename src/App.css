@@ -240,7 +240,7 @@ circle {
 .fish-sub-info.show {
   font-size: 0.8rem;
   display: inline;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .fish-sub-info.hide {
@@ -347,12 +347,6 @@ circle {
   transform: rotate(180deg);
 }
 
-.fish-names {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr));
-  gap: 12px;
-  padding: 15px 5px;
-}
 
 @media only screen and (max-width: 430px) {
   .header-div {
@@ -376,10 +370,6 @@ circle {
     padding: 2em;
   }
 
-  .fish-names {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(125px, 100%), 1fr));
-  }
 }
 
 @media only screen and (max-width: 390px) {
@@ -404,8 +394,4 @@ circle {
     padding: 2em;
   }
 
-  .fish-names {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(125px, 100%), 1fr));
-  }
 }
