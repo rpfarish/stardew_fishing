@@ -44,7 +44,11 @@
   border-bottom: 1px solid var(--border-color);
   color: var(--text-color);
 }
-
+.location-title-time-range {
+    background-color: var(--background-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
 .fish-item.align-top {
   justify-content: flex-start;
 }

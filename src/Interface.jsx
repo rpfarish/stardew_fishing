@@ -32,6 +32,39 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
   let displayableFish = filteredFish.filter((fish) =>
     isCaughtMapState.get(fish.Name)
   );
+  // available times for fish should be a list
+  // if there are no sun fish, should the rest be rain fish?
+  const groupBySeason = (fishes_obj) => {
+    //console.log("group by season");
+    // for each Weather we get Sun, Rain and Any
+    let sunnyFish = [];
+    let anyWeatherFish = [];
+    let rainyFish = [];
+    fishes_obj.forEach((fish) => {
+      if (fish.Weather === "Sun") {
+        sunnyFish.push(fish);
+        //console.log("adding sunny fish ☀ ", fish);
+      } else if (fish.Weather === "Rain") {
+        rainyFish.push(fish);
+        //console.log("adding rainy fish 🌧", fish);
+      } else if (fish.Weather === "Any") {
+        anyWeatherFish.push(fish);
+        //console.log("adding any weather fish ✅", fish);
+      }
+    });
+
+    //console.log("sunny", sunnyFish);
+    //console.log("rainy", rainyFish);
+    //console.log("anyWeather", anyWeatherFish);
+    // combine sunnyFish and anyWeatherFish
+
+    return [[...sunnyFish, ...anyWeatherFish], rainyFish];
+  };
+
+  const [sunFish, rainFish] = groupBySeason(displayableFish);
+
+  //console.log(sunFish);
+  //console.log(rainFish);
 
   const selectAll = () => {
     const caughtMap = new Map();
@@ -120,7 +153,10 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
     return fishByLocation;
   }
 
+  //console.log("displayable fish", displayableFish);
   const fishByLocation = createLocationMap(displayableFish);
+
+  //console.log("fish by loc", fishByLocation);
 
   return (
     <>

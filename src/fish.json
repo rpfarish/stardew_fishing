@@ -9,7 +9,23 @@
         "Weather": "Sun",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Pufferfish"
+        "Image": "Pufferfish",
+        "TimeRangesMilitary": [
+            [
+                12,
+                16
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            12,
+            16
+        ],
+        "TimeRanges": [
+            [
+                "12pm",
+                "4pm"
+            ]
+        ]
     },
     "Anchovy": {
         "Name": "Anchovy",
@@ -22,7 +38,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Anchovy"
+        "Image": "Anchovy",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Tuna": {
         "Name": "Tuna",
@@ -35,7 +67,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Tuna"
+        "Image": "Tuna",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Sardine": {
         "Name": "Sardine",
@@ -49,7 +97,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Sardine"
+        "Image": "Sardine",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Bream": {
         "Name": "Bream",
@@ -61,7 +125,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Bream"
+        "Image": "Bream",
+        "TimeRangesMilitary": [
+            [
+                18,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            18,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6pm",
+                "2am"
+            ]
+        ]
     },
     "Largemouth Bass": {
         "Name": "Largemouth Bass",
@@ -73,7 +153,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "LargemouthBass"
+        "Image": "LargemouthBass",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Smallmouth Bass": {
         "Name": "Smallmouth Bass",
@@ -86,7 +182,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "SmallmouthBass"
+        "Image": "SmallmouthBass",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Rainbow Trout": {
         "Name": "Rainbow Trout",
@@ -98,7 +210,23 @@
         "Weather": "Sun",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "RainbowTrout"
+        "Image": "RainbowTrout",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Salmon": {
         "Name": "Salmon",
@@ -110,7 +238,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Salmon"
+        "Image": "Salmon",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Walleye": {
         "Name": "Walleye",
@@ -122,7 +266,23 @@
         "Weather": "Rain",
         "WinterWithTotem": true,
         "ExclusiveToGingerIsland": false,
-        "Image": "Walleye"
+        "Image": "Walleye",
+        "TimeRangesMilitary": [
+            [
+                12,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            12,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "12pm",
+                "2am"
+            ]
+        ]
     },
     "Perch": {
         "Name": "Perch",
@@ -134,7 +294,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Perch"
+        "Image": "Perch",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Carp": {
         "Name": "Carp",
@@ -146,7 +322,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Carp"
+        "Image": "Carp",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Catfish": {
         "Name": "Catfish",
@@ -159,7 +351,23 @@
         "Weather": "Rain",
         "WinterWithTotem": true,
         "ExclusiveToGingerIsland": false,
-        "Image": "Catfish"
+        "Image": "Catfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                24
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            24
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "12am"
+            ]
+        ]
     },
     "Pike": {
         "Name": "Pike",
@@ -172,7 +380,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Pike"
+        "Image": "Pike",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Sunfish": {
         "Name": "Sunfish",
@@ -185,7 +409,23 @@
         "Weather": "Sun",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Sunfish"
+        "Image": "Sunfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Red Mullet": {
         "Name": "Red Mullet",
@@ -198,7 +438,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "RedMullet"
+        "Image": "RedMullet",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Herring": {
         "Name": "Herring",
@@ -211,7 +467,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Herring"
+        "Image": "Herring",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Eel": {
         "Name": "Eel",
@@ -224,7 +496,23 @@
         "Weather": "Rain",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Eel"
+        "Image": "Eel",
+        "TimeRangesMilitary": [
+            [
+                16,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            16,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "4pm",
+                "2am"
+            ]
+        ]
     },
     "Octopus": {
         "Name": "Octopus",
@@ -236,7 +524,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Octopus"
+        "Image": "Octopus",
+        "TimeRangesMilitary": [
+            [
+                6,
+                13
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            13
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "1pm"
+            ]
+        ]
     },
     "Red Snapper": {
         "Name": "Red Snapper",
@@ -249,7 +553,23 @@
         "Weather": "Rain",
         "WinterWithTotem": true,
         "ExclusiveToGingerIsland": false,
-        "Image": "RedSnapper"
+        "Image": "RedSnapper",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Squid": {
         "Name": "Squid",
@@ -261,7 +581,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Squid"
+        "Image": "Squid",
+        "TimeRangesMilitary": [
+            [
+                18,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            18,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6pm",
+                "2am"
+            ]
+        ]
     },
     "Sea Cucumber": {
         "Name": "Sea Cucumber",
@@ -274,7 +610,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "SeaCucumber"
+        "Image": "SeaCucumber",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Super Cucumber": {
         "Name": "Super Cucumber",
@@ -287,7 +639,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "SuperCucumber"
+        "Image": "SuperCucumber",
+        "TimeRangesMilitary": [
+            [
+                18,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            18,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6pm",
+                "2am"
+            ]
+        ]
     },
     "Ghostfish": {
         "Name": "Ghostfish",
@@ -299,7 +667,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Ghostfish"
+        "Image": "Ghostfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Stonefish": {
         "Name": "Stonefish",
@@ -311,7 +695,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Stonefish"
+        "Image": "Stonefish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Ice Pip": {
         "Name": "Ice Pip",
@@ -323,7 +723,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "IcePip"
+        "Image": "IcePip",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Lava Eel": {
         "Name": "Lava Eel",
@@ -335,7 +751,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "LavaEel"
+        "Image": "LavaEel",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Sandfish": {
         "Name": "Sandfish",
@@ -347,7 +779,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Sandfish"
+        "Image": "Sandfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                20
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            20
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "8pm"
+            ]
+        ]
     },
     "Scorpion Carp": {
         "Name": "Scorpion Carp",
@@ -359,7 +807,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "ScorpionCarp"
+        "Image": "ScorpionCarp",
+        "TimeRangesMilitary": [
+            [
+                6,
+                20
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            20
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "8pm"
+            ]
+        ]
     },
     "Flounder": {
         "Name": "Flounder",
@@ -372,7 +836,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Flounder"
+        "Image": "Flounder",
+        "TimeRangesMilitary": [
+            [
+                6,
+                20
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            20
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "8pm"
+            ]
+        ]
     },
     "Midnight Carp": {
         "Name": "Midnight Carp",
@@ -385,7 +865,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "MidnightCarp"
+        "Image": "MidnightCarp",
+        "TimeRangesMilitary": [
+            [
+                22,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            22,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "10pm",
+                "2am"
+            ]
+        ]
     },
     "Sturgeon": {
         "Name": "Sturgeon",
@@ -398,7 +894,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Sturgeon"
+        "Image": "Sturgeon",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Tiger Trout": {
         "Name": "Tiger Trout",
@@ -411,7 +923,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "TigerTrout"
+        "Image": "TigerTrout",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Bullhead": {
         "Name": "Bullhead",
@@ -423,7 +951,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Bullhead"
+        "Image": "Bullhead",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Tilapia": {
         "Name": "Tilapia",
@@ -436,7 +980,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Tilapia"
+        "Image": "Tilapia",
+        "TimeRangesMilitary": [
+            [
+                6,
+                14
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            14
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2pm"
+            ]
+        ]
     },
     "Chub": {
         "Name": "Chub",
@@ -448,7 +1008,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Chub"
+        "Image": "Chub",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Dorado": {
         "Name": "Dorado",
@@ -460,7 +1036,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Dorado"
+        "Image": "Dorado",
+        "TimeRangesMilitary": [
+            [
+                6,
+                19
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            19
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "7pm"
+            ]
+        ]
     },
     "Albacore": {
         "Name": "Albacore",
@@ -473,7 +1065,31 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Albacore"
+        "Image": "Albacore",
+        "TimeRangesMilitary": [
+            [
+                6,
+                11
+            ],
+            [
+                18,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "11am"
+            ],
+            [
+                "6pm",
+                "2am"
+            ]
+        ]
     },
     "Shad": {
         "Name": "Shad",
@@ -487,19 +1103,51 @@
         "Weather": "Rain",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Shad"
+        "Image": "Shad",
+        "TimeRangesMilitary": [
+            [
+                9,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            9,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "9am",
+                "2am"
+            ]
+        ]
     },
     "Lingcod": {
         "Name": "Lingcod",
         "Location": "River (Town+Forest) Mountain Lake",
-        "Time": "Any time",
+        "Time": "Anytime",
         "Season": [
             "Winter"
         ],
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Lingcod"
+        "Image": "Lingcod",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Halibut": {
         "Name": "Halibut",
@@ -513,7 +1161,31 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Halibut"
+        "Image": "Halibut",
+        "TimeRangesMilitary": [
+            [
+                6,
+                11
+            ],
+            [
+                19,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "11am"
+            ],
+            [
+                "7pm",
+                "2am"
+            ]
+        ]
     },
     "Woodskip": {
         "Name": "Woodskip",
@@ -525,7 +1197,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Woodskip"
+        "Image": "Woodskip",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Void Salmon": {
         "Name": "Void Salmon",
@@ -537,7 +1225,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "VoidSalmon"
+        "Image": "VoidSalmon",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Slimejack": {
         "Name": "Slimejack",
@@ -549,7 +1253,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Slimejack"
+        "Image": "Slimejack",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Stingray": {
         "Name": "Stingray",
@@ -561,7 +1281,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": true,
-        "Image": "Stingray"
+        "Image": "Stingray",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Lionfish": {
         "Name": "Lionfish",
@@ -573,7 +1309,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": true,
-        "Image": "Lionfish"
+        "Image": "Lionfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Blue Discus": {
         "Name": "Blue Discus",
@@ -585,7 +1337,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": true,
-        "Image": "BlueDiscus"
+        "Image": "BlueDiscus",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Goby": {
         "Name": "Goby",
@@ -597,7 +1365,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Goby"
+        "Image": "Goby",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Midnight Squid": {
         "Name": "Midnight Squid",
@@ -609,7 +1393,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "MidnightSquid"
+        "Image": "MidnightSquid",
+        "TimeRangesMilitary": [
+            [
+                17,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            17,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "5pm",
+                "2am"
+            ]
+        ]
     },
     "Spook Fish": {
         "Name": "Spook Fish",
@@ -621,7 +1421,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "SpookFish"
+        "Image": "SpookFish",
+        "TimeRangesMilitary": [
+            [
+                17,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            17,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "5pm",
+                "2am"
+            ]
+        ]
     },
     "Blobfish": {
         "Name": "Blobfish",
@@ -633,7 +1449,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Blobfish"
+        "Image": "Blobfish",
+        "TimeRangesMilitary": [
+            [
+                17,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            17,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "5pm",
+                "2am"
+            ]
+        ]
     },
     "Crimsonfish": {
         "Name": "Crimsonfish",
@@ -645,7 +1477,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Crimsonfish"
+        "Image": "Crimsonfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Angler": {
         "Name": "Angler",
@@ -657,7 +1505,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Angler"
+        "Image": "Angler",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Legend": {
         "Name": "Legend",
@@ -669,7 +1533,23 @@
         "Weather": "Rain",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Legend"
+        "Image": "Legend",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Glacierfish": {
         "Name": "Glacierfish",
@@ -681,7 +1561,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Glacierfish"
+        "Image": "Glacierfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Mutant Carp": {
         "Name": "Mutant Carp",
@@ -693,7 +1589,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "MutantCarp"
+        "Image": "MutantCarp",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Lobster": {
         "Name": "Lobster",
@@ -705,7 +1617,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Lobster"
+        "Image": "Lobster",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Clam": {
         "Name": "Clam",
@@ -717,7 +1645,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Clam"
+        "Image": "Clam",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Crayfish": {
         "Name": "Crayfish",
@@ -729,7 +1673,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Crayfish"
+        "Image": "Crayfish",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Crab": {
         "Name": "Crab",
@@ -741,7 +1701,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Crab"
+        "Image": "Crab",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Cockle": {
         "Name": "Cockle",
@@ -753,7 +1729,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Cockle"
+        "Image": "Cockle",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Mussel": {
         "Name": "Mussel",
@@ -765,7 +1757,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Mussel"
+        "Image": "Mussel",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Shrimp": {
         "Name": "Shrimp",
@@ -777,7 +1785,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Shrimp"
+        "Image": "Shrimp",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Snail": {
         "Name": "Snail",
@@ -789,7 +1813,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Snail"
+        "Image": "Snail",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Periwinkle": {
         "Name": "Periwinkle",
@@ -801,7 +1841,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Periwinkle"
+        "Image": "Periwinkle",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Oyster": {
         "Name": "Oyster",
@@ -813,7 +1869,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Oyster"
+        "Image": "Oyster",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Seaweed": {
         "Name": "Seaweed",
@@ -825,7 +1897,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "Seaweed"
+        "Image": "Seaweed",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Green Algae": {
         "Name": "Green Algae",
@@ -837,7 +1925,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "GreenAlgae"
+        "Image": "GreenAlgae",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "White Algae": {
         "Name": "White Algae",
@@ -849,7 +1953,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "WhiteAlgae"
+        "Image": "WhiteAlgae",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Sea Jelly": {
         "Name": "Sea Jelly",
@@ -861,7 +1981,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "SeaJelly"
+        "Image": "SeaJelly",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "River Jelly": {
         "Name": "River Jelly",
@@ -873,7 +2009,23 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "RiverJelly"
+        "Image": "RiverJelly",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     },
     "Cave Jelly": {
         "Name": "Cave Jelly",
@@ -885,6 +2037,22 @@
         "Weather": "Any",
         "WinterWithTotem": false,
         "ExclusiveToGingerIsland": false,
-        "Image": "CaveJelly"
+        "Image": "CaveJelly",
+        "TimeRangesMilitary": [
+            [
+                6,
+                26
+            ]
+        ],
+        "MaxTimeRangeMilitary": [
+            6,
+            26
+        ],
+        "TimeRanges": [
+            [
+                "6am",
+                "2am"
+            ]
+        ]
     }
 }
