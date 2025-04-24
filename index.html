@@ -3,29 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image" href="/stardew_fishing/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stardew Fishing</title>
     <script>
       (function () {
         const THEME_STORAGE_KEY = "stardew-fish-route-planner-theme";
         const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
         const theme = savedTheme || (prefersDark ? "dark" : "light");
-    
+
         document.documentElement.setAttribute("color-scheme", theme);
-        document.documentElement.style.backgroundColor = theme === "dark" ? "#101218" : "#ffffff";
+        document.documentElement.style.backgroundColor =
+          theme === "dark" ? "#101218" : "#ffffff";
       })();
     </script>
-    
-    
-    <script type="module" crossorigin src="/stardew_fishing/assets/index-BNPgHAj_.js"></script>
+    <script type="module" crossorigin src="/stardew_fishing/assets/index-Dt_qoA9a.js"></script>
     <link rel="stylesheet" crossorigin href="/stardew_fishing/assets/index-DAoeXexH.css">
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://kit.fontawesome.com/38d7453138.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/38d7453138.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
