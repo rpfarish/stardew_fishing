@@ -33,6 +33,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
       newRanges.set(key, {
         start: convertFromMilitaryTime(min),
         end: convertFromMilitaryTime(max),
+        max: max,
       });
     }
     return newRanges;
@@ -50,9 +51,38 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
     setFishInfoShown(newSet);
   };
 
+  let fishArray = Array.from(fishByLocation);
+  fishArray.sort((a, b) => {
+    console.log("key", b[0], "value", b[1]);
+    const timeDiffA = locationTimeRange.get(a[0]).max;
+    const timeDiffB = locationTimeRange.get(b[0]).max;
+    if (timeDiffA !== timeDiffB) return timeDiffA - timeDiffB; // sort by location latest ending time
+    if (b[1].length !== a[1].length) return b[1].length - a[1].length; // sort by number of fish
+    return a[0].localeCompare(b[0]); // sort by location name
+  });
+  // TODO Could fish names be its own component
+  console.log("fisharray", fishArray);
+
+  fishArray.forEach(([_, val]) => {
+    val.sort((a, b) => {
+      const [firstMin, firstMax] = a.MaxTimeRangeMilitary;
+      const [secondMin, secondMax] = b.MaxTimeRangeMilitary;
+
+      console.log("first", firstMin, firstMax);
+      console.log("second", secondMin, secondMax);
+      if (firstMax !== secondMax) return firstMax - secondMax;
+      if (firstMin !== secondMin) return firstMin - secondMin;
+
+      return a.Name.localeCompare(b.Name);
+    });
+  });
+  // compare by
+  // last TimeRangeMilitary
+  // first TimeRangeMilitary
+  // alphabetically
   return (
     <div className="fish-locations-container">
-      {Array.from(fishByLocation).map(([key, values]) => (
+      {fishArray.map(([key, values]) => (
         <div className="fish-location" key={key}>
           <div className="location-title">
             {key}{" "}
@@ -69,6 +99,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
               )}
             </span>
           </div>
+
           <div className="fish-names">
             {values.map((fish, index) => (
               <button
