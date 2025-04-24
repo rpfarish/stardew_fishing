@@ -1,30 +1,28 @@
-eslint.config.js
-index.html
-package-lock.json
-package.json
-src/AllCCFish.js
-src/AnimateFishGrid.jsx
-src/App.css
-src/App.jsx
-src/FishLocations.css
-src/FishLocations.jsx
-src/Footer.css
-src/Footer.jsx
-src/FramerInterface.css
-src/Header.css
-src/Header.jsx
-src/ImportFishImages.js
-src/Interface.css
-src/Interface.jsx
-src/RemainingFish.css
-src/RemainingFish.jsx
-src/SeasonInfo.css
-src/SeasonInfo.jsx
-src/SortedFishMetric.js
-src/ThemeToggleButton.css
-src/ThemeToggleButton.jsx
-src/filterFish.js
-src/fish.json
-src/main.jsx
-src/stardewFish.js
-vite.config.js
+If what we want is to dynamically display, group and sort these fish,
+then we need to store the data in a format that optimizes for that.
+What kind of data structure would be useful here?
+
+We either make the data large enough to hold every representation of the data,
+grouped, sorted, etc.
+
+Or make the data very easy to sort and group.
+
+What is every representation of the data?
+
+- Always grouped by four distinct seasons
+
+Within each season there are three more categories to group and sort by:
+
+- Weather, Time and Location
+
+Are these filters to use or ignore?
+
+How should each group be sorted?
+
+Or should each location be grouped to weather and then within that
+sort the locations?
+
+Having the option to only group by Location should be an option.
+
+Have sunny/ any weather group
+and a rainy group
