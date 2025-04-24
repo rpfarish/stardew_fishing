@@ -31,7 +31,7 @@ const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
               className="remaining-fish-item-button"
               onClick={() => {
                 setIsCaughtMapState((oldMap) =>
-                  new Map(oldMap).set(fishName, !oldMap.get(fishName))
+                  new Map(oldMap).set(fishName, !oldMap.get(fishName)),
                 );
               }}
               key={index}

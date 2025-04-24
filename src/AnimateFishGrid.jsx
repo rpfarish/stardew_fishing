@@ -39,13 +39,13 @@ const AnimatedFishGrid = ({ filteredFish, isSelectedMapState }) => {
                     {fish.Weather === "Sun"
                       ? "☀️"
                       : fish.Weather === "Rain"
-                      ? "🌧"
-                      : ""}
+                        ? "🌧"
+                        : ""}
                   </span>
                 )}
               </div>
             </motion.div>
-          ) : null
+          ) : null,
         )}
       </AnimatePresence>
     </div>

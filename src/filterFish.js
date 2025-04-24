@@ -79,7 +79,7 @@ const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
 export default function filterFishByCircularSeasons(
   fishData,
   allSeasons,
-  startSeason
+  startSeason,
 ) {
   let results = [];
   let remainingFish = [...Object.values(fishData)]; // Start with all fish
@@ -93,12 +93,12 @@ export default function filterFishByCircularSeasons(
     let season = allSeasons[(startIndex + i) % allSeasons.length];
     let filteredFish = remainingFish.filter(
       (fish) =>
-        fish.Season.includes(season) || fish.Season.includes("All Seasons")
+        fish.Season.includes(season) || fish.Season.includes("All Seasons"),
     );
 
     results.push(filteredFish);
     remainingFish = remainingFish.filter(
-      (fish) => !filteredFish.includes(fish)
+      (fish) => !filteredFish.includes(fish),
     );
   }
 

@@ -45,9 +45,9 @@
   color: var(--text-color);
 }
 .location-title-time-range {
-    background-color: var(--background-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+  background-color: var(--background-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 .fish-item.align-top {
   justify-content: flex-start;
@@ -76,7 +76,9 @@
   color: var(--text-color);
   justify-content: center;
   min-width: fit-content;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .fish-item-button:hover {

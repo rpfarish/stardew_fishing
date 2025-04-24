@@ -21,12 +21,8 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
       values.forEach((val) => {
         if (val.Time === "Anytime") return;
         const [start, end] = val.MaxTimeRangeMilitary;
-        if (start < min) {
-          min = start;
-        }
-        if (end > max) {
-          max = end;
-        }
+        min = start < min ? start : min;
+        max = end > max ? end : max;
       });
 
       if (min > max) {
@@ -61,9 +57,16 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
           <div className="location-title">
             {key}{" "}
             <span className="location-title-time-range">
-              {locationTimeRange.get(key).start === "6am" && locationTimeRange.get(key).end === "2am" ? (<span>Anytime</span>) : (
-                <span> {locationTimeRange.get(key).start} - {" "}
-                  {locationTimeRange.get(key).end}</span>)}
+              {locationTimeRange.get(key).start === "6am" &&
+              locationTimeRange.get(key).end === "2am" ? (
+                <span>Anytime</span>
+              ) : (
+                <span>
+                  {" "}
+                  {locationTimeRange.get(key).start} -{" "}
+                  {locationTimeRange.get(key).end}
+                </span>
+              )}
             </span>
           </div>
           <div className="fish-names">
@@ -74,8 +77,9 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
                 onClick={() => toggleFishInfo(fish.Name)}
               >
                 <div
-                  className={`fish-item ${fishInfoShown.has(fish.Name) ? "align-top" : ""
-                    }`}
+                  className={`fish-item ${
+                    fishInfoShown.has(fish.Name) ? "align-top" : ""
+                  }`}
                 >
                   {fish.Name}{" "}
                   {fish.Weather !== "Any" &&
@@ -86,8 +90,9 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
                         : "")}
                   <br />
                   <div
-                    className={`fish-sub-info ${fishInfoShown.has(fish.Name) ? "show" : "hide"
-                      }`}
+                    className={`fish-sub-info ${
+                      fishInfoShown.has(fish.Name) ? "show" : "hide"
+                    }`}
                   >
                     {fish.TimeRanges.map(([startTime, endTime], index) =>
                       startTime === "6am" && endTime === "2am" ? (
@@ -97,7 +102,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
                           {index > 0 && <br />}
                           {startTime} - {endTime}
                         </span>
-                      )
+                      ),
                     )}
                   </div>
                 </div>

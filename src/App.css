@@ -274,7 +274,8 @@ circle {
 
   margin-bottom: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
     box-shadow 0.4s ease;
   flex-wrap: wrap;
 }
@@ -305,7 +306,9 @@ circle {
   background-color: var(--nav-button-background-color);
   color: var(--text-color);
   font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .season-button:hover {
@@ -328,7 +331,9 @@ circle {
   min-width: 141px;
   min-width: 96px;
 
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   flex-wrap: wrap;
   max-height: fit-content;
 }
@@ -346,7 +351,6 @@ circle {
 .toggle-info-icon.rotate {
   transform: rotate(180deg);
 }
-
 
 @media only screen and (max-width: 430px) {
   .header-div {
@@ -369,7 +373,6 @@ circle {
   .tool-bar {
     padding: 2em;
   }
-
 }
 
 @media only screen and (max-width: 390px) {
@@ -393,5 +396,4 @@ circle {
   .tool-bar {
     padding: 2em;
   }
-
 }

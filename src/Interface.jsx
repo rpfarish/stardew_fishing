@@ -22,15 +22,15 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
   const [fishInfoShown, setFishInfoShown] = useState(new Set());
 
   const [allFilteredFishArr, setAllFilteredFishArr] = useState(
-    filterFishBySeasons(fishData, allSeasons, curStartSeason)
+    filterFishBySeasons(fishData, allSeasons, curStartSeason),
   );
 
   const [filteredFish, setFilteredFish] = useState(
-    allFilteredFishArr[startCount]
+    allFilteredFishArr[startCount],
   );
 
   let displayableFish = filteredFish.filter((fish) =>
-    isCaughtMapState.get(fish.Name)
+    isCaughtMapState.get(fish.Name),
   );
   // available times for fish should be a list
   // if there are no sun fish, should the rest be rain fish?
@@ -94,7 +94,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
     const newFilteredFish = filterFishBySeasons(
       fishData,
       allSeasons,
-      allSeasons[count]
+      allSeasons[count],
     );
 
     setAllFilteredFishArr(newFilteredFish);
@@ -139,7 +139,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
 
     filteredFish.forEach((fish) => {
       const primaryLocation = sortedFishMetric.find((loc) =>
-        fish.Location.includes(loc)
+        fish.Location.includes(loc),
       );
 
       if (primaryLocation) {
