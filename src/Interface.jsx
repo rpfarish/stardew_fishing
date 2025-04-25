@@ -219,6 +219,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
             <FishLocations
               fishByLocation={fishByLocation}
               fishInfoMap={{ fishInfoShown, setFishInfoShown }}
+              isExpanded={showResults}
             />
           </div>
         </div>

@@ -1,8 +1,13 @@
 import "./FishLocations.css";
+import findOptimalFishingWindow from "./FindOptimalFishingWindow";
 
-const FishLocations = ({ fishByLocation, fishInfoMap }) => {
+const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
   const { fishInfoShown, setFishInfoShown } = fishInfoMap;
-
+  const [s, e] = findOptimalFishingWindow([
+    [6, 13],
+    [14, 18],
+  ]);
+  console.log("fishing window", s, e);
   if (fishByLocation.size === 0) return <p className="no-fish">No Fish</p>;
 
   const convertFromMilitaryTime = (hour) => {
@@ -18,6 +23,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
     for (const [key, values] of locationMap) {
       let min = 26;
       let max = 6;
+      key;
       values.forEach((val) => {
         if (val.Time === "Anytime") return;
         const [start, end] = val.MaxTimeRangeMilitary;
@@ -38,7 +44,22 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
     }
     return newRanges;
   };
-
+  // make a map that has the an array of the optimal window for that location
+  const getOptimalWindowMap = (locationsMap) => {
+    const optWinMap = new Map();
+    Array.from(locationsMap).forEach(([key, vals]) => {
+      let newArr = new Array();
+      vals.forEach((val) => {
+        newArr.push([...val.MaxTimeRangeMilitary]);
+      });
+      const optimalWindow = findOptimalFishingWindow(newArr);
+      optWinMap.set(key, optimalWindow);
+    });
+    return optWinMap;
+  };
+  const optimalWindowMap = getOptimalWindowMap(fishByLocation);
+  console.log("optimal window map", optimalWindowMap);
+  console.log(fishByLocation);
   const locationTimeRange = getLocationRange(fishByLocation);
 
   const toggleFishInfo = (fishId) => {
@@ -53,23 +74,19 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
 
   let fishArray = Array.from(fishByLocation);
   fishArray.sort((a, b) => {
-    console.log("key", b[0], "value", b[1]);
     const timeDiffA = locationTimeRange.get(a[0]).max;
     const timeDiffB = locationTimeRange.get(b[0]).max;
     if (timeDiffA !== timeDiffB) return timeDiffA - timeDiffB; // sort by location latest ending time
+
     if (b[1].length !== a[1].length) return b[1].length - a[1].length; // sort by number of fish
     return a[0].localeCompare(b[0]); // sort by location name
   });
   // TODO Could fish names be its own component
-  console.log("fisharray", fishArray);
 
   fishArray.forEach(([_, val]) => {
     val.sort((a, b) => {
       const [firstMin, firstMax] = a.MaxTimeRangeMilitary;
       const [secondMin, secondMax] = b.MaxTimeRangeMilitary;
-
-      console.log("first", firstMin, firstMax);
-      console.log("second", secondMin, secondMax);
       if (firstMax !== secondMax) return firstMax - secondMax;
       if (firstMin !== secondMin) return firstMin - secondMin;
 
@@ -87,14 +104,14 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
           <div className="location-title">
             {key}{" "}
             <span className="location-title-time-range">
-              {locationTimeRange.get(key).start === "6am" &&
-              locationTimeRange.get(key).end === "2am" ? (
+              {optimalWindowMap.get(key)[0] === 6 &&
+              optimalWindowMap.get(key)[1] === 26 ? (
                 <span>Anytime</span>
               ) : (
                 <span>
                   {" "}
-                  {locationTimeRange.get(key).start} -{" "}
-                  {locationTimeRange.get(key).end}
+                  {convertFromMilitaryTime(optimalWindowMap.get(key)[0])} -{" "}
+                  {convertFromMilitaryTime(optimalWindowMap.get(key)[1])}
                 </span>
               )}
             </span>
@@ -104,6 +121,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
             {values.map((fish, index) => (
               <button
                 key={index}
+                tabIndex={isExpanded ? 0 : -1}
                 className="fish-item-button"
                 onClick={() => toggleFishInfo(fish.Name)}
               >
@@ -145,5 +163,4 @@ const FishLocations = ({ fishByLocation, fishInfoMap }) => {
     </div>
   );
 };
-
 export default FishLocations;

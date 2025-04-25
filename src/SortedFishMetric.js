@@ -6,6 +6,7 @@ const sortedFishMetric = [
   "Mountain",
   "Ginger Island",
   "Secret Woods",
+  "Desert",
   "Witch's Swamp",
   "Mutant Bug Lair",
   "Forest Pond",
