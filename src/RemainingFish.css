@@ -8,8 +8,71 @@
   border-bottom: 2px var(--border-color) solid;
   padding: 0 2rem;
   padding-bottom: 0.5rem;
+  margin: 0;
+}
+.remaining-fish-header-wrapper {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.sort-icons {
+  padding: 0.75rem;
+  padding-right: 1.25rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+.sort-icon-collections-button {
+  background-color: transparent;
+  border: none;
+}
+.sort-icon-collections {
+  width: 50px;
+  height: auto;
+}
+.sort-icon {
+  color: var(--text-color);
+  background-color: var(
+    --remaining-fish-item-greyed-out-background-color,
+    #f5f5f5
+  );
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.4rem;
+  /* letter-spacing: -1px; */
+  border-radius: 8px;
+  border: 1px var(--border-color) solid;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition:
+    background-color 0.1s ease-in-out,
+    transform 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.sort-alphabet {
+  padding-top: 0px;
+}
+.sort-arrow {
+  color: var(--text-color);
+  font-size: 1.3rem;
+  padding-bottom: 5px;
+}
+.sort-content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+/* .sort-icon:hover { */
+/*   /* transform: translateY(-2px); */
+/*   background-color: var(--remaining-fish-item-hover-background-color); */
+/* } */
 .remaining-fish {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(110px, 100%), 1fr));
@@ -72,6 +135,7 @@
   border: none;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }
 
 .remaining-fish-content {
@@ -86,7 +150,6 @@
   margin: 0;
   margin-top: 6px;
   font-family: "Roboto Mono";
-  cursor: default;
   user-select: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -167,4 +230,103 @@
   .remaining-fish-item-button {
     min-height: 7.4rem;
   }
+}
+@media (max-width: 700px) {
+  .sort-icons {
+    position: static; /* reset absolute positioning */
+    transform: none;
+    margin-top: 0.5rem;
+    margin-right: -18px;
+    justify-content: center;
+  }
+
+  .remaining-fish-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.sort-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+/* Sort button styling - using your original CSS */
+/* .sort-icon { */
+/*   color: var(--text-color, #333); */
+/*   background-color: var( */
+/*     --remaining-fish-item-greyed-out-background-color, */
+/*     #f5f5f5 */
+/*   ); */
+/*   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); */
+/*   padding: 0.4rem; */
+/*   border-radius: 8px; */
+/*   border: 1px var(--border-color, #ccc) solid; */
+/*   font-weight: 400; */
+/*   font-size: 1rem; */
+/*   transition: */
+/*     background-color 0.1s ease-in-out, */
+/*     transform 0.2s ease-in-out; */
+/*   cursor: pointer; */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   justify-content: center; */
+/*   align-items: center; */
+/* } */
+/* .sort-icon:hover { */
+/*   background-color: var(--remaining-fish-item-hover-background-color, #e8e8e8); */
+/* } */
+
+.sort-icon.active {
+  background-color: var(--remaining-fish-item-background-color);
+}
+
+.sort-icon-svg {
+  padding: 0;
+  border: 1px var(--border-color) solid;
+  background-color: var(
+    --remaining-fish-item-greyed-out-background-color,
+    #f5f5f5
+  );
+
+  cursor: pointer;
+  border-radius: 8px;
+}
+.sort-icon-svg.active {
+  background-color: var(--remaining-fish-item-background-color);
+}
+.sort-alphabet {
+  padding-top: 0px;
+}
+/**/
+/* .sort-arrow { */
+/*   color: var(--text-color, #333); */
+/*   font-size: 0.9rem; */
+/*   padding-bottom: 2px; */
+/* } */
+
+.sort-content {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sort-content-svg {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* SVG specific styling */
+
+/* Info text */
+.sort-info {
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

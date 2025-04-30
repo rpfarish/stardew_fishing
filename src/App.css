@@ -73,6 +73,8 @@
   --google-tooltip-background-light: hsl(0, 0%, 88%);
   --google-tooltip-text-color-dark: var(--text-color-dark);
   --google-tooltip-text-color-light: var(--text-color-light);
+  --tooltip-background-color-dark: rgba(0, 0, 0, 1);
+  --tooltip-background-color-light: rgba(255, 255, 255, 1);
 }
 
 :root[color-scheme="dark"] {
@@ -120,6 +122,8 @@
 
   --google-tooltip-background: var(--google-tooltip-background-light);
   --google-tooltip-text-color: var(--google-tooltip-text-color-light);
+  --tooltip-background-color: var(--tooltip-background-color-dark);
+  --tooltip-text-color: var(--text-color-dark);
 }
 
 :root[color-scheme="light"] {
@@ -168,6 +172,9 @@
 
   --google-tooltip-background: var(--google-tooltip-background-dark);
   --google-tooltip-text-color: var(--google-tooltip-text-color-dark);
+
+  --tooltip-background-color: var(--tooltip-background-color-light);
+  --tooltip-text-color: var(--text-color-light);
 }
 
 #root {

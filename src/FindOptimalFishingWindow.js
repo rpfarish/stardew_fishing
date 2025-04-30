@@ -13,6 +13,7 @@ function findOptimalFishingWindow(availabilityTimes) {
 
   // Merge overlapping intervals as described
   const mergedTimes = [];
+  let removedTimesCount = 0;
   for (const time of sortedTimes) {
     // If this is the first interval or there's no overlap with the previous one
     if (
@@ -27,8 +28,18 @@ function findOptimalFishingWindow(availabilityTimes) {
       // Only add if start and end aren't equal
       if (newInterval[0] !== newInterval[1]) {
         mergedTimes.push(newInterval);
+      } else {
+        removedTimesCount++;
       }
     }
+  }
+  if (mergedTimes.length === 1) {
+    const newWindow = mergedTimes[0];
+    const startTime = newWindow[0];
+    const endTime = newWindow[1];
+    const scheduledEndTime = startTime + removedTimesCount + 1;
+    const newEndTime = scheduledEndTime > endTime ? endTime : scheduledEndTime;
+    return [startTime, newEndTime];
   }
 
   // For each hour of the day (0-23) + next day (24-47), determine which fish are available

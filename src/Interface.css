@@ -12,6 +12,7 @@
 .fishing-route-display-container.expanded {
   max-height: 10000px;
   opacity: 1;
+  visibility: visible;
 }
 
 .fishing-route-display {
@@ -30,6 +31,7 @@
 .fishing-route-display-container.collapsed {
   padding-top: 0;
   padding-bottom: 0;
+  visibility: hidden;
 }
 
 .locations-container {

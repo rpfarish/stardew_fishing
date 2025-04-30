@@ -99,6 +99,35 @@
   padding: 10px;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 5rem;
+  background-color: var(--tooltip-background-color);
+  color: var(--tooltip-text-color);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1000;
+  /* left: 140%; */
+  top: -250%;
+  /* width: 120px; */
+  /* bottom: 100%; */
+  left: 120%;
+  margin-left: -3.5rem;
+}
+
+.tooltip .tooltip-text::after {
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
 @media only screen and (max-width: 430px) {
   .fish-names {
     display: grid;
