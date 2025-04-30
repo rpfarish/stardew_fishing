@@ -245,7 +245,11 @@
     flex-direction: column;
     align-items: center;
   }
+  .remaining-fish-header-wrapper {
+    margin-bottom: 0.5rem;
+  }
 }
+
 .sort-buttons-container {
   display: flex;
   flex-direction: column;
@@ -253,7 +257,6 @@
   gap: 16px;
   padding: 20px;
 }
-
 /* Sort button styling - using your original CSS */
 /* .sort-icon { */
 /*   color: var(--text-color, #333); */

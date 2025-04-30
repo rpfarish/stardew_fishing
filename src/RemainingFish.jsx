@@ -28,81 +28,79 @@ const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
           <h2 className="remaining-fish-heading" id="remaining-fish-heading">
             Remaining Fish
           </h2>
-          <div className="sort-icons">
-            <button
-              className={`sort-icon-svg ${alphabetSortIsActive ? "" : "active"}`}
-              onClick={() => {
-                setAlphabetSortIsActive(false);
-                console.log("setting to false!");
-                setSortDirection("asc");
-              }}
-              aria-label="Toggle grid sort order"
-            >
-              <div className="sort-content-svg">
-                <svg
-                  className="sort-icon-collections"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 400 400"
-                >
-                  <g fill="none" stroke="currentColor" strokeWidth="12">
-                    <rect x="105" y="80" width="80" height="80" />
-                    <rect x="215" y="80" width="80" height="80" />
-                    <rect x="105" y="180" width="80" height="80" />
-                    <rect x="215" y="180" width="80" height="80" />
-                    <path
-                      className="sort-toggle-arrow"
-                      d="M180 320 L115 320 L145 290"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      className="sort-toggle-arrow"
-                      d="M115 320 L145 350"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      className="sort-toggle-arrow"
-                      d="M220 320 L285 320 L255 290"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      className="sort-toggle-arrow"
-                      d="M285 320 L255 350"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </g>
-                </svg>
-              </div>
-            </button>
-            <button
-              className={`sort-icon ${alphabetSortIsActive ? "active" : ""}`}
-              onClick={() => {
-                if (alphabetSortIsActive) toggleSort();
-                setAlphabetSortIsActive(true);
-                console.log("setting to true!");
-              }}
-              aria-label={
-                sortDirection === "asc" ? "Sort A to Z" : "Sort Z to A"
-              }
-            >
-              <div className="sort-content">
-                {sortDirection === "asc" ? (
-                  <>
-                    <span className="sort-arrow">↓</span>
-                    <span className="sort-alphabet">A-Z</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="sort-arrow">↑</span>
-                    <span className="sort-alphabet">Z-A</span>
-                  </>
-                )}
-              </div>
-            </button>
-          </div>
+        </div>
+        <div className="sort-icons">
+          <button
+            className={`sort-icon-svg ${alphabetSortIsActive ? "" : "active"}`}
+            onClick={() => {
+              setAlphabetSortIsActive(false);
+              console.log("setting to false!");
+              setSortDirection("asc");
+            }}
+            aria-label="Toggle grid sort order"
+          >
+            <div className="sort-content-svg">
+              <svg
+                className="sort-icon-collections"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 400 400"
+              >
+                <g fill="none" stroke="currentColor" strokeWidth="12">
+                  <rect x="105" y="80" width="80" height="80" />
+                  <rect x="215" y="80" width="80" height="80" />
+                  <rect x="105" y="180" width="80" height="80" />
+                  <rect x="215" y="180" width="80" height="80" />
+                  <path
+                    className="sort-toggle-arrow"
+                    d="M180 320 L115 320 L145 290"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    className="sort-toggle-arrow"
+                    d="M115 320 L145 350"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    className="sort-toggle-arrow"
+                    d="M220 320 L285 320 L255 290"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    className="sort-toggle-arrow"
+                    d="M285 320 L255 350"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <button
+            className={`sort-icon ${alphabetSortIsActive ? "active" : ""}`}
+            onClick={() => {
+              if (alphabetSortIsActive) toggleSort();
+              setAlphabetSortIsActive(true);
+              console.log("setting to true!");
+            }}
+            aria-label={sortDirection === "asc" ? "Sort A to Z" : "Sort Z to A"}
+          >
+            <div className="sort-content">
+              {sortDirection === "asc" ? (
+                <>
+                  <span className="sort-arrow">↓</span>
+                  <span className="sort-alphabet">A-Z</span>
+                </>
+              ) : (
+                <>
+                  <span className="sort-arrow">↑</span>
+                  <span className="sort-alphabet">Z-A</span>
+                </>
+              )}
+            </div>
+          </button>
         </div>
       </div>
       <div
