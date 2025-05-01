@@ -290,6 +290,7 @@
 .sort-icon-svg {
   padding: 0;
   border: 1px var(--border-color) solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   background-color: var(
     --remaining-fish-item-greyed-out-background-color,
     #f5f5f5
