@@ -401,6 +401,10 @@ circle {
     line-height: 2.5;
   }
 
+  .file-name-span.error {
+    color: red !important;
+  }
+
   .fishing-route-display-container {
     padding: 0 2em;
   }

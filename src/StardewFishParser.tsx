@@ -197,9 +197,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
       setFishCaught(fishCaughtData);
       handleFileLoad(fishCaughtData);
     } catch (error) {
-      setError(
-        error instanceof Error ? error.message : "An unknown error occurred",
-      );
+      setError(error);
       console.error("Save Parse Error:", error);
     } finally {
       setLoading(false);
@@ -211,8 +209,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
     if (file) {
       parseStardewFish(file);
       setFileName(file.name);
-      console.log(file.name);
-    }
+     
   };
 
   const sortedFish = Object.entries(fishCaught).sort(
@@ -241,7 +238,16 @@ const StardewFishParser = ({ handleFileLoad }) => {
         onChange={handleFileUpload}
         key="file-input" // Add this
       />
-      <span className="file-name-span"> {fileName}</span>
+
+      {error ? (
+        <span className="file-name-span">
+          {" "}
+          Error parsing save file: {error}
+        </span>
+      ) : (
+        <span className="file-name-span"> {fileName}</span>
+      )}
+
       {/* {loading && ( */}
       {/*   <div> */}
       {/*     <p>Parsing your save file...</p> */}

@@ -6,8 +6,6 @@ import fishImages from "./ImportFishImages";
 import "./RemainingFish.css";
 
 const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
-  console.log("remaining fish reload");
-  console.log(isCaughtMapState);
   const [sortDirection, setSortDirection] = useState("asc");
   const [alphabetSortIsActive, setAlphabetSortIsActive] = useState(false);
   const toggleSort = () => {
@@ -36,7 +34,6 @@ const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
             className={`sort-icon-svg ${alphabetSortIsActive ? "" : "active"}`}
             onClick={() => {
               setAlphabetSortIsActive(false);
-              console.log("setting to false!");
               setSortDirection("asc");
             }}
             aria-label="Toggle grid sort order"
@@ -85,7 +82,6 @@ const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
             onClick={() => {
               if (alphabetSortIsActive) toggleSort();
               setAlphabetSortIsActive(true);
-              console.log("setting to true!");
             }}
             aria-label={sortDirection === "asc" ? "Sort A to Z" : "Sort Z to A"}
           >

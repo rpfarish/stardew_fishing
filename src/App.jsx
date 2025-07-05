@@ -9,15 +9,10 @@ import stardewFish from "./stardewFish";
 const THEME_STORAGE_KEY = "stardew-fish-route-planner-theme";
 
 function App() {
-  console.log("app reloaded");
   const [saveFileLoaded, setSaveFileLoaded] = useState(false);
   const [saveFileData, setSaveFileData] = useState({});
   const isCaughtMap = new Map(stardewFish.map((fish) => [fish, true]));
   const [isCaughtMapState, setIsCaughtMapState] = useState(isCaughtMap);
-
-  console.log(isCaughtMap);
-
-  console.log(saveFileLoaded, saveFileData);
 
   const handleFileLoad = (fishData) => {
     setSaveFileData(fishData);
