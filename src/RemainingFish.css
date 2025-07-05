@@ -83,12 +83,12 @@
   align-content: center;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--border-color);
-  user-select: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  /* user-select: none; */
+  /* -webkit-user-drag: none; */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-select: none; */
+  /* -ms-user-select: none; */
 }
 
 .remaining-fish-item {
@@ -110,12 +110,12 @@
     background-color 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  user-select: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  /* user-select: none; */
+  /* -webkit-user-drag: none; */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-select: none; */
+  /* -ms-user-select: none; */
 }
 
 .remaining-fish-item.uncaught:hover {
@@ -150,22 +150,22 @@
   margin: 0;
   margin-top: 6px;
   font-family: "Roboto Mono";
-  user-select: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  /* user-select: none; */
+  /* -webkit-user-drag: none; */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-select: none; */
+  /* -ms-user-select: none; */
 }
 
 .remaining-fish-image {
   margin: 0 auto;
-  user-select: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  /* user-select: none; */
+  /* -webkit-user-drag: none; */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-select: none; */
+  /* -ms-user-select: none; */
 }
 
 .remaining-fish-image.uncaught {
@@ -180,12 +180,12 @@
 .remaining-fish-wrapper {
   padding: 2em 4em;
   padding-top: 0;
-  user-select: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+  /* user-select: none; */
+  /* -webkit-user-drag: none; */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-select: none; */
+  /* -ms-user-select: none; */
 }
 
 @media only screen and (max-width: 430px) {

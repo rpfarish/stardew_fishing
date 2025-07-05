@@ -9,8 +9,33 @@ import stardewFish from "./stardewFish";
 const THEME_STORAGE_KEY = "stardew-fish-route-planner-theme";
 
 function App() {
+  console.log("app reloaded");
+  const [saveFileLoaded, setSaveFileLoaded] = useState(false);
+  const [saveFileData, setSaveFileData] = useState({});
   const isCaughtMap = new Map(stardewFish.map((fish) => [fish, true]));
   const [isCaughtMapState, setIsCaughtMapState] = useState(isCaughtMap);
+
+  console.log(isCaughtMap);
+
+  console.log(saveFileLoaded, saveFileData);
+
+  const handleFileLoad = (fishData) => {
+    setSaveFileData(fishData);
+    setSaveFileLoaded(true);
+
+    // Update caught status based on fish data
+    setIsCaughtMapState((currentMap) => {
+      const newMap = new Map(currentMap);
+      Object.values(fishData).forEach((fish) => {
+        if (fish?.name && newMap.has(fish.name)) {
+          newMap.set(fish.name, false);
+        } else {
+          newMap.set(fish.name, true);
+        }
+      });
+      return newMap;
+    });
+  };
 
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
@@ -51,6 +76,7 @@ function App() {
       <Interface
         isCaughtMapState={isCaughtMapState}
         setIsCaughtMapState={setIsCaughtMapState}
+        handleFileLoad={handleFileLoad}
       />
       <RemainingFish
         isCaughtMapState={isCaughtMapState}

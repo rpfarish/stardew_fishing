@@ -6,6 +6,8 @@ import fishImages from "./ImportFishImages";
 import "./RemainingFish.css";
 
 const RemainingFish = ({ isCaughtMapState, setIsCaughtMapState }) => {
+  console.log("remaining fish reload");
+  console.log(isCaughtMapState);
   const [sortDirection, setSortDirection] = useState("asc");
   const [alphabetSortIsActive, setAlphabetSortIsActive] = useState(false);
   const toggleSort = () => {

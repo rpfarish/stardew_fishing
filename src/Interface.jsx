@@ -9,8 +9,13 @@ import sortedFishMetric from "./SortedFishMetric";
 import FishLocations from "./FishLocations";
 import SeasonInfo from "./SeasonInfo";
 import "./Interface.css";
+import StardewFishParser from "./StardewFishParser";
 
-const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
+const Interface = ({
+  isCaughtMapState,
+  setIsCaughtMapState,
+  handleFileLoad,
+}) => {
   const [count, setCount] = useState(0);
   const [startCount, setStartCount] = useState(0);
   const [curStartSeason, setCurStartSeason] = useState("Spring");
@@ -187,6 +192,7 @@ const Interface = ({ isCaughtMapState, setIsCaughtMapState }) => {
                 Next Season
               </button>
             </div>
+            <StardewFishParser handleFileLoad={handleFileLoad} />
           </div>
           <div className="view-info-toggles">
             <button className="view-info-toggle" onClick={toggleSeasonInfo}>
