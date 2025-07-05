@@ -79,10 +79,14 @@ const Interface = ({
     setIsCaughtMapState(caughtMap);
   };
 
-  const selectAllCC = () => {
-    let caughtMap = new Map(stardewFish.map((fish) => [fish, false]));
+  const filterAllCC = () => {
+    let caughtMap = new Map(isCaughtMapState);
+
     stardewFish.forEach((fish) => {
-      caughtMap.set(fish, allCCFish.has(fish));
+      // if cc fish is already false in map don't do anything
+      // if not cc fish set to false
+      // we should not be setting anything to true
+      if (!allCCFish.has(fish)) caughtMap.set(fish, false);
     });
 
     setIsCaughtMapState(caughtMap);
@@ -175,8 +179,8 @@ const Interface = ({
             <button className="season-button" onClick={selectAll}>
               Select All
             </button>
-            <button className="season-button" onClick={selectAllCC}>
-              Select All CC
+            <button className="season-button" onClick={filterAllCC}>
+              Filter All CC
             </button>
             <button className="season-button" onClick={clearAll}>
               Clear All
