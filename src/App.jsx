@@ -24,15 +24,17 @@ function App() {
     setSaveFileLoaded(true);
 
     // Update caught status based on fish data
-    setIsCaughtMapState((currentMap) => {
-      const newMap = new Map(currentMap);
+    setIsCaughtMapState(() => {
+      // Start with all fish as uncaught (true)
+      const newMap = new Map(stardewFish.map((fish) => [fish, true]));
+
+      // Then mark the caught ones as false
       Object.values(fishData).forEach((fish) => {
         if (fish?.name && newMap.has(fish.name)) {
           newMap.set(fish.name, false);
-        } else {
-          newMap.set(fish.name, true);
         }
       });
+
       return newMap;
     });
   };
