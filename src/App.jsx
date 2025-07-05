@@ -14,7 +14,6 @@ function App() {
   const [saveFileData, setSaveFileData] = useState({});
   const isCaughtMap = new Map(stardewFish.map((fish) => [fish, true]));
   const [isCaughtMapState, setIsCaughtMapState] = useState(isCaughtMap);
-  const [selectedFile, setSelectedFile] = useState(null);
 
   console.log(isCaughtMap);
 

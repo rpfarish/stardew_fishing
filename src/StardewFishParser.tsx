@@ -15,6 +15,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
+  const [selectedFile, setSelectedFile] = useState("");
 
   const fishData = {
     128: "Pufferfish",
@@ -209,6 +210,8 @@ const StardewFishParser = ({ handleFileLoad }) => {
     const file = event.target.files?.[0];
     if (file) {
       parseStardewFish(file);
+      setFileName(file.name);
+      console.log(file.name);
     }
   };
 
@@ -221,7 +224,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
   );
 
   return (
-    <div>
+    <div className="file-input-div">
       {/* <h1>Stardew Valley Fish Parser</h1> */}
       {/* <p>Upload your Stardew Valley save file to see your fishing progress</p> */}
       {/**/}
@@ -238,6 +241,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
         onChange={handleFileUpload}
         key="file-input" // Add this
       />
+      <span> {fileName}</span>
       {/* {loading && ( */}
       {/*   <div> */}
       {/*     <p>Parsing your save file...</p> */}

@@ -34,6 +34,10 @@
   visibility: hidden;
 }
 
+.file-input-div {
+  word-break: break-word;
+}
+
 .locations-container {
   height: 100px;
   height: fit-content;
