@@ -397,6 +397,10 @@ circle {
     padding: 30px 0;
   }
 
+  .file-name-span {
+    line-height: 2.5;
+  }
+
   .fishing-route-display-container {
     padding: 0 2em;
   }
@@ -418,6 +422,10 @@ circle {
 
   .fishing-route-display {
     padding: 30px 0;
+  }
+
+  .file-name-span {
+    line-height: 2.5;
   }
 
   .fishing-route-display-container {

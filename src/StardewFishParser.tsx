@@ -241,7 +241,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
         onChange={handleFileUpload}
         key="file-input" // Add this
       />
-      <span> {fileName}</span>
+      <span className="file-name-span"> {fileName}</span>
       {/* {loading && ( */}
       {/*   <div> */}
       {/*     <p>Parsing your save file...</p> */}
