@@ -105,6 +105,10 @@
   height: 100%;
   box-sizing: border-box;
 
+  /* fixes firefox translation issue  */
+  backface-visibility: hidden;
+  will-change: transform;
+
   transition:
     all 0.3s cubic-bezier(0.22, 1, 0.36, 1),
     background-color 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
