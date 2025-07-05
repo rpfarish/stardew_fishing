@@ -209,7 +209,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
     if (file) {
       parseStardewFish(file);
       setFileName(file.name);
-     
+    }
   };
 
   const sortedFish = Object.entries(fishCaught).sort(
