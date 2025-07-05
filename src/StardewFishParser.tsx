@@ -228,7 +228,16 @@ const StardewFishParser = ({ handleFileLoad }) => {
 
       {/* <p>Supports both compressed and uncompressed save files</p> */}
 
-      <input type="file" onChange={handleFileUpload} />
+      <label htmlFor="file-upload" className="file-input-label">
+        Choose File
+      </label>
+      <input
+        id="file-upload"
+        type="file"
+        className="fileInput"
+        onChange={handleFileUpload}
+        key="file-input" // Add this
+      />
       {/* {loading && ( */}
       {/*   <div> */}
       {/*     <p>Parsing your save file...</p> */}

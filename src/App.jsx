@@ -14,6 +14,7 @@ function App() {
   const [saveFileData, setSaveFileData] = useState({});
   const isCaughtMap = new Map(stardewFish.map((fish) => [fish, true]));
   const [isCaughtMapState, setIsCaughtMapState] = useState(isCaughtMap);
+  const [selectedFile, setSelectedFile] = useState(null);
 
   console.log(isCaughtMap);
 
@@ -22,19 +23,16 @@ function App() {
   const handleFileLoad = (fishData) => {
     setSaveFileData(fishData);
     setSaveFileLoaded(true);
-
     // Update caught status based on fish data
     setIsCaughtMapState(() => {
       // Start with all fish as uncaught (true)
       const newMap = new Map(stardewFish.map((fish) => [fish, true]));
-
       // Then mark the caught ones as false
       Object.values(fishData).forEach((fish) => {
         if (fish?.name && newMap.has(fish.name)) {
           newMap.set(fish.name, false);
         }
       });
-
       return newMap;
     });
   };
