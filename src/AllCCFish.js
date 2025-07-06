@@ -19,5 +19,15 @@ const allCCFish = new Set([
   "Pufferfish",
   "Ghostfish",
   "Chub",
+  "Snail",
+  "Crayfish",
+  "Periwinkle",
+  "Lobster",
+  "Crab",
+  "Oyster",
+  "Clam",
+  "Shrimp",
+  "Cockle",
+  "Mussel",
 ]);
 export default allCCFish;
