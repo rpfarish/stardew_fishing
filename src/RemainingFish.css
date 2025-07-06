@@ -59,17 +59,19 @@
 .sort-alphabet {
   padding-top: 0px;
 }
+
 .sort-arrow {
   color: var(--text-color);
   font-size: 1.3rem;
-  /* padding-bottom: 5px; */
-  /* -moz-padding-bottom: 0px; */
+  line-height: 1;
 }
+
 .sort-content {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
+
 /* .sort-icon:hover { */
 /*   /* transform: translateY(-2px); */
 /*   background-color: var(--remaining-fish-item-hover-background-color); */
