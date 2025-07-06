@@ -137,15 +137,38 @@ const StardewFishParser = ({ handleFileLoad }) => {
     setFileName(file.name);
 
     try {
+      // Validate file
+      if (!file || file.size === 0) {
+        setError("Invalid or empty file");
+        return;
+      }
+
       const saveCompressed = file.size < 512000;
       let xmlContent: string;
 
       if (saveCompressed) {
-        const arrayBuffer = await file.arrayBuffer();
-        const uint8Array = new Uint8Array(arrayBuffer);
-        xmlContent = inflate(uint8Array, { to: "string" });
+        try {
+          const arrayBuffer = await file.arrayBuffer();
+          const uint8Array = new Uint8Array(arrayBuffer);
+          xmlContent = inflate(uint8Array, { to: "string" });
+        } catch (inflateError) {
+          setError("Failed to decompress file - may be corrupted");
+          return;
+        }
       } else {
         xmlContent = await file.text();
+      }
+
+      // Validate content
+      if (!xmlContent || xmlContent.trim().length === 0) {
+        setError("File appears to be empty");
+        return;
+      }
+
+      // Check if it looks like XML
+      if (!xmlContent.trim().startsWith("<")) {
+        setError("File does not appear to be a valid XML save file");
+        return;
       }
 
       const parser = new DOMParser();
@@ -153,19 +176,23 @@ const StardewFishParser = ({ handleFileLoad }) => {
 
       const parseError = xmlDoc.querySelector("parsererror");
       if (parseError) {
-        throw new Error("XML parsing failed: " + parseError.textContent);
+        setError(`XML parsing failed: ${parseError.textContent}`);
+        return;
       }
 
       const fishCaughtData: FishCaughtData = {};
       const players = xmlDoc.querySelectorAll("farmhand, SaveGame > player");
 
+      if (players.length === 0) {
+        setError("No player data found in save file");
+        return;
+      }
+
       players.forEach((player) => {
         const fishCaughtItems = player.querySelectorAll("fishCaught > item");
-
         fishCaughtItems.forEach((item) => {
           const keyElement = item.querySelector("key");
           const valueElement = item.querySelector("value > ArrayOfInt > int");
-
           if (
             keyElement &&
             valueElement &&
@@ -174,13 +201,11 @@ const StardewFishParser = ({ handleFileLoad }) => {
           ) {
             let rawId = keyElement.textContent.trim();
             const count = parseInt(valueElement.textContent) || 0;
-
             let fishId = rawId;
             const parenIndex = rawId.indexOf(")");
             if (parenIndex > -1) {
               fishId = rawId.substring(parenIndex + 1);
             }
-
             if (count > 0 && !ignoreList[fishId]) {
               if (!fishCaughtData[fishId]) {
                 fishCaughtData[fishId] = {
@@ -197,7 +222,9 @@ const StardewFishParser = ({ handleFileLoad }) => {
       setFishCaught(fishCaughtData);
       handleFileLoad(fishCaughtData);
     } catch (error) {
-      setError(error);
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error occurred";
+      setError(errorMessage);
       console.error("Save Parse Error:", error);
     } finally {
       setLoading(false);
