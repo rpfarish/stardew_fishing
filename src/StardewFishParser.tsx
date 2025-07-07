@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent, useRef } from "react";
 import { inflate } from "pako";
 
 interface FishData {
@@ -15,6 +15,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fishData = {
     128: "Pufferfish",
@@ -248,76 +249,37 @@ const StardewFishParser = ({ handleFileLoad }) => {
 
   return (
     <div className="file-input-div">
-      {/* <h1>Stardew Valley Fish Parser</h1> */}
-      {/* <p>Upload your Stardew Valley save file to see your fishing progress</p> */}
-      {/**/}
-
-      {/* <p>Supports both compressed and uncompressed save files</p> */}
-
-      <label htmlFor="file-upload" className="file-input-label">
-        Choose File
-      </label>
+      <div
+        className="file-input-button-div"
+        tabIndex={0}
+        role="button"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            fileInputRef.current?.click();
+          }
+        }}
+        onClick={() => fileInputRef.current?.click()}
+      >
+        <div className="file-input-label">Choose File</div>
+      </div>
       <input
+        ref={fileInputRef}
         id="file-upload"
         type="file"
         className="fileInput"
         onChange={handleFileUpload}
-        key="file-input" // Add this
+        key="file-input"
+        style={{ display: "none" }}
       />
-
-      {error ? (
-        <span className="file-name-span">
-          {" "}
-          Error parsing save file: {error}
-        </span>
-      ) : (
-        <span className="file-name-span"> {fileName}</span>
-      )}
-
-      {/* {loading && ( */}
-      {/*   <div> */}
-      {/*     <p>Parsing your save file...</p> */}
-      {/*   </div> */}
-      {/* )} */}
-      {/**/}
-      {/* {error && ( */}
-      {/*   <div> */}
-      {/*     <h3>Error parsing save file</h3> */}
-      {/*     <p>{error}</p> */}
-      {/*   </div> */}
-      {/* )} */}
-      {/**/}
-      {/* {fileName && */}
-      {/*   !loading && */}
-      {/*   !error && */}
-      {/*   Object.keys(fishCaught).length === 0 && ( */}
-      {/*     <div> */}
-      {/*       <p> */}
-      {/*         No fish data found in the save file. Make sure you've uploaded a */}
-      {/*         valid Stardew Valley save file. */}
-      {/*       </p> */}
-      {/*     </div> */}
-      {/*   )} */}
-      {/**/}
-      {/* {Object.keys(fishCaught).length > 0 && ( */}
-      {/*   <div> */}
-      {/*     <h2>Fish Caught</h2> */}
-      {/*     {fileName && <p>File: {fileName}</p>} */}
-      {/*     <p> */}
-      {/*       {Object.keys(fishCaught).length} species | {totalFish} total fish */}
-      {/*     </p> */}
-      {/**/}
-      {/*     <div> */}
-      {/*       {sortedFish.map(([id, fish]) => ( */}
-      {/*         <div key={id}> */}
-      {/*           <span>{fish.name}</span> */}
-      {/*           {fish.name.includes("Unknown") && <span> (ID: {id})</span>} */}
-      {/*           <span> - {fish.count} caught</span> */}
-      {/*         </div> */}
-      {/*       ))} */}
-      {/*     </div> */}
-      {/*   </div> */}
-      {/* )} */}
+      <div className="file-name-container">
+        {error ? (
+          <span className="file-name-span">
+            Error parsing save file: {error}
+          </span>
+        ) : (
+          <span className="file-name-span">{fileName}</span>
+        )}
+      </div>
     </div>
   );
 };

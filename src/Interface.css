@@ -36,6 +36,25 @@
 
 .file-input-div {
   word-break: break-word;
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  gap: 16px; /* Your spacing */
+}
+
+.file-input-div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap; /* Allows items to wrap to next line */
+}
+
+.file-input-button {
+  flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+.file-name-span {
+  flex: 1; /* Allows text to take available space */
+  min-width: 0; /* Allows text to shrink if needed */
 }
 
 .locations-container {

@@ -418,3 +418,19 @@ circle {
     padding: 2em;
   }
 }
+.file-input-button-div {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.file-input-button-div:focus {
+  outline: none;
+}
+
+.file-input-button-div:focus-visible .file-input-label {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 0 0 2px #ffffff;
+}
