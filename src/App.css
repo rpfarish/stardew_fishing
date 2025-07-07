@@ -20,7 +20,7 @@
     --remaining-fish-item-hover-background-color-dark
   );
 
-  --text-color-dark: #e7e9e7;
+  --text-color-dark: #ffffff;
 
   --theme-toggle-button-background-color-dark: rgb(55, 56, 59);
   --theme-toggle-button-background-color-active-dark: hsl(225, 4%, 40%);
