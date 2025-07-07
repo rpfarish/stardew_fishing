@@ -15,7 +15,6 @@ const StardewFishParser = ({ handleFileLoad }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
-  const [selectedFile, setSelectedFile] = useState("");
 
   const fishData = {
     128: "Pufferfish",

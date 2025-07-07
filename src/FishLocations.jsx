@@ -21,11 +21,9 @@ const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
 
   const toggleFishInfo = (fishId) => {
     const newSet = new Set(fishInfoShown);
-    if (newSet.has(fishId)) {
-      newSet.delete(fishId);
-    } else {
-      newSet.add(fishId);
-    }
+    if (newSet.has(fishId)) newSet.delete(fishId);
+    else newSet.add(fishId);
+
     setFishInfoShown(newSet);
   };
 

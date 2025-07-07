@@ -88,9 +88,6 @@
   transform: translateY(-2px);
 }
 
-.fish-item {
-}
-
 .fish-names {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(130px, 100%), 1fr));
@@ -120,9 +117,6 @@
   /* bottom: 100%; */
   left: 120%;
   margin-left: -3.5rem;
-}
-
-.tooltip .tooltip-text::after {
 }
 
 .tooltip:hover .tooltip-text {
