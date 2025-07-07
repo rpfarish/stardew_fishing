@@ -38,9 +38,11 @@
   --result-fish-background-dark: #2e2e2e;
   --result-fish-hover-background-dark: #3d3d3d;
 
+  --file-error-background-color-dark: #742525;
+
   /* ---------- Light Mode ---------- */
-  --remaining-fish-item-background-color-light: hsl(203, 76%, 85%);
-  --remaining-fish-item-hover-background-color-light: hsl(203, 76%, 90%);
+  --remaining-fish-item-background-color-light: hsl(203, 76%, 66%);
+  --remaining-fish-item-hover-background-color-light: hsl(203, 76%, 78%);
   --remaining-fish-item-greyed-out-background-color-light: hsl(208, 21%, 86%);
 
   --toggle-button-background-color-light: var(
@@ -59,7 +61,7 @@
   --body-background-color-light: hsl(0, 0%, 92%);
   --header-footer-background-color-light: hsl(0, 0%, 80%);
   --background-color-light: #f5f5f5;
-  --border-color-light: hsl(0, 0%, 73%);
+  --border-color-light: hsl(0, 0%, 63%);
   --greyed-out-text-color-light: #2b2b2b;
 
   --nav-button-background-color-light: hsl(0, 0%, 85%);
@@ -67,6 +69,8 @@
 
   --result-fish-background-light: hsl(0, 0%, 85%);
   --result-fish-hover-background-light: hsl(0, 0%, 90%);
+
+  --file-error-background-color-light: #e3a6a6;
 
   /* ---------- Tooltip ---------- */
   --google-tooltip-background-dark: #3c4043;
@@ -120,6 +124,8 @@
   --result-fish-background: var(--result-fish-background-dark);
   --result-fish-hover-background: var(--result-fish-hover-background-dark);
 
+  --file-error-background-color: var(--file-error-background-color-dark);
+
   --google-tooltip-background: var(--google-tooltip-background-light);
   --google-tooltip-text-color: var(--google-tooltip-text-color-light);
   --tooltip-background-color: var(--tooltip-background-color-dark);
@@ -169,6 +175,8 @@
 
   --result-fish-background: var(--result-fish-background-light);
   --result-fish-hover-background: var(--result-fish-hover-background-light);
+
+  --file-error-background-color: var(--file-error-background-color-light);
 
   --google-tooltip-background: var(--google-tooltip-background-dark);
   --google-tooltip-text-color: var(--google-tooltip-text-color-dark);
@@ -340,6 +348,10 @@ circle {
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
+}
+
+.file-input-label.error {
+  background-color: var(--file-error-background-color);
 }
 
 .file-input-label:hover {

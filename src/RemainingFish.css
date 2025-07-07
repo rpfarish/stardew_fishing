@@ -84,7 +84,7 @@
   background-color: var(--background-color);
   border-radius: 24px;
   align-content: center;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   border: 1px solid var(--border-color);
   /* user-select: none; */
   /* -webkit-user-drag: none; */

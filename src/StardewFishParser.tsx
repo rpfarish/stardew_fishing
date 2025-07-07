@@ -260,7 +260,9 @@ const StardewFishParser = ({ handleFileLoad }) => {
         }}
         onClick={() => fileInputRef.current?.click()}
       >
-        <div className="file-input-label">Choose File</div>
+        <div className={`file-input-label ${error !== "" ? "error" : ""}`}>
+          Choose File
+        </div>
       </div>
       <input
         ref={fileInputRef}
