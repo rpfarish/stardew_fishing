@@ -359,6 +359,14 @@ circle {
   transform: translateY(-2px);
 }
 
+.file-input-label.error {
+  background-color: var(--file-error-background-color);
+}
+
+.file-input-label:hover.error {
+  background-color: var(--file-error-background-color);
+}
+
 .view-info-toggle {
   display: flex;
   align-items: center;
