@@ -156,14 +156,14 @@
 .remaining-fish-item-button:focus-visible .remaining-fish-item {
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.2),
-    0 0 0 2px #ffffff;
+    0 0 0 2px var(--text-color);
 }
 
 /* For caught items, ensure white focus border is still visible */
 .remaining-fish-item-button:focus-visible .remaining-fish-item.caught {
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.2),
-    0 0 0 2px #ffffff;
+    0 0 0 2px var(--text-color);
 }
 
 .remaining-fish-content {

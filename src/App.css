@@ -440,5 +440,5 @@ circle {
 .file-input-button-div:focus-visible .file-input-label {
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.2),
-    0 0 0 2px #ffffff;
+    0 0 0 2px var(--text-color);
 }
