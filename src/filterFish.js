@@ -91,6 +91,11 @@ export default function filterFishByCircularSeasons(
 
   for (let i = 0; i < allSeasons.length; i++) {
     let season = allSeasons[(startIndex + i) % allSeasons.length];
+    // Add this before the loop to see what's causing the issue
+    console.log(
+      "Fish with missing Season:",
+      remainingFish.filter((fish) => !fish.Season),
+    );
     let filteredFish = remainingFish.filter(
       (fish) =>
         fish.Season.includes(season) || fish.Season.includes("All Seasons"),

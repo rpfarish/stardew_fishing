@@ -1,6 +1,7 @@
 import "./SeasonInfo.css";
 
 const SeasonInfo = ({ curStartSeason, curSeason }) => {
+  console.log("inside season info", curSeason, curStartSeason);
   return (
     <div className="season-info">
       <p className="starting-season">

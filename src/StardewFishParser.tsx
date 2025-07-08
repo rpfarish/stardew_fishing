@@ -15,6 +15,7 @@ const StardewFishParser = ({ handleFileLoad }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
+  const [fileSeason, setFileSeason] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fishData = {
@@ -136,6 +137,11 @@ const StardewFishParser = ({ handleFileLoad }) => {
     setError("");
     setFileName(file.name);
 
+    const capitalize = (str: string | null | undefined): string => {
+      if (!str) return str || "";
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    };
+
     try {
       // Validate file
       if (!file || file.size === 0) {
@@ -188,6 +194,10 @@ const StardewFishParser = ({ handleFileLoad }) => {
         return;
       }
 
+      const currentSeason = capitalize(
+        xmlDoc.querySelector("currentSeason")?.textContent,
+      );
+
       players.forEach((player) => {
         const fishCaughtItems = player.querySelectorAll("fishCaught > item");
         fishCaughtItems.forEach((item) => {
@@ -219,8 +229,15 @@ const StardewFishParser = ({ handleFileLoad }) => {
         });
       });
 
+      if (currentSeason) {
+        setFileSeason(currentSeason);
+        console.log(currentSeason);
+      } else {
+        console.log("currentSeason element not found");
+      }
+
       setFishCaught(fishCaughtData);
-      handleFileLoad(fishCaughtData);
+      handleFileLoad(fishCaughtData, currentSeason);
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : "Unknown error occurred";

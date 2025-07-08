@@ -15,28 +15,26 @@ const Interface = ({
   isCaughtMapState,
   setIsCaughtMapState,
   handleFileLoad,
+  curSeason,
+  setCurSeason,
+  curStartSeason,
+  setCurStartSeason,
+  filteredFish,
+  setFilteredFish,
+  allFilteredFishArr,
+  setAllFilteredFishArr,
 }) => {
-  const [count, setCount] = useState(0);
-  const [startCount, setStartCount] = useState(0);
-  const [curStartSeason, setCurStartSeason] = useState("Spring");
-  const [curSeason, setCurSeason] = useState("Spring");
   const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
+
   const [showResults, setShowResults] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [fishInfoShown, setFishInfoShown] = useState(new Set());
 
-  const [allFilteredFishArr, setAllFilteredFishArr] = useState(
-    filterFishBySeasons(fishData, allSeasons, curStartSeason),
-  );
-
-  const [filteredFish, setFilteredFish] = useState(
-    allFilteredFishArr[startCount],
-  );
-
   let displayableFish = filteredFish.filter((fish) =>
     isCaughtMapState.get(fish.Name),
   );
+
   // available times for fish should be a list
   // if there are no sun fish, should the rest be rain fish?
   const groupBySeason = (fishes_obj) => {
@@ -98,31 +96,49 @@ const Interface = ({
   };
 
   const setStartingSeason = () => {
-    setStartCount(count);
-    setCurStartSeason(allSeasons[count]);
+    setCurStartSeason(curSeason);
     const newFilteredFish = filterFishBySeasons(
       fishData,
       allSeasons,
-      allSeasons[count],
+      curSeason,
     );
 
     setAllFilteredFishArr(newFilteredFish);
-    setFilteredFish(newFilteredFish[count]);
-  };
-
-  const prevSeason = () => {
-    const newCount = (count - 1 + 4) % 4;
-    setCount(newCount);
-    setCurSeason(allSeasons[newCount]);
-    setFilteredFish(allFilteredFishArr[newCount]);
+    const index = allSeasons.indexOf(curSeason);
+    setFilteredFish(newFilteredFish[index]);
   };
 
   const nextSeason = () => {
-    const newCount = (count + 1) % 4;
-    setCount(newCount);
-    setCurSeason(allSeasons[newCount]);
-    setFilteredFish(allFilteredFishArr[newCount]);
+    const index = allSeasons.indexOf(curSeason);
+    const nextSeasonIdx = (index + 1) % allSeasons.length;
+    setCurSeason(() => {
+      return allSeasons[nextSeasonIdx];
+    });
+    setFilteredFish(allFilteredFishArr[nextSeasonIdx]);
   };
+
+  const prevSeason = () => {
+    const index = allSeasons.indexOf(curSeason);
+    const prevSeasonIdx = (index - 1 + allSeasons.length) % allSeasons.length;
+    setCurSeason(() => {
+      return allSeasons[prevSeasonIdx];
+    });
+    setFilteredFish(allFilteredFishArr[prevSeasonIdx]);
+  };
+
+  // const prevSeason = () => {
+  //   const newCount = (count - 1 + 4) % 4;
+  //   setCount(newCount);
+  //   setCurSeason(allSeasons[newCount]);
+  //   setFilteredFish(allFilteredFishArr[newCount]);
+  // };
+  //
+  // const nextSeason = () => {
+  //   const newCount = (count + 1) % 4;
+  //   setCount(newCount);
+  //   setCurSeason(allSeasons[newCount]);
+  //   setFilteredFish(allFilteredFishArr[newCount]);
+  // };
 
   const toggleSeasonInfo = () => {
     setShowInfo(!showInfo);
@@ -225,6 +241,11 @@ const Interface = ({
       >
         <div className="fishing-route-display">
           <div className="locations-container">
+            {/* Debug logging */}
+            {console.log("Rendering SeasonInfo with:", {
+              curStartSeason,
+              curSeason,
+            })}
             <SeasonInfo curStartSeason={curStartSeason} curSeason={curSeason} />
             <FishLocations
               fishByLocation={fishByLocation}
