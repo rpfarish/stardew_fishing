@@ -7,9 +7,8 @@ import fishData from "./fish.json";
 import sortedFishMetric from "./SortedFishMetric";
 import stardewFish from "./stardewFish";
 
-import FishLocations from "./FishLocations";
-import SeasonInfo from "./SeasonInfo";
-import StardewFishParser from "./StardewFishParser";
+import FishingRouteDisplay from "./FishRouteDisplay";
+import ToolbarInterface from "./ToolbarInterface";
 
 const Interface = ({
   isCaughtMapState,
@@ -151,76 +150,28 @@ const Interface = ({
 
   return (
     <>
-      <div className="tool-bar">
-        <div
-          className={`button-container ${
-            isExpanded ? "expanded" : "collapsed"
-          }`}
-        >
-          <div className="season-buttons">
-            <button className="season-button" onClick={selectAll}>
-              Select All
-            </button>
-            <button className="season-button" onClick={filterAllCC}>
-              Filter All CC
-            </button>
-            <button className="season-button" onClick={clearAll}>
-              Clear All
-            </button>
-            <button className="season-button" onClick={setStartingSeason}>
-              Set Starting Season
-            </button>
-            <div className="season-selector">
-              <button className="season-button" onClick={prevSeason}>
-                Prev Season
-              </button>
-              <button className="season-button" onClick={nextSeason}>
-                Next Season
-              </button>
-            </div>
-            <StardewFishParser handleFileLoad={handleFileLoad} />
-          </div>
-          <div className="view-info-toggles">
-            <button className="view-info-toggle" onClick={toggleSeasonInfo}>
-              <span className="button-text">
-                {showInfo ? "Hide Info" : "Show Info"}
-              </span>
-            </button>
-            <button className="view-info-toggle" onClick={toggleResults}>
-              <span className="button-text">
-                {showResults ? "Hide Results" : "Show Results"}
-              </span>
-              <span
-                className={`toggle-info-icon ${isExpanded ? "" : "rotate"}`}
-              >
-                ▼
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className={`fishing-route-display-container ${
-          showResults ? "expanded" : "collapsed"
-        }`}
-      >
-        <div className="fishing-route-display">
-          <div className="locations-container">
-            {/* Debug logging */}
-            {console.log("Rendering SeasonInfo with:", {
-              curStartSeason,
-              curSeason,
-            })}
-            <SeasonInfo curStartSeason={curStartSeason} curSeason={curSeason} />
-            <FishLocations
-              fishByLocation={fishByLocation}
-              fishInfoMap={{ fishInfoShown, setFishInfoShown }}
-              isExpanded={showResults}
-            />
-          </div>
-        </div>
-      </div>
+      <ToolbarInterface
+        isExpanded={isExpanded}
+        selectAll={selectAll}
+        filterAllCC={filterAllCC}
+        clearAll={clearAll}
+        setStartingSeason={setStartingSeason}
+        prevSeason={prevSeason}
+        nextSeason={nextSeason}
+        handleFileLoad={handleFileLoad}
+        toggleSeasonInfo={toggleSeasonInfo}
+        showInfo={showInfo}
+        toggleResults={toggleResults}
+        showResults={showResults}
+      />
+      <FishingRouteDisplay
+        showResults={showResults}
+        curStartSeason={curStartSeason}
+        curSeason={curSeason}
+        fishByLocation={fishByLocation}
+        fishInfoShown={fishInfoShown}
+        setFishInfoShown={setFishInfoShown}
+      />
     </>
   );
 };
