@@ -142,7 +142,6 @@ const StardewFishParser = ({ handleFileLoad }) => {
     };
 
     try {
-      // Validate file
       if (!file || file.size === 0) {
         setError("Invalid or empty file");
         return;
@@ -164,13 +163,11 @@ const StardewFishParser = ({ handleFileLoad }) => {
         xmlContent = await file.text();
       }
 
-      // Validate content
       if (!xmlContent || xmlContent.trim().length === 0) {
         setError("File appears to be empty");
         return;
       }
 
-      // Check if it looks like XML
       if (!xmlContent.trim().startsWith("<")) {
         setError("File does not appear to be a valid XML save file");
         return;
@@ -248,11 +245,6 @@ const StardewFishParser = ({ handleFileLoad }) => {
     }
     event.target.value = "";
   };
-
-  const totalFish = Object.values(fishCaught).reduce(
-    (sum, fish) => sum + fish.count,
-    0,
-  );
 
   return (
     <div className="file-input-div">

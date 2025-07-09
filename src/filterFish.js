@@ -75,7 +75,6 @@ const stardewFish = [
   "White Algae",
 ];
 
-const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
 export default function filterFishByCircularSeasons(
   fishData,
   allSeasons,
