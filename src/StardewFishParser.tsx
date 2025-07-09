@@ -15,7 +15,6 @@ const StardewFishParser = ({ handleFileLoad }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [fileName, setFileName] = useState("");
-  const [fileSeason, setFileSeason] = useState("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const fishData = {
@@ -229,13 +228,6 @@ const StardewFishParser = ({ handleFileLoad }) => {
         });
       });
 
-      if (currentSeason) {
-        setFileSeason(currentSeason);
-        console.log(currentSeason);
-      } else {
-        console.log("currentSeason element not found");
-      }
-
       setFishCaught(fishCaughtData);
       handleFileLoad(fishCaughtData, currentSeason);
     } catch (error) {
@@ -257,9 +249,6 @@ const StardewFishParser = ({ handleFileLoad }) => {
     event.target.value = "";
   };
 
-  const sortedFish = Object.entries(fishCaught).sort(
-    (a, b) => b[1].count - a[1].count,
-  );
   const totalFish = Object.values(fishCaught).reduce(
     (sum, fish) => sum + fish.count,
     0,

@@ -1,14 +1,14 @@
 import { useState } from "react";
-import filterFishBySeasons from "./filterFish";
+import "./Interface.css";
 
-import fishData from "./fish.json";
-import stardewFish from "./stardewFish";
 import allCCFish from "./AllCCFish";
+import filterFishBySeasons from "./filterFish";
+import fishData from "./fish.json";
 import sortedFishMetric from "./SortedFishMetric";
+import stardewFish from "./stardewFish";
 
 import FishLocations from "./FishLocations";
 import SeasonInfo from "./SeasonInfo";
-import "./Interface.css";
 import StardewFishParser from "./StardewFishParser";
 
 const Interface = ({
@@ -38,36 +38,23 @@ const Interface = ({
   // available times for fish should be a list
   // if there are no sun fish, should the rest be rain fish?
   const groupBySeason = (fishes_obj) => {
-    //console.log("group by season");
-    // for each Weather we get Sun, Rain and Any
     let sunnyFish = [];
     let anyWeatherFish = [];
     let rainyFish = [];
     fishes_obj.forEach((fish) => {
       if (fish.Weather === "Sun") {
         sunnyFish.push(fish);
-        //console.log("adding sunny fish ☀ ", fish);
       } else if (fish.Weather === "Rain") {
         rainyFish.push(fish);
-        //console.log("adding rainy fish 🌧", fish);
       } else if (fish.Weather === "Any") {
         anyWeatherFish.push(fish);
-        //console.log("adding any weather fish ✅", fish);
       }
     });
-
-    //console.log("sunny", sunnyFish);
-    //console.log("rainy", rainyFish);
-    //console.log("anyWeather", anyWeatherFish);
-    // combine sunnyFish and anyWeatherFish
 
     return [[...sunnyFish, ...anyWeatherFish], rainyFish];
   };
 
   const [sunFish, rainFish] = groupBySeason(displayableFish);
-
-  //console.log(sunFish);
-  //console.log(rainFish);
 
   const selectAll = () => {
     const caughtMap = new Map();
@@ -79,11 +66,7 @@ const Interface = ({
 
   const filterAllCC = () => {
     let caughtMap = new Map(isCaughtMapState);
-
     stardewFish.forEach((fish) => {
-      // if cc fish is already false in map don't do anything
-      // if not cc fish set to false
-      // we should not be setting anything to true
       if (!allCCFish.has(fish)) caughtMap.set(fish, false);
     });
 
@@ -126,20 +109,6 @@ const Interface = ({
     setFilteredFish(allFilteredFishArr[prevSeasonIdx]);
   };
 
-  // const prevSeason = () => {
-  //   const newCount = (count - 1 + 4) % 4;
-  //   setCount(newCount);
-  //   setCurSeason(allSeasons[newCount]);
-  //   setFilteredFish(allFilteredFishArr[newCount]);
-  // };
-  //
-  // const nextSeason = () => {
-  //   const newCount = (count + 1) % 4;
-  //   setCount(newCount);
-  //   setCurSeason(allSeasons[newCount]);
-  //   setFilteredFish(allFilteredFishArr[newCount]);
-  // };
-
   const toggleSeasonInfo = () => {
     setShowInfo(!showInfo);
     if (showInfo) {
@@ -178,10 +147,7 @@ const Interface = ({
     return fishByLocation;
   }
 
-  //console.log("displayable fish", displayableFish);
   const fishByLocation = createLocationMap(displayableFish);
-
-  //console.log("fish by loc", fishByLocation);
 
   return (
     <>

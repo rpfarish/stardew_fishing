@@ -1,9 +1,11 @@
-import "./App.css";
-import Header from "./Header";
 import { useState, useEffect } from "react";
+import "./App.css";
+
+import Header from "./Header";
+import Interface from "./Interface";
 import RemainingFish from "./RemainingFish";
 import Footer from "./Footer";
-import Interface from "./Interface";
+
 import stardewFish from "./stardewFish";
 import filterFishBySeasons from "./filterFish";
 import fishData from "./fish.json";
@@ -11,9 +13,10 @@ import fishData from "./fish.json";
 const THEME_STORAGE_KEY = "stardew-fish-route-planner-theme";
 
 function App() {
-  const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
   const isCaughtMap = new Map(stardewFish.map((fish) => [fish, true]));
   const [isCaughtMapState, setIsCaughtMapState] = useState(isCaughtMap);
+
+  const allSeasons = ["Spring", "Summer", "Fall", "Winter"];
   const [curStartSeason, setCurStartSeason] = useState("Spring");
   const [curSeason, setCurSeason] = useState("Spring");
 
@@ -26,25 +29,6 @@ function App() {
   );
 
   const handleFileLoad = (fileFishData, newCurSeason) => {
-    setCurSeason(newCurSeason);
-    setCurStartSeason(newCurSeason);
-
-    console.log(
-      "logging in handleFileLoad",
-      fishData,
-      allSeasons,
-      newCurSeason,
-    );
-    const newFilteredFish = filterFishBySeasons(
-      fishData,
-      allSeasons,
-      newCurSeason,
-    );
-
-    setAllFilteredFishArr(newFilteredFish);
-    const index = allSeasons.indexOf(newCurSeason);
-    setFilteredFish(newFilteredFish[index]);
-
     setIsCaughtMapState(() => {
       const newMap = new Map(isCaughtMap);
 
@@ -54,6 +38,19 @@ function App() {
 
       return newMap;
     });
+
+    setCurSeason(newCurSeason);
+    setCurStartSeason(newCurSeason);
+
+    const newFilteredFish = filterFishBySeasons(
+      fishData,
+      allSeasons,
+      newCurSeason,
+    );
+
+    setAllFilteredFishArr(newFilteredFish);
+    const index = allSeasons.indexOf(newCurSeason);
+    setFilteredFish(newFilteredFish[index]);
   };
 
   const [theme, setTheme] = useState(() => {
