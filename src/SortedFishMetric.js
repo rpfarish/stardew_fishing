@@ -11,5 +11,6 @@ const sortedFishMetric = [
   "Mutant Bug Lair",
   "Forest Pond",
   "Waterfall",
+  "Forest",
 ];
 export default sortedFishMetric;
