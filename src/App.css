@@ -7,11 +7,11 @@
   font-weight: 400;
   color-scheme: light dark;
 
-  /* ---------- Dark Mode ---------- */
+  /* ---------- Tokyo Night Storm (Dark Mode) ---------- */
 
-  --remaining-fish-item-background-color-dark: #1a5d8a;
-  --remaining-fish-item-hover-background-color-dark: hsl(204, 68%, 42%);
-  --remaining-fish-item-greyed-out-background-color-dark: #5f5f5f;
+  --remaining-fish-item-background-color-dark: #1a2a50;
+  --remaining-fish-item-hover-background-color-dark: #2e3860;
+  --remaining-fish-item-greyed-out-background-color-dark: #272a35;
 
   --toggle-button-background-color-dark: var(
     --remaining-fish-item-background-color-dark
@@ -20,27 +20,28 @@
     --remaining-fish-item-hover-background-color-dark
   );
 
-  --text-color-dark: #ffffff;
+  --text-color-dark: #e8eeff;
 
-  --theme-toggle-button-background-color-dark: rgb(55, 56, 59);
-  --theme-toggle-button-background-color-active-dark: hsl(225, 4%, 40%);
+  --theme-toggle-button-background-color-dark: #1a1f2e;
+  --theme-toggle-button-background-color-active-dark: #2e3860;
   --theme-toggle-button-color-dark: var(--text-color);
 
-  --body-background-color-dark: #242424;
-  --header-footer-background-color-dark: rgb(28, 30, 32);
-  --background-color-dark: rgb(26, 26, 26);
-  --border-color-dark: hsl(0, 0%, 27%);
-  --greyed-out-text-color-dark: white;
+  --body-background-color-dark: #080c18;
+  --header-footer-background-color-dark: #1a1f2e;
+  --background-color-dark: #0f1320;
+  --border-color-dark: #1e2540;
+  --greyed-out-text-color-dark: #4a5270;
 
-  --nav-button-background-color-dark: #454545;
-  --nav-button-hover-background-color-dark: hsl(0, 0%, 33%);
+  --nav-button-background-color-dark: #1a1f2e;
+  --nav-button-hover-background-color-dark: #2e3860;
 
-  --result-fish-background-dark: #2e2e2e;
-  --result-fish-hover-background-dark: #3d3d3d;
+  --result-fish-background-dark: #0f1320;
+  --result-fish-hover-background-dark: #1a1f2e;
 
-  --file-error-background-color-dark: #742525;
+  --file-error-background-color-dark: #4a1525;
 
-  /* ---------- Light Mode ---------- */
+  /* ---------- Tokyo Night Storm (Light Mode) ---------- */
+
   --remaining-fish-item-background-color-light: hsl(203, 76%, 66%);
   --remaining-fish-item-hover-background-color-light: hsl(203, 76%, 78%);
   --remaining-fish-item-greyed-out-background-color-light: hsl(208, 21%, 86%);
@@ -52,33 +53,33 @@
     --remaining-fish-item-hover-background-color-light
   );
 
-  --text-color-light: #000000;
+  --text-color-light: #1a1e2e;
 
-  --theme-toggle-button-background-color-light: hsl(0, 0%, 55%);
-  --theme-toggle-button-background-color-active-light: hsl(225, 4%, 45%);
+  --theme-toggle-button-background-color-light: #d0d5e8;
+  --theme-toggle-button-background-color-active-light: #a0aace;
   --theme-toggle-button-color-light: var(--text-color);
 
-  --body-background-color-light: hsl(0, 0%, 92%);
-  --header-footer-background-color-light: hsl(0, 0%, 80%);
-  --background-color-light: #f5f5f5;
-  --border-color-light: hsl(0, 0%, 63%);
-  --greyed-out-text-color-light: #2b2b2b;
+  --body-background-color-light: #f0f2f8;
+  --header-footer-background-color-light: #e2e6f0;
+  --background-color-light: #ffffff;
+  --border-color-light: #d0d5e8;
+  --greyed-out-text-color-light: #7880a0;
 
-  --nav-button-background-color-light: hsl(0, 0%, 85%);
-  --nav-button-hover-background-color-light: hsl(0, 0%, 90%);
+  --nav-button-background-color-light: #e2e6f0;
+  --nav-button-hover-background-color-light: #d0d5e8;
 
-  --result-fish-background-light: hsl(0, 0%, 85%);
-  --result-fish-hover-background-light: hsl(0, 0%, 90%);
+  --result-fish-background-light: #e2e6f0;
+  --result-fish-hover-background-light: #eef0f8;
 
-  --file-error-background-color-light: #e3a6a6;
+  --file-error-background-color-light: #f5bcc8;
 
   /* ---------- Tooltip ---------- */
-  --google-tooltip-background-dark: #3c4043;
-  --google-tooltip-background-light: hsl(0, 0%, 88%);
+  --google-tooltip-background-dark: #1a1f2e;
+  --google-tooltip-background-light: #e2e6f0;
   --google-tooltip-text-color-dark: var(--text-color-dark);
   --google-tooltip-text-color-light: var(--text-color-light);
-  --tooltip-background-color-dark: rgba(0, 0, 0, 1);
-  --tooltip-background-color-light: rgba(255, 255, 255, 1);
+  --tooltip-background-color-dark: rgba(8, 12, 24, 1);
+  --tooltip-background-color-light: rgba(240, 242, 248, 1);
 }
 
 :root[color-scheme="dark"] {
@@ -278,7 +279,7 @@ circle {
   padding-top: 2em;
 }
 
-/* Dark mode theme */
+/* Tokyo Night Storm theme */
 .button-container {
   display: flex;
   justify-content: space-between;
