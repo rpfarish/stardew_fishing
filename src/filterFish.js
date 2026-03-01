@@ -93,10 +93,13 @@ export default function filterFishByCircularSeasons(
 
     let filteredFish = remainingFish.filter(
       (fish) =>
-        fish.Season.includes(season) || fish.Season.includes("All Seasons"),
+        fish.Season.includes(season) ||
+        fish.Season.includes("All Seasons") ||
+        (season == "Winter" && fish.WinterWithTotem),
     );
 
     results.push(filteredFish);
+    console.log(season, filteredFish);
     remainingFish = remainingFish.filter(
       (fish) => !filteredFish.includes(fish),
     );

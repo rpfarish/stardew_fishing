@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import fishImages, { rainTotemImage } from "./ImportFishImages";
+import SeasonInfo from "./SeasonInfo";
 import stardewFish from "./stardewFish";
+
 import "./FishLocations.css";
 
 // ─── findOptimalFishingWindow ────────────────────────────────────────────────
@@ -7,7 +10,6 @@ function findOptimalFishingWindow(availabilityTimes) {
   const sortedTimes = [...availabilityTimes].sort((a, b) => a[1] - b[1]);
   const mergedTimes = [];
   let removedTimesCount = 0;
-  console.log("Available", availabilityTimes);
 
   for (const time of sortedTimes) {
     if (
@@ -25,7 +27,6 @@ function findOptimalFishingWindow(availabilityTimes) {
     }
   }
 
-  console.log(mergedTimes.length, "Merged", mergedTimes);
   if (mergedTimes.length === 1) {
     const newWindow = mergedTimes[0];
     const startTime = newWindow[0];
@@ -203,9 +204,16 @@ function FishRow({
   windowEnd,
   tabIndex,
   showBars,
+  curSeason,
 }) {
   const weatherIcon =
-    fish.Weather === "Sun" ? "☀️" : fish.Weather === "Rain" ? "🌧" : null;
+    fish.WinterWithTotem && curSeason == "Winter"
+      ? { type: "totem" }
+      : fish.Weather === "Sun"
+        ? { type: "emoji", char: "☀️", title: "Sunny weather" }
+        : fish.Weather === "Rain"
+          ? { type: "emoji", char: "🌧", title: "Rainy weather" }
+          : null;
 
   return (
     <div className="fish-row">
@@ -217,11 +225,17 @@ function FishRow({
         </span>
         <span className="fish-row__name">{fish.Name}</span>
         {weatherIcon && (
-          <span
-            className="fish-row__weather-icon"
-            title={fish.Weather === "Sun" ? "Sunny weather" : "Rainy weather"}
-          >
-            {weatherIcon}
+          <span className="fish-row__weather-icon">
+            {weatherIcon.type === "totem" ? (
+              <img
+                src={rainTotemImage}
+                alt="Rain Totem"
+                className="fish-row__totem-img"
+                title="Available with Rain Totem in Winter"
+              />
+            ) : (
+              <span title={weatherIcon.title}>{weatherIcon.char}</span>
+            )}
           </span>
         )}
       </button>
@@ -235,7 +249,6 @@ function FishRow({
         />
       )}
 
-      {/* Info shows whenever this fish is open — no global gate needed */}
       {isOpen && (
         <div className="fish-row__times">
           {fish.TimeRanges.map(([s, e], i) =>
@@ -261,6 +274,7 @@ function LocationCard({
   fishInfoShown,
   onToggleFish,
   showBars,
+  curSeason,
 }) {
   const timeRanges = fishes.map((f) => [...f.MaxTimeRangeMilitary]);
   const [winStart, winEnd] = findOptimalFishingWindow(timeRanges);
@@ -310,6 +324,7 @@ function LocationCard({
           windowEnd={winEnd}
           tabIndex={isExpanded ? 0 : -1}
           showBars={showBars}
+          curSeason={curSeason}
         />
       ))}
     </div>
@@ -328,7 +343,13 @@ function getInitialTheme() {
 }
 
 // ─── FishLocations ────────────────────────────────────────────────────────────
-const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
+const FishLocations = ({
+  fishByLocation,
+  fishInfoMap,
+  isExpanded,
+  curStartSeason,
+  curSeason,
+}) => {
   const { fishInfoShown, setFishInfoShown } = fishInfoMap;
   const [showInfo, setShowInfo] = useState(false);
   const [filter, setFilter] = useState("All");
@@ -420,6 +441,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
         <p className="fish-header__subtitle">
           Recommended fishing windows · color bars show availability
         </p>
+        <SeasonInfo curStartSeason={curStartSeason} curSeason={curSeason} />
       </div>
 
       <div className="fish-controls">
@@ -480,6 +502,7 @@ const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
               fishInfoShown={fishInfoShown}
               onToggleFish={toggleFishInfo}
               showBars={showBars}
+              curSeason={curSeason}
             />
           ))
         )}

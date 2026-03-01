@@ -74,6 +74,7 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 4px;
+  flex-wrap: wrap;
 }
 
 .fish-header__icon {
@@ -94,6 +95,7 @@
   font-size: 14px;
   color: var(--fl-text-muted);
   font-family: var(--fl-font-mono);
+  text-align: left;
 }
 
 /* ── Controls bar ────────────────────────────────────────────────────────────── */
@@ -417,4 +419,12 @@
   font-size: 13px;
   color: var(--fl-text-primary);
   letter-spacing: 0.5px;
+}
+
+.fish-row__totem-img {
+  width: 1.4em;
+  height: 1.4em;
+  object-fit: contain;
+  vertical-align: middle;
+  border-radius: 2px;
 }

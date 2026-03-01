@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
@@ -6,8 +5,7 @@ const Footer = () => {
     <div id="footer" className="footer">
       <div id="copyright" className="copyright">
         <p className="footer-text">
-          Copyright &copy; 2026 Ryan Farish. Made with{" "}
-          <i className="heart fa-solid fa-heart"></i> in the U.S.A.
+          Copyright &copy; 2026 Ryan Farish. Made with ♥️ in the U.S.A.
         </p>
       </div>
     </div>

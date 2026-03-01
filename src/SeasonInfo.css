@@ -1,36 +1,54 @@
 .season-info {
+  display: grid;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.season-info__pill {
   display: flex;
-  grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-  padding-bottom: 2rem;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 14px;
+  background: var(--fl-bg-card);
+  border: 1px solid var(--fl-border-idle);
+  border-radius: var(--fl-radius-sm);
+  min-width: 120px;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
 }
 
-.season-info p {
-  max-width: fit-content;
-  min-width: fit-content;
-  margin: 0;
-  text-align: center;
-  padding: 0 1.5rem;
-  flex: 1;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+.season-info__pill:hover {
+  border-color: var(--fl-border-hover);
 }
 
-.starting-season {
-  margin: 0;
-  font-weight: 500;
-  font-size: 1.2rem;
-  border-bottom: 2px solid var(--border-color);
-}
-.current-season {
-  margin: 0;
-  font-weight: 500;
-  font-size: 1.2rem;
-  border-bottom: 2px solid var(--border-color);
+.season-info__label {
+  font-family: var(--fl-font-mono);
+  font-size: 10px;
+  color: var(--fl-text-muted);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
 }
 
-.season-value {
-  /* text-transform: capitalize; */
-  font-weight: 400;
+.season-info__value {
+  font-family: var(--fl-font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fl-text-primary);
+  letter-spacing: 0.3px;
+}
+
+/* Accent the "current" pill to distinguish it */
+.season-info__pill--current {
+  border-color: var(--fl-badge-border);
+  background: var(--fl-badge-bg);
+}
+
+.season-info__pill--current .season-info__label {
+  color: var(--fl-accent-green);
+}
+
+.season-info__pill--current .season-info__value {
+  color: var(--fl-accent-green);
 }

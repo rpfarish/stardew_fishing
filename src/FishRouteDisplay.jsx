@@ -19,13 +19,14 @@ const FishingRouteDisplay = ({
     >
       <div className="fishing-route-display">
         <div className="locations-container">
-          <SeasonInfo curStartSeason={curStartSeason} curSeason={curSeason} />
           <FishLocations
             fishByLocation={fishByLocation}
             fishInfoMap={{ fishInfoShown, setFishInfoShown }}
             isExpanded={showResults}
             toggleSeasonInfo={toggleSeasonInfo}
             showInfo={showInfo}
+            curStartSeason={curStartSeason}
+            curSeason={curSeason}
           />
         </div>
       </div>
