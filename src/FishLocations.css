@@ -380,7 +380,7 @@
 }
 
 .fish-row__name {
-  font-size: 13px;
+  font-size: 15px;
   font-family: var(--fl-font-display);
   font-weight: 500;
   flex: 1;
