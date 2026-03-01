@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import stardewFish from "./stardewFish";
 import "./FishLocations.css";
 
 // ─── findOptimalFishingWindow ────────────────────────────────────────────────
@@ -84,13 +85,12 @@ function timeToPercent(hour) {
 
 // ─── PDF Export ───────────────────────────────────────────────────────────────
 async function exportToPDF(gridEl, theme) {
-  // Dynamically import so the bundle doesn't pay the cost unless used
   const [{ default: html2canvas }, { default: jsPDF }] = await Promise.all([
     import("html2canvas"),
     import("jspdf"),
   ]);
 
-  const scale = 2; // retina
+  const scale = 2;
   const canvas = await html2canvas(gridEl, {
     scale,
     useCORS: true,
@@ -98,21 +98,20 @@ async function exportToPDF(gridEl, theme) {
     logging: false,
   });
 
-  const imgW = 190; // mm — A4 content width with 10mm margins each side
+  const imgW = 190;
   const imgH = (canvas.height / canvas.width) * imgW;
-  const pageH = 277; // A4 height minus margins
+  const pageH = 277;
 
   const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
   let yOffset = 0;
 
-  // Slice canvas into A4 pages
   while (yOffset < imgH) {
     if (yOffset > 0) pdf.addPage();
     pdf.addImage(
       canvas.toDataURL("image/png"),
       "PNG",
-      10, // x margin
-      10 - yOffset, // shift image up as we page
+      10,
+      10 - yOffset,
       imgW,
       imgH,
     );
@@ -122,12 +121,23 @@ async function exportToPDF(gridEl, theme) {
   pdf.save("fish-locations.pdf");
 }
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+// Convert a time string like "6am", "11am", "7pm", "2am" to a military hour
+// number in the BAR_START–BAR_END (6–26) extended range.
+function timeStringToHour(str, prevHour = null) {
+  const match = str.match(/^(\d+)(am|pm)$/i);
+  if (!match) return null;
+  let hour = parseInt(match[1], 10);
+  const meridiem = match[2].toLowerCase();
+  if (meridiem === "pm" && hour !== 12) hour += 12;
+  if (meridiem === "am" && hour === 12) hour = 0;
+  // If this hour is less than the previous one it has wrapped past midnight
+  if (prevHour !== null && hour < prevHour) hour += 24;
+  return hour;
+}
+
 // ─── Availability Bar ─────────────────────────────────────────────────────────
 function AvailabilityBar({ fish, windowStart, windowEnd, toggle }) {
-  const [start, end] = fish.MaxTimeRangeMilitary;
-  const left = Math.max(0, timeToPercent(start));
-  const right = Math.min(100, timeToPercent(end));
-  const width = right - left;
   const winLeft = Math.max(0, timeToPercent(windowStart));
   const winRight = Math.min(100, timeToPercent(windowEnd));
 
@@ -138,16 +148,30 @@ function AvailabilityBar({ fish, windowStart, windowEnd, toggle }) {
         ? "avail-bar__fill--rain"
         : "avail-bar__fill--any";
 
+  // Build one segment per TimeRange entry so gaps (e.g. 11am–7pm) show up
+  const segments = fish.TimeRanges.map(([startStr, endStr]) => {
+    const startH = timeStringToHour(startStr);
+    const endH = timeStringToHour(endStr, startH);
+    const left = Math.max(0, timeToPercent(startH));
+    const right = Math.min(100, timeToPercent(endH));
+    return { left, width: right - left };
+  });
+
   return (
     <div className="avail-bar" onClick={toggle}>
+      {/* Optimal window highlight */}
       <div
         className="avail-bar__window-highlight"
         style={{ left: `${winLeft}%`, width: `${winRight - winLeft}%` }}
       />
-      <div
-        className={`avail-bar__fill ${fillClass}`}
-        style={{ left: `${left}%`, width: `${width}%` }}
-      />
+      {/* One coloured segment per actual time range */}
+      {segments.map(({ left, width }, i) => (
+        <div
+          key={i}
+          className={`avail-bar__fill ${fillClass}`}
+          style={{ left: `${left}%`, width: `${width}%` }}
+        />
+      ))}
     </div>
   );
 }
@@ -211,6 +235,7 @@ function FishRow({
         />
       )}
 
+      {/* Info shows whenever this fish is open — no global gate needed */}
       {isOpen && (
         <div className="fish-row__times">
           {fish.TimeRanges.map(([s, e], i) =>
@@ -305,6 +330,7 @@ function getInitialTheme() {
 // ─── FishLocations ────────────────────────────────────────────────────────────
 const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
   const { fishInfoShown, setFishInfoShown } = fishInfoMap;
+  const [showInfo, setShowInfo] = useState(false);
   const [filter, setFilter] = useState("All");
   const [showBars, setShowBars] = useState(true);
   const [exporting, setExporting] = useState(false);
@@ -326,6 +352,15 @@ const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
 
   if (fishByLocation.size === 0)
     return <p className="fish-no-results">No Fish</p>;
+
+  const toggleAllInfo = () => {
+    setShowInfo(!showInfo);
+    if (showInfo) {
+      setFishInfoShown(new Set()); // Hide all
+    } else {
+      setFishInfoShown(new Set(stardewFish)); // Show all
+    }
+  };
 
   const toggleFishInfo = (fishName) => {
     const newSet = new Set(fishInfoShown);
@@ -373,8 +408,6 @@ const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
     ])
     .filter(([, fishes]) => fishes.length > 0);
 
-  const isDark = theme === "dark";
-
   return (
     <div className="fish-root">
       {exporting && <div className="fish-export-overlay">Generating PDF…</div>}
@@ -390,13 +423,21 @@ const FishLocations = ({ fishByLocation, fishInfoMap, isExpanded }) => {
       </div>
 
       <div className="fish-controls">
-        {/* Windows toggle */}
+        {/* Bars toggle */}
         <button
           className={`fish-btn${showBars ? " fish-btn--active" : ""}`}
           onClick={() => setShowBars((v) => !v)}
-          title="Toggle availability windows"
+          title="Toggle availability bars"
         >
           ▬ Bars
+        </button>
+
+        {/* Global info toggle — opens/closes all fish at once */}
+        <button
+          className={`fish-btn${showInfo ? " fish-btn--active" : ""}`}
+          onClick={toggleAllInfo}
+        >
+          {showInfo ? "Hide Info" : "Show Info"}
         </button>
 
         <div className="fish-controls__spacer" />

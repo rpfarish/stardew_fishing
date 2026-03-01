@@ -9,7 +9,7 @@
   --fl-border-hover: #2e3860;
   --fl-text-primary: #e8eeff;
   --fl-text-secondary: #c8d0e8;
-  --fl-text-muted: #4a5270;
+  --fl-text-muted: #909ecf;
   --fl-text-dim: #3d4560;
   --fl-text-sub: #6b7594;
   --fl-accent-green: #4eca8b;
@@ -28,11 +28,11 @@
   --fl-border-hover: #a0aace;
   --fl-text-primary: #1a1e2e;
   --fl-text-secondary: #2e3450;
-  --fl-text-muted: #676d88;
+  --fl-text-muted: #454c6c;
   --fl-text-dim: #a0a8c0;
   --fl-text-sub: #606880;
-  --fl-accent-green: #1a9e68;
-  --fl-accent-blue: #1a7fd4;
+  --fl-accent-green: #0a5033;
+  --fl-accent-blue: #11548c;
   --fl-card-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   --fl-badge-bg: rgba(26, 158, 104, 0.08);
   --fl-badge-border: rgba(26, 158, 104, 0.25);
@@ -165,7 +165,7 @@
   gap: 14px;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: 3px;
+  padding: 0 5px;
 }
 
 .fish-legend__item {

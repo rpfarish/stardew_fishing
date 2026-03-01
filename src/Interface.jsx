@@ -159,8 +159,6 @@ const Interface = ({
         prevSeason={prevSeason}
         nextSeason={nextSeason}
         handleFileLoad={handleFileLoad}
-        toggleSeasonInfo={toggleSeasonInfo}
-        showInfo={showInfo}
         toggleResults={toggleResults}
         showResults={showResults}
       />
@@ -171,6 +169,8 @@ const Interface = ({
         fishByLocation={fishByLocation}
         fishInfoShown={fishInfoShown}
         setFishInfoShown={setFishInfoShown}
+        toggleSeasonInfo={toggleSeasonInfo}
+        showInfo={showInfo}
       />
     </>
   );

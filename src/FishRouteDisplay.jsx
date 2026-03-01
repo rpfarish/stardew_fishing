@@ -8,6 +8,8 @@ const FishingRouteDisplay = ({
   fishByLocation,
   fishInfoShown,
   setFishInfoShown,
+  toggleSeasonInfo,
+  showInfo,
 }) => {
   return (
     <div
@@ -22,6 +24,8 @@ const FishingRouteDisplay = ({
             fishByLocation={fishByLocation}
             fishInfoMap={{ fishInfoShown, setFishInfoShown }}
             isExpanded={showResults}
+            toggleSeasonInfo={toggleSeasonInfo}
+            showInfo={showInfo}
           />
         </div>
       </div>

@@ -31,8 +31,6 @@ const ToolbarInterface = ({
           handleFileLoad={handleFileLoad}
         />
         <ViewToggleControls
-          toggleSeasonInfo={toggleSeasonInfo}
-          showInfo={showInfo}
           toggleResults={toggleResults}
           showResults={showResults}
           isExpanded={isExpanded}
